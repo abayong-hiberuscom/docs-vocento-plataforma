@@ -1,0 +1,3337 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentación técnico-funcional consolidada del Proyecto Data (Espacio de Datos, Publicidad, Clasificados, Suscripciones, Propuestas Comerciales, Gobierno del Dato)">
+      
+      
+      
+      
+        <link rel="prev" href="../dataplex/">
+      
+      
+        <link rel="next" href="../../publicidad/resumen/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Modelo entidad-relación técnico - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelo-entidad-relacion-tecnico" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Proyecto Data Vocento — Documentación Técnico-Funcional" class="md-header__button md-logo" aria-label="Proyecto Data Vocento — Documentación Técnico-Funcional" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Data Vocento — Documentación Técnico-Funcional
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modelo entidad-relación técnico
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../vision-general/resumen-ejecutivo/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Visión general del proyecto
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../espacio-datos/modelo-operativo/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Espacio de Datos (EEDD)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../modelo-gobierno/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Gobierno del Dato y Calidad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../publicidad/resumen/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Publicidad
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clasificados/resumen/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Clasificados
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../suscripciones/resumen/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Suscripciones
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../otros-dominios/propuestas-comerciales/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Propuestas Comerciales, BI y Plan Data
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../formacion/formacion-eedd/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Formación y comunicación
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../anexos/inventario/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Anexos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Proyecto Data Vocento — Documentación Técnico-Funcional" class="md-nav__button md-logo" aria-label="Proyecto Data Vocento — Documentación Técnico-Funcional" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Proyecto Data Vocento — Documentación Técnico-Funcional
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visión general del proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Visión general del proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vision-general/resumen-ejecutivo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen ejecutivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vision-general/seguimiento-programa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seguimiento del programa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vision-general/entregables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memoria técnica (Entregables E1-E23)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Espacio de Datos (EEDD)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Espacio de Datos (EEDD)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../espacio-datos/modelo-operativo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definición y modelo operativo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../espacio-datos/arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura desplegada
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../espacio-datos/gobierno-accesos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobierno y accesos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../espacio-datos/legal-dpo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aspectos legales y DPO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../espacio-datos/consentimientos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consentimientos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gobierno del Dato y Calidad
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gobierno del Dato y Calidad
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelo-gobierno/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de gobierno
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glosario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glosario de negocio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calidad-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reglas de calidad de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataplex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataplex y metadatos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo entidad-relación técnico
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo entidad-relación técnico
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#01_source-landing-fuentes-consumidas-por-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        01_source / landing (fuentes consumidas por staging)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02_staging-43-vistas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        02_staging (43 vistas)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="02_staging (43 vistas)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vistas-staging-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vistas staging clave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventario-completo-staging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventario completo staging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03_intermediate-48-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        03_intermediate (48 modelos)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="03_intermediate (48 modelos)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entidades-intermedias-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entidades intermedias principales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inventario-completo-intermediate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inventario completo intermediate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04_data_mart-22-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        04_data_mart (22 modelos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-sqlx-de-casos-de-uso-eedd-ruta-5-documentacion-espacio-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Otros SQLX de casos de uso EEDD (ruta 5. Documentación Espacio Datos)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Publicidad
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Publicidad
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publicidad/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen funcional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publicidad/arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura y fuentes de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publicidad/modelo-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clasificados
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Clasificados
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clasificados/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen funcional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clasificados/arquitectura/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitectura y fuentes de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clasificados/modelo-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Suscripciones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Suscripciones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../suscripciones/resumen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resumen funcional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../suscripciones/reporting-objetivos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporting y objetivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../suscripciones/modelo-datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de datos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuestas Comerciales, BI y Plan Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Propuestas Comerciales, BI y Plan Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otros-dominios/propuestas-comerciales/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propuestas comerciales
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otros-dominios/plataforma-plan-data/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plataforma tecnológica y Plan Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otros-dominios/inteligencia-negocio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inteligencia de negocio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otros-dominios/catalogo-casos-uso/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catálogo de casos de uso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formación y comunicación
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Formación y comunicación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formacion/formacion-eedd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Formación EEDD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formacion/notas-gobernanza/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notas de sesiones de gobernanza
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anexos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Anexos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anexos/inventario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventario documental
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../anexos/grabaciones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grabaciones (no transcritas)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modelo-entidad-relacion-tecnico">Modelo entidad-relación técnico<a class="headerlink" href="#modelo-entidad-relacion-tecnico" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Este apartado es el corazón técnico del documento. Se ha cruzado <code>Dataform SQLX</code>, SQL compilado (<code>bq_queries_20260210</code>), <code>Modelado DW.xlsx</code> y los SQLX empaquetados de EEDD. En <strong>source</strong> y <strong>staging</strong> predominan vistas; en <strong>data_mart</strong> aparecen tablas con PK lógicas explícitas.</p>
+</blockquote>
+<h3 id="01_source-landing-fuentes-consumidas-por-staging">01_source / landing (fuentes consumidas por staging)<a class="headerlink" href="#01_source-landing-fuentes-consumidas-por-staging" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Fuente landing</th>
+<th>Vista staging descendente</th>
+<th>Uso / campos consumidos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>landing_json_incrementals.advertiser</code></td>
+<td><code>stg_mysql__advertisers</code></td>
+<td>Anunciantes base de Sumauto: ids, cliente, provincia, nombre, slug, fechas, <code>salesforce_id</code>, delivery y contrato/autobiz.</td>
+</tr>
+<tr>
+<td><code>landing_json_incrementals.ad</code></td>
+<td><code>stg_mysql__ads</code></td>
+<td>Anuncios base: <code>id</code>, <code>province_id</code>, <code>advertiser_id</code>, fechas, <code>status</code>, <code>price</code>, <code>product_id</code>, <code>kilometers</code>, <code>num_imagenes</code>.</td>
+</tr>
+<tr>
+<td><code>landing_salesforce.cuentas</code></td>
+<td><code>stg_sf__accounts</code></td>
+<td>Cuentas comerciales: <code>advertiser_sf_id</code>, comercial, grupo, estado Sumauto, CIF, teléfono, email, stock y fechas.</td>
+</tr>
+<tr>
+<td><code>landing_salesforce.propuestas</code></td>
+<td><code>stg_sf__proposals</code></td>
+<td>Cabecera de propuestas/contratos con fechas, tipo, etapa y comercial.</td>
+</tr>
+<tr>
+<td><code>landing_salesforce.productos</code></td>
+<td><code>stg_sf__proposal_products</code></td>
+<td>Líneas de producto por propuesta: <code>propuesta_id</code>, <code>product_sf_id</code>, descripción y cantidad.</td>
+</tr>
+<tr>
+<td><code>landing_json_incrementals.zoom_vn_vo</code></td>
+<td><code>stg_mysql_zoom__advertisers__daily</code></td>
+<td>Métricas diarias por anunciante: ads, llamadas, emails, leads, visitas y paquete.</td>
+</tr>
+<tr>
+<td><code>landing_mongodb_auto_stats.advertiserreport</code></td>
+<td><code>stg_mongo__advertisers__daily</code></td>
+<td>Reporte diario de anunciante serializado como JSON.</td>
+</tr>
+<tr>
+<td><code>landing_mongodb_auto_stats.adreport</code></td>
+<td><code>stg_mongo__ads__daily</code></td>
+<td>Reporte diario de anuncio serializado como JSON.</td>
+</tr>
+<tr>
+<td><code>landing_pricing.advertiser_to_cluster</code></td>
+<td><code>stg_advertiser_to_cluster</code></td>
+<td>Asignación de cluster para pricing.</td>
+</tr>
+<tr>
+<td><code>landing_seeds_drive.seed__listado_provincias</code></td>
+<td><code>stg_seed__listado_provincias</code></td>
+<td>Catálogo geográfico de referencia.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Otras fuentes landing detectadas</strong>: <code>brand</code>, <code>campaign</code>, <code>client</code>, <code>family</code>, <code>fuel</code>, <code>product</code>, <code>autobiz_prices</code>, <code>autotel_record</code>, <code>zoom_as24</code>, <code>cochesnet</code>, <code>wallapop</code>, <code>market</code>, <code>articles_prices</code>, múltiples <code>seed__*</code> y tablas Salesforce auxiliares.</p>
+<h3 id="02_staging-43-vistas">02_staging (43 vistas)<a class="headerlink" href="#02_staging-43-vistas" title="Permanent link">&para;</a></h3>
+<h4 id="vistas-staging-clave">Vistas staging clave<a class="headerlink" href="#vistas-staging-clave" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>stg_mysql__advertisers</code></strong> ← <code>landing_json_incrementals.advertiser</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_id</code> INT64, <code>client_id</code> INT64, <code>province_id</code> INT64, <code>advertiser_name</code> STRING, <code>advertiser_slug</code> STRING, <code>created_at</code> DATETIME, <code>updated_at</code> DATETIME, <code>advertiser_sf_id</code> INT64, <code>is_delivery</code> BOOL, <code>is_autobiz</code> BOOL, <code>added_at</code> DATE</li>
+<li><strong>Filtros</strong>: <code>where salesforce_id is not null and salesforce_id != 0</code></li>
+<li><strong>Deduplicación</strong>: <code>PARTITION BY advertiser_id</code> / <code>ORDER BY updated_at desc, added_at desc</code></li>
+<li><strong><code>stg_mysql__ads</code></strong> ← <code>landing_json_incrementals.ad</code></li>
+<li><strong>Columnas</strong>: <code>ad_id</code> INT64, <code>province_id</code> INT64, <code>advertiser_id</code> INT64, <code>ad_name</code> STRING, <code>ad_slug</code> STRING, <code>created_at</code> DATETIME, <code>updated_at</code> DATETIME, <code>deleted_at</code> DATETIME, <code>permanencia_dias_today</code>, <code>description</code> STRING, <code>year</code> INT64, <code>status</code> INT64, <code>price</code> INT64, <code>published_at</code> DATETIME, <code>product_id</code> INT64, <code>kilometers</code> INT64, <code>kilometers_range</code>, <code>num_imagenes</code> INT64</li>
+<li><strong>Filtros</strong>: <code>where status between 0 and 2</code></li>
+<li><strong>Deduplicación</strong>: <code>PARTITION BY ad_id</code> / <code>ORDER BY updated_at desc, added_at desc</code></li>
+<li><strong><code>stg_sf__accounts</code></strong> ← <code>landing_salesforce.cuentas</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_sf_id</code> INT64, <code>advertiser_name</code> STRING, <code>comercial_sf_id</code> STRING, <code>advertiser_group_name</code> STRING, <code>business_line</code> STRING, <code>agreement_type</code> STRING, <code>cif</code> STRING, <code>phone</code> STRING, <code>email</code> STRING, <code>account_status</code> STRING, <code>account_source</code> STRING, <code>sumauto_status</code> STRING, <code>is_associated_client</code> BOOLEAN, <code>sumauto_registration_date</code>, <code>sumauto_sector</code> STRING, <code>sumauto_stock</code> INT64, <code>last_proposal_date</code>, <code>sumauto_withdrawal_date</code></li>
+<li><strong><code>stg_sf__proposals</code></strong> ← <code>landing_salesforce.propuestas</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_sf_id</code> INT64, <code>propuesta_id</code> INT64, <code>firma_contrato_date</code>, <code>start_contrato_date</code>, <code>end_contrato_date</code>, <code>tipo_propuesta</code> STRING, <code>etapa_propuesta</code> STRING, <code>estado_anunciante</code> STRING, <code>comercial_name</code> STRING, <code>comercial_alias</code> STRING, <code>comercial_sf_id</code> STRING, <code>campaign_name</code> STRING</li>
+<li><strong><code>stg_sf__proposal_products</code></strong> ← <code>landing_salesforce.productos</code></li>
+<li><strong>Columnas</strong>: <code>propuesta_id</code> INT64, <code>product_sf_id</code> STRING, <code>product_des</code> STRING, <code>quantity</code> FLOAT64, <code>comercial_alias</code> STRING, <code>comercial_sf_id</code> STRING, <code>comercial_name</code> STRING</li>
+<li><strong><code>stg_mysql_zoom__advertisers__daily</code></strong> ← <code>landing_json_incrementals.zoom_vn_vo</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_id</code> INT64, <code>daily_period</code>, <code>ad_type</code> STRING, <code>zoom_vn_vo_id</code> INT64, <code>period_int</code>, <code>contracted_ads</code> INT64, <code>published_ads</code> INT64, <code>phone_views</code> INT64, <code>has_autotel</code> BOOL, <code>total_calls</code> INT64, <code>emails</code> INT64, <code>total_leads</code> INT64, <code>available_featured_ads</code> INT64, <code>available_premium_ads</code> INT64, <code>used_featured_ads</code> INT64, <code>used_premium_ads</code> INT64, <code>has_multiprovince</code> BOOL, <code>visits</code> INT64</li>
+<li><strong>Filtros</strong>: <code>where is_mascus = 0 ), fix_package as ( select * except (package_name), case when period_int &lt; 202301 then coalesce(package_name, 'unknown') else package_name end as package_name from raw_data</code></li>
+<li><strong>Deduplicación</strong>: <code>PARTITION BY advertiser_id, daily_period, ad_type</code> / <code>ORDER BY added_at desc</code></li>
+<li><strong><code>stg_mongo__advertisers__daily</code></strong> ← <code>landing_mongodb_auto_stats.advertiserreport</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_id</code>, <code>period_datetime</code>, <code>id</code>, <code>ad_type</code>, <code>n_calls</code>, <code>n_searches</code>, <code>n_contacts</code>, <code>n_views</code></li>
+<li><strong>Filtros</strong>: <code>), extracted_data as ( select safe_cast(json_extract_scalar(json_data, '$.advertiserId') as int64) as advertiser_id, parse_datetime('%b %d, %Y, %I:%M:%S %p', json_extract_scalar(json_data, '$.period')) as period_datetim…</code></li>
+<li><strong>Deduplicación</strong>: <code>PARTITION BY advertiser_id, daily_period, ad_type</code> / <code>ORDER BY id desc</code></li>
+<li><strong><code>stg_mongo__ads__daily</code></strong> ← <code>landing_mongodb_auto_stats.adreport</code></li>
+<li><strong>Columnas</strong>: <code>ad_id</code>, <code>id</code>, <code>period_datetime</code>, <code>n_searches</code>, <code>n_views</code>, <code>n_contacts</code></li>
+<li><strong>Filtros</strong>: <code>), extracted_data as ( select safe_cast(json_extract_scalar(json_data, '$.adId') as int64) as ad_id, id, parse_datetime('%b %d, %Y, %I:%M:%S %p', json_extract_scalar(json_data, '$.period')) as period_datetime, safe_cast…</code></li>
+<li><strong>Deduplicación</strong>: <code>PARTITION BY ad_id, daily_period</code> / <code>ORDER BY id desc</code></li>
+<li><strong><code>stg_seed__listado_provincias</code></strong> ← <code>landing_seeds_drive.seed__listado_provincias</code></li>
+<li><strong>Columnas</strong>: no tipado explícito detectado en el parseo.</li>
+</ul>
+<h4 id="inventario-completo-staging">Inventario completo staging<a class="headerlink" href="#inventario-completo-staging" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Vista staging</th>
+<th>Fuente</th>
+<th style="text-align: right;">Nº columnas detectadas</th>
+<th>Observación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stg_advertiser_to_cluster</code></td>
+<td><code>landing_pricing.advertiser_to_cluster</code></td>
+<td style="text-align: right;">4</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_mongo__ads__daily</code></td>
+<td><code>landing_mongodb_auto_stats.adreport</code></td>
+<td style="text-align: right;">6</td>
+<td>filtro, dedup</td>
+</tr>
+<tr>
+<td><code>stg_mongo__advertisers__daily</code></td>
+<td><code>landing_mongodb_auto_stats.advertiserreport</code></td>
+<td style="text-align: right;">8</td>
+<td>filtro, dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__ads</code></td>
+<td><code>landing_json_incrementals.ad</code></td>
+<td style="text-align: right;">19</td>
+<td>filtro, dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__advertiser_groups</code></td>
+<td><code>landing_json_incrementals.campaign</code></td>
+<td style="text-align: right;">3</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__advertisers</code></td>
+<td><code>landing_json_incrementals.advertiser</code></td>
+<td style="text-align: right;">11</td>
+<td>filtro, dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__advertisers__group_info</code></td>
+<td><code>landing_json_incrementals.client</code></td>
+<td style="text-align: right;">4</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__brand__families</code></td>
+<td><code>landing_json_incrementals.family</code></td>
+<td style="text-align: right;">3</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__brands</code></td>
+<td><code>landing_json_incrementals.brand</code></td>
+<td style="text-align: right;">3</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__cars</code></td>
+<td><code>landing_json_incrementals.product</code></td>
+<td style="text-align: right;">9</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql__fuels</code></td>
+<td><code>landing_json_incrementals.fuel</code></td>
+<td style="text-align: right;">3</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql_autobiz__ads__prices_info</code></td>
+<td><code>landing_json_incrementals.autobiz_prices</code></td>
+<td style="text-align: right;">8</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql_cpc__keyword_groups</code></td>
+<td><code>landing_mysql_autocasion.keyword_plan_ad_group_keyword</code></td>
+<td style="text-align: right;">3</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_mysql_cpc__monthly_searches_volume</code></td>
+<td><code>landing_mysql_autocasion.keyword_plan_historical_metric_monthly_search_volume</code></td>
+<td style="text-align: right;">3</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_mysql_zoom__advertisers__daily</code></td>
+<td><code>landing_json_incrementals.zoom_vn_vo</code></td>
+<td style="text-align: right;">30</td>
+<td>filtro, dedup</td>
+</tr>
+<tr>
+<td><code>stg_mysql_zoom_autoscout24__advertisers__daily</code></td>
+<td><code>landing_json_incrementals.zoom_as24</code></td>
+<td style="text-align: right;">7</td>
+<td>dedup</td>
+</tr>
+<tr>
+<td><code>stg_nexus__articles_prices</code></td>
+<td><code>landing_nexus_new.tarifas</code></td>
+<td style="text-align: right;">4</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_nexus__invoicing</code></td>
+<td><code>landing_nexus_new.nexus_new</code></td>
+<td style="text-align: right;">32</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__advertisers__ballenas_flag</code></td>
+<td><code>landing_seeds_drive.seed__advertisers__ballenas_flag</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__advertisers__groups_not_considered</code></td>
+<td><code>landing_seeds_drive.seed__advertisers__groups_not_considered</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__clusters_names</code></td>
+<td><code>landing_seeds_drive.seed__clusters_names</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__comercials_provinces</code></td>
+<td><code>landing_seeds_drive.seed__comerciales_presenciales_provincias</code></td>
+<td style="text-align: right;">3</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__isc_brand_agreements</code></td>
+<td><code>landing_seeds_drive.seed__isc_brand_agreements</code></td>
+<td style="text-align: right;">6</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__isc_excluded_articles</code></td>
+<td><code>landing_seeds_drive.seed__isc_excluded_articles</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__list_superusers__commercial</code></td>
+<td><code>landing_seeds_drive.seed__list_superusers__commercial</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__list_superusers__pricing</code></td>
+<td><code>landing_seeds_drive.seed__list_superusers__pricing</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__list_superusers__zoom</code></td>
+<td><code>landing_seeds_drive.seed__list_superusers__zoom</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__listado_comerciales</code></td>
+<td><code>landing_seeds_drive.seed__listado_comerciales</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__listado_contact</code></td>
+<td><code>landing_seeds_drive.seed__listado_contact</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__listado_provincias</code></td>
+<td><code>landing_seeds_drive.seed__listado_provincias</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__product_exclusion_pricing</code></td>
+<td><code>landing_seeds_drive.seed__product_exclusion_pricing</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__status_ads</code></td>
+<td><code>landing_seeds_drive.seed__status_ads</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__zoom__business_list</code></td>
+<td><code>landing_seeds_drive.seed__zoom__business_list</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed__zoom__comercial_list</code></td>
+<td><code>landing_seeds_drive.seed__zoom__commercials_list</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_seed_sf__proposal_types</code></td>
+<td><code>landing_seeds_drive.seed_sf__proposal_types</code></td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sf__accounts</code></td>
+<td><code>landing_salesforce.cuentas</code></td>
+<td style="text-align: right;">23</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sf__advertiser__total_ads</code></td>
+<td><code>landing_salesforce.total_anuncios</code></td>
+<td style="text-align: right;">6</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sf__advertiser__withdrawals</code></td>
+<td><code>landing_salesforce.bajas</code></td>
+<td style="text-align: right;">11</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sf__proposal_products</code></td>
+<td><code>landing_salesforce.productos</code></td>
+<td style="text-align: right;">7</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sf__proposals</code></td>
+<td><code>landing_salesforce.propuestas</code></td>
+<td style="text-align: right;">12</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sftp__cochesnet</code></td>
+<td><code>landing_sftp.cochesnet</code></td>
+<td style="text-align: right;">18</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sftp__market</code></td>
+<td><code>landing_sftp.market_db</code></td>
+<td style="text-align: right;">48</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stg_sftp__wallapop</code></td>
+<td><code>landing_sftp.wallapop</code></td>
+<td style="text-align: right;">18</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="03_intermediate-48-modelos">03_intermediate (48 modelos)<a class="headerlink" href="#03_intermediate-48-modelos" title="Permanent link">&para;</a></h3>
+<h4 id="entidades-intermedias-principales">Entidades intermedias principales<a class="headerlink" href="#entidades-intermedias-principales" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong><code>int__advertiser</code></strong></li>
+<li><strong>Refs</strong>: <code>stg__mysql__advertiser</code></li>
+<li><strong>Columnas principales</strong>: modelo heredado vía <code>SELECT *</code> / CTE.</li>
+<li><strong><code>int__accounts</code></strong></li>
+<li><strong>Refs</strong>: <code>stg__sf__accounts</code></li>
+<li><strong>Columnas principales</strong>: <code>advertiser_sf_id</code>, <code>comercial_sf_id</code>, <code>autobiz_id</code>, <code>advertiser_group_name</code>, <code>sumauto_registration_date</code>, <code>smt_status</code>, <code>is_useless_record</code></li>
+<li><strong><code>int__proposals</code></strong></li>
+<li><strong>Refs</strong>: usa staging/direct SQL sin <code>ref()</code> visible en el parseo.</li>
+<li><strong>Columnas principales</strong>: <code>advertiser_sf_id</code>, <code>propuesta_id</code>, <code>tipo_propuesta</code>, <code>etapa_propuesta</code>, <code>estado_anunciante</code>, <code>comercial_name</code>, <code>comercial_alias</code>, <code>comercial_sf_id</code>, <code>campaign_name</code>, <code>firma_contrato_date</code>, <code>start_contrato_date</code>, <code>end_contrato_date</code>, <code>is_active_today</code>, <code>is_active_pricing_month</code>, <code>is_active_past_years</code>, <code>grupo_tipo_propuesta</code></li>
+<li><strong><code>int__product</code></strong></li>
+<li><strong>Refs</strong>: usa staging/direct SQL sin <code>ref()</code> visible en el parseo.</li>
+<li><strong>Columnas principales</strong>: <code>advertiser_sf_id</code>, <code>propuesta_id</code>, <code>product_sf_id</code>, <code>start_contrato_date</code>, <code>end_contrato_date</code>, <code>tipo_propuesta</code>, <code>grupo_tipo_propuesta</code>, <code>product_pricing_exclusion_type</code>, <code>product_des</code>, <code>quantity</code></li>
+<li><strong><code>int__car</code></strong></li>
+<li><strong>Refs</strong>: <code>stg__mysql__brand</code>, <code>stg__mysql__brand__family</code>, <code>stg__mysql__fuel</code>, <code>stg__mysql__product</code></li>
+<li><strong>Columnas principales</strong>: <code>product_id</code>, <code>car_version</code>, <code>has_ficha_tecnica</code>, <code>brand_id</code>, <code>brand_name</code>, <code>modelo</code>, <code>fuel_id</code>, <code>fuel_name</code>, <code>modelo_fuel</code></li>
+<li><strong>Joins detectados</strong>: <code>stg__mysql__product.brand_id</code> = <code>stg__mysql__brand.id</code>; <code>stg__mysql__product.family_id</code> = <code>stg__mysql__brand__family.id</code>; <code>stg__mysql__product.fuel_id</code> = <code>stg__mysql__fuel.id</code></li>
+<li><strong><code>int__ad</code></strong></li>
+<li><strong>Refs</strong>: <code>int__advertiser__sf</code>, <code>stg__mysql__ad</code>, <code>stg__seed__listado_provincias</code></li>
+<li><strong>Columnas principales</strong>: <code>ad_id</code>, <code>listing_id_as24</code>, <code>advertiser_sf_id</code>, <code>fecha_publicacion</code>, <code>province_id</code>, <code>product_id</code>, <code>ad_province</code>, <code>price</code>, <code>status</code>, <code>descripcion</code>, <code>ad_url</code>, <code>anyo_coche</code>, <code>kilometers</code>, <code>posted</code>, <code>permanencia_dias_today</code>, <code>created_at</code>, <code>deleted_at</code>, <code>updated_at</code>, <code>num_imagenes</code></li>
+<li><strong>Joins detectados</strong>: <code>stg__mysql__ad.province_id</code> = <code>stg__seed__listado_provincias.id</code></li>
+<li><strong><code>int__advertiser__group_info</code></strong></li>
+<li><strong>Refs</strong>: <code>stg__mysql__campaign</code>, <code>stg__mysql__client</code></li>
+<li><strong>Columnas principales</strong>: <code>client_id</code>, <code>campaign_id</code>, <code>campaign_name</code></li>
+<li><strong>Joins detectados</strong>: <code>stg__mysql__client.campaign_id</code> = <code>stg__mysql__campaign.id</code></li>
+<li><strong><code>int__proposals__active_agg</code></strong></li>
+<li><strong>Refs</strong>: usa staging/direct SQL sin <code>ref()</code> visible en el parseo.</li>
+<li><strong>Columnas principales</strong>: <code>advertiser_sf_id</code>, <code>is_advertiser_active_today</code>, <code>is_advertiser_pricing_month</code>, <code>min_start_contrato_date</code>, <code>max_start_contrato_nuevo_date</code>, <code>contrato_churn_date</code></li>
+<li><strong><code>int__zoom__advertisers__daily</code></strong></li>
+<li><strong>Refs</strong>: <code>int__advertiser__sf</code>, <code>stg__mysql__autotel_record</code>, <code>stg__mysql__zoom__advertisers__daily</code>, <code>stg__mysql__zoom_autoscout24__advertisers__daily</code></li>
+<li><strong>Columnas principales</strong>: <code>advertiser_sf_id</code>, <code>daily_period</code>, <code>period_int</code>, <code>period_week_int</code>, <code>contracted_ads</code>, <code>section_ac</code>, <code>published_ads</code>, <code>oro_ads</code>, <code>plata_ads</code>, <code>destacados_ads</code>, <code>pepita_ads</code>, <code>avg_no_media</code>, <code>stats_listado</code>, <code>zoom_as_24_sum_list_view</code>, <code>total_leads</code>, <code>visits</code>, <code>zoom_as_24_sum_ads_view</code>, <code>avg_published_ads</code>, <code>total_phone_views</code>, <code>total_calls</code></li>
+<li><strong><code>int__mongo__ads__monthly</code></strong></li>
+<li><strong>Refs</strong>: <code>int__advertiser</code>, <code>int__proposals__active_agg</code></li>
+<li><strong>Columnas principales</strong>: <code>ad_id</code>, <code>period_int</code>, <code>monthly_period</code>, <code>n_contacts</code>, <code>n_searches</code>, <code>n_views</code>, <code>days_active</code>, <code>price</code>, <code>province_id</code>, <code>mean_n_views</code>, <code>stdev_n_views</code>, <code>mean_n_contacts</code>, <code>stdev_n_contacts</code>, <code>mean_n_searches</code>, <code>stdev_n_searches</code>, <code>distinct_ads_count</code></li>
+<li><strong>Joins detectados</strong>: <code>int__advertiser.advertiser_sf_id</code> = <code>int__proposals__active_agg.advertiser_sf_id</code></li>
+<li><strong><code>int__invoicing_advertisers__monthly</code></strong></li>
+<li><strong>Refs</strong>: <code>int__advertiser</code>, <code>int__advertiser__group_info</code>, <code>int__brand_agreements</code>, <code>int__invoices__monthly</code>, <code>int__zoom__advertisers__end_of_month</code></li>
+<li><strong>Columnas principales</strong>: <code>advertiser_sf_id</code>, <code>period_int</code>, <code>has_invoice_info</code>, <code>monthly_total_invoice_isc</code>, <code>price</code>, <code>monthly_total_reference_price_isc</code>, <code>monthly_total_reference_price</code>, <code>distinct_article_count</code></li>
+<li><strong>Joins detectados</strong>: <code>int__advertiser.client_id</code> = <code>int__advertiser__group_info.client_id</code>; <code>int__advertiser.advertiser_sf_id</code> = <code>int__zoom__advertisers__end_of_month.advertiser_sf_id</code>; <code>int__advertiser__group_info.campaign_id</code> = <code>int__brand_agreements.advertiser_group_id</code></li>
+<li><strong><code>int__pricing_advertiser</code></strong></li>
+<li><strong>Refs</strong>: <code>int__advertiser__pricing_excluded_products</code>, <code>int__pricing_query</code>, <code>stg__pricing__advertiser_to_cluster</code>, <code>stg__seed__clusters_names</code></li>
+<li><strong>Columnas principales</strong>: <code>decision</code>, <code>highest</code>, <code>invoice_increase_reason</code>, <code>pricing_exclusion_type</code></li>
+<li><strong>Joins detectados</strong>: <code>stg__pricing__advertiser_to_cluster.cluster_id</code> = <code>stg__seed__clusters_names.cluster_id</code>; <code>None.advertiser_sf_id</code> = <code>int__advertiser__pricing_excluded_products.advertiser_sf_id</code></li>
+</ul>
+<h4 id="inventario-completo-intermediate">Inventario completo intermediate<a class="headerlink" href="#inventario-completo-intermediate" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Modelo intermediate</th>
+<th>Dependencias (<code>ref</code>)</th>
+<th style="text-align: right;">Nº columnas detectadas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int__accounts</code></td>
+<td>stg__sf__accounts</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td><code>int__ad</code></td>
+<td>int__advertiser__sf, stg__mysql__ad, stg__seed__listado_provincias</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td><code>int__ad__estimated_contacts</code></td>
+<td>int__ad, int__ad__quartiles, int__ad_cochesnet, int__ad_wallapop, int__advertiser, int__advertiser__group_info, int__car, int__mongo__ads__monthly, int__proposals__active_agg, stg__seed__advertisers__groups_not_considered, stg__seed__listado_provincias</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td><code>int__ad__quartiles</code></td>
+<td>int__mongo__ads__monthly</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td><code>int__ad_cochesnet</code></td>
+<td>int__brand_map, stg__crawlers__cochesnet</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__ad_cochesnet__traffic</code></td>
+<td>int__ad__estimated_contacts, int__ad__quartiles, int__ad_cochesnet, stg__seed__listado_provincias</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td><code>int__ad_market</code></td>
+<td>stg__crawlers__market</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td><code>int__ad_wallapop</code></td>
+<td>int__brand_map, stg__crawlers__wallapop</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__ad_wallapop__traffic</code></td>
+<td>int__ad__estimated_contacts, int__ad__quartiles, int__ad_wallapop, stg__seed__listado_provincias</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td><code>int__advertiser</code></td>
+<td>stg__mysql__advertiser</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><code>int__advertiser__group_info</code></td>
+<td>stg__mysql__campaign, stg__mysql__client</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>int__advertiser__groups</code></td>
+<td>int__accounts, int__seed__comercial</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>int__advertiser__is_withdrawal</code></td>
+<td>stg__sf__advertiser__withdrawals</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__advertiser__pricing_excluded_products</code></td>
+<td></td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>int__advertiser__sf</code></td>
+<td>stg__mysql__advertiser</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td><code>int__advertiser__total_ads</code></td>
+<td>stg__sf__advertiser__total_ads</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td><code>int__autobiz__ads__prices_info</code></td>
+<td>stg__mysql__autobiz__ads_prices</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td><code>int__brand_agreements</code></td>
+<td>int__date, stg__seed__isc_brand_agreements</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>int__brand_map</code></td>
+<td>brand_mapping, int__car</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td><code>int__car</code></td>
+<td>stg__mysql__brand, stg__mysql__brand__family, stg__mysql__fuel, stg__mysql__product</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td><code>int__car__avg_price</code></td>
+<td>int__advertiser__sf, stg__mysql__ad</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td><code>int__cpc__province_brand</code></td>
+<td>stg__mysql_cpc__keyword_groups, stg__mysql_cpc__monthly_searches_volume</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>int__cpc_brand</code></td>
+<td>int__cpc__province_brand</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td><code>int__cpc_province</code></td>
+<td>int__cpc__province_brand, int__seed__listado_provincias</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>int__date</code></td>
+<td></td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td><code>int__invoices__monthly</code></td>
+<td></td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__invoicing_advertisers__monthly</code></td>
+<td>int__advertiser, int__advertiser__group_info, int__brand_agreements, int__invoices__monthly, int__zoom__advertisers__end_of_month</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td><code>int__mongo__ads__monthly</code></td>
+<td>int__advertiser, int__proposals__active_agg</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td><code>int__pricing_advertiser</code></td>
+<td>int__advertiser__pricing_excluded_products, int__pricing_query, stg__pricing__advertiser_to_cluster, stg__seed__clusters_names</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td><code>int__pricing_query</code></td>
+<td>int__invoicing_advertisers__monthly, int__proposals__active_agg</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__product</code></td>
+<td></td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td><code>int__proposals</code></td>
+<td></td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td><code>int__proposals__active_agg</code></td>
+<td></td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td><code>int__prospects_autobiz</code></td>
+<td>int__accounts, int__ad_cochesnet, int__ad_cochesnet__traffic, int__ad_market, int__ad_wallapop, int__ad_wallapop__traffic, int__advertiser, int__invoicing_advertisers__monthly, int__pricing_advertiser, int__proposals__active_agg, int__zoom__advertisers__end_of_month, stg__seed__listado_provincias, stg__sf__advertiser__withdrawals</td>
+<td style="text-align: right;">39</td>
+</tr>
+<tr>
+<td><code>int__prospects_grouped</code></td>
+<td>int__prospects_autobiz</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td><code>int__prospects_pricing</code></td>
+<td>stg__pricing__prospects_pricing</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td><code>int__prospects_score</code></td>
+<td>int__prospects_grouped</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td><code>int__seed__advertisers__ballenas_flag</code></td>
+<td>stg__seed__advertisers__ballenas_flag</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__seed__comercial</code></td>
+<td>stg__seed__listado_comerciales</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td><code>int__seed__comercials_provinces</code></td>
+<td>stg__seed__comercials_provinces</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><code>int__seed__contact</code></td>
+<td>stg__seed__listado_contact</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td><code>int__seed__list_superusers_commercial</code></td>
+<td>stg__seed__list_superusers__commercial</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__seed__list_superusers_pricing</code></td>
+<td>stg__seed__list_superusers__pricing</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__seed__list_superusers_zoom</code></td>
+<td>stg__seed__list_superusers__zoom</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td><code>int__seed__listado_provincias</code></td>
+<td>stg__seed__listado_provincias</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td><code>int__zoom__advertisers__daily</code></td>
+<td>int__advertiser__sf, stg__mysql__autotel_record, stg__mysql__zoom__advertisers__daily, stg__mysql__zoom_autoscout24__advertisers__daily</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr>
+<td><code>int__zoom__advertisers__end_of_month</code></td>
+<td>int__zoom__advertisers__daily</td>
+<td style="text-align: right;">35</td>
+</tr>
+<tr>
+<td><code>int__zoom__advertisers__end_of_week</code></td>
+<td>int__zoom__advertisers__daily</td>
+<td style="text-align: right;">35</td>
+</tr>
+</tbody>
+</table>
+<h3 id="04_data_mart-22-modelos">04_data_mart (22 modelos)<a class="headerlink" href="#04_data_mart-22-modelos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><code>access_control_list__commercial</code></strong></li>
+<li><strong>PK lógica</strong>: <code>comercial_email</code>, <code>advertiser_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>comercial_email</code> STRING, <code>advertiser_sf_id</code> INT64, <code>is_super_user</code> BOOLEAN</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_proposals</code>, <code>prod__mrt.dim_comercial</code>, <code>prod__stg.stg_seed__list_superusers__commercial</code></li>
+<li><strong><code>access_control_list__pricing</code></strong></li>
+<li><strong>PK lógica</strong>: <code>comercial_email</code>, <code>advertiser_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>comercial_email</code> STRING, <code>advertiser_sf_id</code> INT64, <code>is_super_user</code> BOOLEAN</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_proposals</code>, <code>prod__mrt.dim_comercial</code>, <code>prod__stg.stg_seed__list_superusers__pricing</code></li>
+<li><strong><code>access_control_list__zoom</code></strong></li>
+<li><strong>PK lógica</strong>: <code>comercial_email</code>, <code>advertiser_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>comercial_email</code> STRING, <code>advertiser_sf_id</code> INT64, <code>is_super_user</code> BOOLEAN</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_proposals</code>, <code>prod__mrt.dim_comercial</code>, <code>prod__stg.stg_seed__list_superusers__zoom</code></li>
+<li><strong><code>cpc_brand</code></strong></li>
+<li><strong>PK lógica</strong>: no explícita / agregación o vista.</li>
+<li><strong>Columnas</strong>: <code>brand_name</code> STRING, <code>cpc_brand</code> FLOAT64</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_cpc__province_brand</code></li>
+<li><strong><code>cpc_province</code></strong></li>
+<li><strong>PK lógica</strong>: no explícita / agregación o vista.</li>
+<li><strong>Columnas</strong>: <code>province_id</code> INT64, <code>province_name</code> STRING, <code>cpc_province</code> FLOAT64</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_cpc__province_brand</code>, <code>prod__stg.stg_seed__listado_provincias</code></li>
+<li><strong><code>dim_ad</code></strong></li>
+<li><strong>PK lógica</strong>: <code>ad_id</code></li>
+<li><strong>Columnas</strong>: <code>ad_id</code> INT64, <code>province_id</code> INT64, <code>fecha_publicacion</code> DATETIME, <code>product_id</code> INT64, <code>advertiser_province</code> STRING, <code>ad_province</code> STRING, <code>price</code> INT64, <code>status</code> INT64, <code>descripcion</code> STRING, <code>ad_url</code> STRING, <code>anyo_coche</code> INT64, <code>kilometers</code> INT64, <code>kilometers_range</code> STRING, <code>permanencia_dias_today</code> INT64, <code>created_at</code> DATETIME, <code>deleted_at</code> DATETIME, <code>updated_at</code> DATETIME, <code>num_imagenes</code> INT64, <code>advertiser_sf_id</code> INT64, <code>car_version</code> STRING, <code>has_ficha_tecnica</code> BOOLEAN, <code>brand_name</code> STRING, <code>modelo</code> STRING, <code>fuel_name</code> STRING, <code>modelo_fuel</code> STRING, <code>advertiser_group_id</code> INT64, <code>is_advertiser_active_today</code> BOOLEAN, <code>advertiser_name</code> STRING, <code>advertiser_group_name</code> STRING, <code>b2c_market_value</code> INT64, <code>autobiz_price_particular</code> INT64, <code>time_to_sell</code> INT64, <code>sales_speed</code> STRING, <code>is_autobiz</code> BOOLEAN, <code>price_avg</code> FLOAT64, <code>diff_price_sumauto</code> FLOAT64, <code>created_at_avg</code> DATETIME, <code>diff_price_b2cmarketvalue</code> INT64, <code>calidad_anuncio</code> INT64</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_ads</code>, <code>prod__int.int_car__avg_price</code>, <code>prod__mrt.dim_advertiser</code>, <code>prod__mrt.dim_car</code>, <code>prod__stg.stg_mysql_autobiz__ads__prices_info</code>, <code>prod__stg.stg_seed__listado_provincias</code></li>
+<li><strong><code>dim_advertiser</code></strong></li>
+<li><strong>PK lógica</strong>: <code>advertiser_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_sf_id</code> INT64, <code>advertiser_name</code> STRING, <code>client_id</code> INT64, <code>province_id</code> INT64, <code>updated_at</code> DATETIME, <code>is_delivery</code> BOOLEAN, <code>is_autobiz</code> BOOLEAN, <code>advertiser_slug</code> STRING, <code>advertiser_province</code> STRING, <code>advertiser_group_name</code> STRING, <code>advertiser_group_id</code> INT64, <code>is_advertiser_active_today</code> BOOLEAN, <code>is_advertiser_pricing_month</code> BOOLEAN, <code>min_start_contrato_date</code> DATE, <code>max_start_contrato_nuevo_date</code> DATE, <code>contrato_churn_date</code> DATE, <code>is_ballena</code> BOOLEAN, <code>is_acuerdo_marca</code> BOOLEAN, <code>total_ads</code> INT64, <code>sector_anunciante</code> STRING, <code>actual_contracted_ads</code> INT64, <code>actual_unpublished_ads</code> INT64, <code>actual_published_ads</code> INT64, <code>actual_deleted_ads</code> INT64, <code>is_vn</code> BOOLEAN</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_ads</code>, <code>prod__int.int_advertisers</code>, <code>prod__int.int_brand_agreements</code>, <code>prod__int.int_proposals</code>, <code>prod__int.int_zoom__advertisers__daily</code>, <code>prod__stg.stg_mysql__advertiser_groups</code>, <code>prod__stg.stg_mysql__advertisers__group_info</code>, <code>prod__stg.stg_seed__advertisers__ballenas_flag</code>, <code>prod__stg.stg_seed__listado_provincias</code>, <code>prod__stg.stg_sf__advertiser__total_ads</code></li>
+<li><strong><code>dim_car</code></strong></li>
+<li><strong>PK lógica</strong>: <code>product_id</code></li>
+<li><strong>Columnas</strong>: <code>product_id</code> INT64, <code>car_version</code> STRING, <code>has_ficha_tecnica</code> BOOLEAN, <code>brand_id</code> INT64, <code>brand_name</code> STRING, <code>modelo</code> STRING, <code>fuel_id</code> INT64, <code>fuel_name</code> STRING, <code>modelo_fuel</code> STRING</li>
+<li><strong>Dependencias</strong>: <code>prod__stg.stg_mysql__brand__families</code>, <code>prod__stg.stg_mysql__brands</code>, <code>prod__stg.stg_mysql__cars</code>, <code>prod__stg.stg_mysql__fuels</code></li>
+<li><strong><code>dim_comercial</code></strong></li>
+<li><strong>PK lógica</strong>: <code>comercial_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>comercial_sf_id</code> STRING, <code>comercial_username</code> STRING, <code>comercial_email</code> STRING, <code>comercial_des</code> STRING</li>
+<li><strong>Dependencias</strong>: <code>prod__stg.stg_seed__listado_comerciales</code></li>
+<li><strong><code>dim_contact</code></strong></li>
+<li><strong>PK lógica</strong>: <code>contact_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>contact_sf_id</code> STRING, <code>contact_username</code> STRING, <code>contact_email</code> STRING, <code>contact_des</code> STRING, <code>contact_index</code> INT64, <code>total_contacts</code> INT64</li>
+<li><strong>Dependencias</strong>: <code>prod__stg.stg_seed__listado_contact</code></li>
+<li><strong><code>dim_date</code></strong></li>
+<li><strong>PK lógica</strong>: <code>period_int</code></li>
+<li><strong>Columnas</strong>: <code>period_int</code> INT64, <code>year</code> INT64, <code>month</code> INT64, <code>period_first_day</code> DATE, <code>period_last_day</code> DATE</li>
+<li><strong><code>dim_sf</code></strong></li>
+<li><strong>PK lógica</strong>: <code>advertiser_id</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_id</code> INT64, <code>advertiser_sf_id</code> INT64</li>
+<li><strong>Dependencias</strong>: <code>prod__stg.stg_mysql__advertisers</code></li>
+<li><strong><code>fct_acc_snapshot_nexus</code></strong></li>
+<li><strong>Clave</strong>: vista derivada de <code>fct_monthly_snapshot_advertiser</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_sf_id</code>, <code>period_int</code>, <code>monthly_period</code>, <code>monthly_total_invoice_isc</code>, <code>monthly_total_invoice</code>, <code>monthly_total_invoice_estimated</code>, <code>distinct_article_count</code>, <code>advertiser_name</code>, <code>client_id</code>, <code>province_id</code>, <code>advertiser_province</code>, <code>advertiser_group_name</code>, <code>is_advertiser_active_today</code>, <code>min_start_contrato_date</code>, <code>max_start_contrato_nuevo_date</code></li>
+<li><strong>Dependencias</strong>: <code>prod__mrt.fct_acc_snapshot_nexus</code>, <code>prod__mrt.fct_monthly_snapshot_advertiser</code></li>
+<li><strong><code>fct_acc_snapshot_product</code></strong></li>
+<li><strong>PK lógica</strong>: no explícita / agregación o vista.</li>
+<li><strong>Columnas</strong>: <code>advertiser_sf_id</code> INT64, <code>propuesta_id</code> INT64, <code>start_contrato_date</code> DATE, <code>end_contrato_date</code> DATE, <code>tipo_propuesta</code> STRING, <code>grupo_tipo_propuesta</code> STRING, <code>product_des</code> STRING, <code>quantity</code> FLOAT64, <code>product_sf_id</code> STRING, <code>advertiser_name</code> STRING, <code>client_id</code> INT64, <code>province_id</code> INT64, <code>advertiser_province</code> STRING, <code>advertiser_group_name</code> STRING, <code>is_advertiser_active_today</code> BOOLEAN, <code>advertiser_group_id</code> INT64</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_products</code>, <code>prod__mrt.dim_advertiser</code></li>
+<li><strong><code>fct_monthly_snapshot_ad</code></strong></li>
+<li><strong>PK lógica</strong>: <code>ad_id</code>, <code>period_int</code></li>
+<li><strong>Columnas</strong>: <code>ad_id</code> INT64, <code>province_id</code> INT64, <code>fecha_publicacion</code> DATETIME, <code>product_id</code> INT64, <code>advertiser_province</code> STRING, <code>ad_province</code> STRING, <code>price</code> INT64, <code>status</code> INT64, <code>descripcion</code> STRING, <code>ad_url</code> STRING, <code>anyo_coche</code> INT64, <code>kilometers</code> INT64, <code>kilometers_range</code> STRING, <code>permanencia_dias_today</code> INT64, <code>created_at</code> DATETIME, <code>deleted_at</code> DATETIME, <code>updated_at</code> DATETIME, <code>num_imagenes</code> INT64, <code>advertiser_sf_id</code> INT64, <code>car_version</code> STRING, <code>has_ficha_tecnica</code> BOOLEAN, <code>brand_name</code> STRING, <code>modelo</code> STRING, <code>fuel_name</code> STRING, <code>modelo_fuel</code> STRING, <code>advertiser_group_id</code> INT64, <code>is_advertiser_active_today</code> BOOLEAN, <code>advertiser_name</code> STRING, <code>advertiser_group_name</code> STRING, <code>b2c_market_value</code> INT64, <code>autobiz_price_particular</code> INT64, <code>time_to_sell</code> INT64, <code>sales_speed</code> STRING, <code>is_autobiz</code> BOOLEAN, <code>price_avg</code> FLOAT64, <code>diff_price_sumauto</code> FLOAT64, <code>created_at_avg</code> DATETIME, <code>diff_price_b2cmarketvalue</code> INT64, <code>calidad_anuncio</code> INT64, <code>period_int</code> INT64, <code>n_contacts</code> INT64, <code>n_searches</code> INT64, <code>n_views</code> INT64, <code>days_active</code> INT64, <code>mean_n_contacts</code> FLOAT64, <code>stdev_n_contacts</code> FLOAT64, <code>mean_n_searches</code> FLOAT64, <code>stdev_n_searches</code> FLOAT64, <code>mean_n_views</code> FLOAT64, <code>stdev_n_views</code> FLOAT64, <code>distinct_ads_count</code> INT64, <code>monthly_period</code> DATE</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_mongo__ads__monthly</code>, <code>prod__mrt.dim_ad</code></li>
+<li><strong><code>fct_monthly_snapshot_advertiser</code></strong></li>
+<li><strong>PK lógica</strong>: <code>advertiser_sf_id</code>, <code>period_int</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_name</code> STRING, <code>client_id</code> INT64, <code>advertiser_sf_id</code> INT64, <code>province_id</code> INT64, <code>advertiser_province</code> STRING, <code>advertiser_group_name</code> STRING, <code>advertiser_group_id</code> INT64, <code>is_advertiser_active_today</code> BOOLEAN, <code>is_ballena</code> BOOLEAN, <code>comercial_sf_id</code> STRING, <code>comercial_name</code> STRING, <code>max_start_contrato_nuevo_date</code> DATE, <code>min_start_contrato_date</code> DATE, <code>monthly_published_ads</code> INT64, <code>monthly_unique_published_ads</code> INT64, <code>monthly_contracted_ads</code> INT64, <code>daily_avg_published_ads</code> FLOAT64, <code>daily_avg_no_media</code> FLOAT64, <code>monthly_total_leads</code> INT64, <code>monthly_visits</code> INT64, <code>monthly_section_ac</code> STRING, <code>monthly_oro_ads</code> INT64, <code>monthly_plata_ads</code> INT64, <code>monthly_destacados_ads</code> INT64, <code>monthly_pepitas_ads</code> INT64, <code>monthly_total_stats_listado</code> INT64, <code>monthly_total_phone_views</code> INT64, <code>monthly_total_calls</code> INT64, <code>monthly_total_emails</code> INT64, <code>monthly_total_invoice_isc</code> FLOAT64, <code>monthly_total_invoice</code> FLOAT64, <code>monthly_total_invoice_estimated</code> FLOAT64, <code>monthly_total_invoice_isc_performance</code> FLOAT64, <code>monthly_total_reference_price_isc</code> FLOAT64, <code>monthly_total_reference_price</code> FLOAT64, <code>distinct_article_count</code> INT64, <code>monthly_cpl</code> FLOAT64, <code>return_per_lead_total_comercial</code> INT64, <code>return_per_lead_unique_comercial</code> INT64, <code>return_per_lead_total_business</code> INT64, <code>return_per_lead_unique_business</code> INT64, <code>monthly_unique_calls</code> INT64, <code>monthly_unique_emails</code> INT64, <code>monthly_unique_leads</code> INT64, <code>monthly_unique_cpl</code> FLOAT64, <code>monthly_last_access</code> DATETIME, <code>monthly_package_name</code> STRING, <code>monthly_has_multiprovince</code> BOOLEAN, <code>monthly_has_autotel</code> BOOLEAN, <code>period_int</code> INT64, <code>monthly_total_return_comercial</code> INT64, <code>monthly_total_roi_comercial</code> FLOAT64, <code>monthly_unique_return_comercial</code> INT64, <code>monthly_unique_roi_comercial</code> FLOAT64, <code>monthly_total_return_business</code> INT64, <code>monthly_total_roi_business</code> FLOAT64, <code>monthly_unique_return_business</code> INT64, <code>monthly_unique_roi_business</code> FLOAT64, <code>monthly_total_score_comercial</code> STRING, <code>monthly_total_score_business</code> STRING, <code>monthly_period</code> DATE</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_invoicing_advertisers__monthly</code>, <code>prod__int.int_proposals</code>, <code>prod__int.int_zoom__advertisers__end_of_month</code>, <code>prod__mrt.dim_advertiser</code>, <code>prod__mrt.dim_comercial</code></li>
+<li><strong><code>fct_monthly_snapshot_advertiser_union</code></strong></li>
+<li><strong>Clave</strong>: vista <code>UNION ALL</code> sobre <code>fct_monthly_snapshot_advertiser</code> + columna <code>vision</code></li>
+<li><strong>Columnas</strong>: mismas métricas base de <code>fct_monthly_snapshot_advertiser</code> para dos visiones (<code>Comercial</code>, <code>Negocio</code>) con columnas de retorno, ROI, score y <code>vision</code></li>
+<li><strong>Dependencias</strong>: <code>prod__mrt.fct_monthly_snapshot_advertiser</code>, <code>prod__mrt.fct_monthly_snapshot_advertiser_union</code></li>
+<li><strong><code>fct_monthly_snapshot_agg_all_advertisers_sin_ballenas</code></strong></li>
+<li><strong>PK lógica</strong>: <code>period_int</code></li>
+<li><strong>Columnas</strong>: <code>period_int</code> INT64, <code>monthly_period</code> DATE, <code>monthly_contracted_ads</code> INT64, <code>monthly_published_ads</code> INT64, <code>daily_avg_published_ads</code> FLOAT64, <code>monthly_total_leads</code> INT64, <code>monthly_unique_leads</code> INT64, <code>monthly_total_invoice_isc</code> FLOAT64, <code>monthly_visits</code> INT64</li>
+<li><strong>Dependencias</strong>: <code>prod__mrt.fct_monthly_snapshot_agg_all_advertisers_sin_ballenas_provincias</code></li>
+<li><strong><code>fct_monthly_snapshot_agg_all_advertisers_sin_ballenas_provincias</code></strong></li>
+<li><strong>PK lógica</strong>: <code>period_int</code>, <code>province_id</code></li>
+<li><strong>Columnas</strong>: <code>period_int</code> INT64, <code>province_id</code> INT64, <code>monthly_period</code> DATE, <code>province_name</code> STRING, <code>monthly_contracted_ads</code> INT64, <code>monthly_published_ads</code> INT64, <code>daily_avg_published_ads</code> FLOAT64, <code>monthly_total_leads</code> INT64, <code>monthly_unique_leads</code> INT64, <code>monthly_visits</code> INT64, <code>monthly_total_invoice_isc</code> FLOAT64</li>
+<li><strong>Dependencias</strong>: <code>prod__mrt.fct_monthly_snapshot_advertiser</code>, <code>prod__stg.stg_seed__listado_provincias</code></li>
+<li><strong><code>pricing_advertiser</code></strong></li>
+<li><strong>PK lógica</strong>: <code>advertiser_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_sf_id</code> INT64, <code>advertiser_name</code> STRING, <code>advertiser_group_id</code> INT64, <code>advertiser_group_name</code> STRING, <code>province_id</code> INT64, <code>advertiser_province</code> STRING, <code>is_ballena</code> BOOLEAN, <code>is_acuerdo_marca</code> BOOLEAN, <code>is_baja</code> BOOLEAN, <code>is_in_group</code> BOOLEAN, <code>is_vn</code> BOOLEAN, <code>cpc_province</code> FLOAT64, <code>is_advertiser_pricing_month</code> BOOLEAN, <code>last_renewal_date</code> DATE, <code>max_start_contrato_nuevo_date</code> DATE, <code>min_start_contrato_date</code> DATE, <code>seniority_days</code> INT64, <code>contrato_churn_date</code> DATE, <code>current_year_avg_monthly_published_ads</code> FLOAT64, <code>last_month_monthly_total_leads</code> INT64, <code>current_year_avg_monthly_total_leads</code> FLOAT64, <code>last_month_monthly_visits</code> INT64, <code>current_year_avg_monthly_visits</code> FLOAT64, <code>last_month_monthly_contracted_ads</code> INT64, <code>current_year_avg_monthly_contracted_ads</code> FLOAT64, <code>last_month_monthly_total_invoice_isc</code> FLOAT64, <code>current_year_avg_monthly_total_invoice_isc</code> FLOAT64, <code>last_month_monthly_total_invoice</code> FLOAT64, <code>current_year_avg_monthly_total_invoice</code> FLOAT64, <code>last_month_monthly_total_reference_price_isc</code> FLOAT64, <code>current_year_avg_monthly_total_reference_price_isc</code> FLOAT64, <code>last_month_monthly_total_reference_price</code> FLOAT64, <code>current_year_avg_monthly_total_reference_price</code> FLOAT64, <code>last_month_total_distinct_ads</code> INT64, <code>current_year_avg_total_distinct_ads</code> FLOAT64, <code>current_year_total_distinct_ads</code> INT64, <code>last_month_avg_ad_price</code> FLOAT64, <code>current_year_avg_ad_price</code> FLOAT64, <code>last_month_has_active_proposal</code> BOOLEAN, <code>current_year_n_months_active</code> INT64, <code>last_month_inorganic_cost</code> FLOAT64, <code>current_year_avg_inorganic_cost</code> FLOAT64, <code>current_year_cpl</code> FLOAT64, <code>last_month_cpl</code> FLOAT64, <code>current_year_cpl_total</code> FLOAT64, <code>last_month_cpl_total</code> FLOAT64, <code>current_year_coverage</code> FLOAT64, <code>last_month_coverage</code> FLOAT64, <code>current_year_total_discount</code> FLOAT64, <code>last_month_total_discount</code> FLOAT64, <code>current_year_total_discount_isc</code> FLOAT64, <code>last_month_total_discount_isc</code> FLOAT64, <code>last_month_cpl_total_normalized</code> FLOAT64, <code>current_year_cpl_total_normalized</code> FLOAT64, <code>current_year_rentability</code> FLOAT64, <code>last_month_rentability</code> FLOAT64, <code>ideal_cpl</code> FLOAT64, <code>ideal_cpl_total</code> FLOAT64, <code>cluster_id</code> INT64, <code>cluster_name</code> STRING, <code>churn_prob</code> FLOAT64, <code>invoice_increase</code> FLOAT64, <code>invoice_increase_for_ideal_cpl</code> FLOAT64, <code>invoice_increase_for_ideal_cpl_total</code> FLOAT64, <code>invoice_increase_for_rentability</code> FLOAT64, <code>invoice_increase_reason</code> STRING, <code>is_churn</code> BOOLEAN, <code>pricing_exclusion_type</code> STRING</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_advertisers__pricing_excluded_product</code>, <code>prod__mrt.query_pricing</code>, <code>prod__stg.stg_advertiser_to_cluster</code>, <code>prod__stg.stg_seed__clusters_names</code></li>
+<li><strong><code>pricing_cluster</code></strong></li>
+<li><strong>PK lógica</strong>: <code>cluster_id</code></li>
+<li><strong>Columnas</strong>: <code>cluster_id</code> INT64, <code>cluster_name</code> STRING, <code>advertiser_count</code> INT64, <code>avg_current_year_avg_monthly_published_ads</code> FLOAT64, <code>avg_current_year_avg_monthly_total_invoice</code> FLOAT64, <code>avg_current_year_avg_monthly_total_leads</code> FLOAT64, <code>avg_current_year_coverage</code> FLOAT64, <code>avg_current_year_cpl</code> FLOAT64, <code>avg_current_year_cpl_total</code> FLOAT64, <code>avg_current_year_rentability</code> FLOAT64, <code>avg_invoice_increase</code> FLOAT64, <code>avg_seniority_days</code> FLOAT64, <code>median_current_year_avg_monthly_published_ads</code> FLOAT64, <code>median_current_year_avg_monthly_total_invoice</code> FLOAT64, <code>median_current_year_avg_monthly_total_leads</code> FLOAT64, <code>median_current_year_cpl</code> FLOAT64, <code>median_current_year_cpl_total</code> FLOAT64, <code>percentage_invoice_increase</code> FLOAT64, <code>percentage_is_baja</code> FLOAT64, <code>percentage_is_ballena</code> FLOAT64, <code>percentage_is_in_group</code> FLOAT64, <code>percentage_is_vn</code> FLOAT64, <code>ideal_cpl</code> FLOAT64, <code>ideal_cpl_total</code> FLOAT64</li>
+<li><strong>Dependencias</strong>: <code>prod__mrt.pricing_advertiser</code></li>
+<li><strong><code>query_pricing</code></strong></li>
+<li><strong>PK lógica</strong>: <code>advertiser_sf_id</code></li>
+<li><strong>Columnas</strong>: <code>advertiser_sf_id</code> INT64, <code>advertiser_name</code> STRING, <code>advertiser_group_id</code> INT64, <code>advertiser_group_name</code> STRING, <code>province_id</code> INT64, <code>advertiser_province</code> STRING, <code>is_ballena</code> BOOLEAN, <code>is_acuerdo_marca</code> BOOLEAN, <code>is_baja</code> BOOLEAN, <code>is_in_group</code> BOOLEAN, <code>is_vn</code> BOOLEAN, <code>cpc_province</code> FLOAT64, <code>is_advertiser_pricing_month</code> BOOLEAN, <code>last_renewal_date</code> DATE, <code>max_start_contrato_nuevo_date</code> DATE, <code>min_start_contrato_date</code> DATE, <code>seniority_days</code> INT64, <code>contrato_churn_date</code> DATE, <code>last_month_monthly_contracted_ads</code> INT64, <code>current_year_avg_monthly_contracted_ads</code> FLOAT64, <code>prev_year_avg_monthly_contracted_ads</code> FLOAT64, <code>last_month_monthly_published_ads</code> INT64, <code>current_year_avg_monthly_published_ads</code> FLOAT64, <code>prev_year_avg_monthly_published_ads</code> FLOAT64, <code>last_month_monthly_total_leads</code> INT64, <code>current_year_avg_monthly_total_leads</code> FLOAT64, <code>prev_year_avg_monthly_total_leads</code> FLOAT64, <code>last_month_monthly_total_calls</code> INT64, <code>current_year_avg_monthly_total_calls</code> FLOAT64, <code>prev_year_avg_monthly_total_calls</code> FLOAT64, <code>last_month_monthly_visits</code> INT64, <code>current_year_avg_monthly_visits</code> FLOAT64, <code>prev_year_avg_monthly_visits</code> FLOAT64, <code>last_month_monthly_total_invoice_isc</code> FLOAT64, <code>current_year_avg_monthly_total_invoice_isc</code> FLOAT64, <code>prev_year_avg_monthly_total_invoice_isc</code> FLOAT64, <code>last_month_monthly_total_invoice</code> FLOAT64, <code>current_year_avg_monthly_total_invoice</code> FLOAT64, <code>prev_year_avg_monthly_total_invoice</code> FLOAT64, <code>last_month_monthly_total_reference_price_isc</code> FLOAT64, <code>current_year_avg_monthly_total_reference_price_isc</code> FLOAT64, <code>prev_year_avg_monthly_total_reference_price_isc</code> FLOAT64, <code>last_month_monthly_total_reference_price</code> FLOAT64, <code>current_year_avg_monthly_total_reference_price</code> FLOAT64, <code>prev_year_avg_monthly_total_reference_price</code> FLOAT64, <code>last_month_total_distinct_ads</code> INT64, <code>current_year_avg_total_distinct_ads</code> FLOAT64, <code>prev_year_avg_total_distinct_ads</code> FLOAT64, <code>current_year_total_distinct_ads</code> INT64, <code>last_month_avg_ad_price</code> FLOAT64, <code>current_year_avg_ad_price</code> FLOAT64, <code>prev_year_total_distinct_ads</code> INT64, <code>prev_year_avg_ad_price</code> FLOAT64, <code>last_month_has_active_proposal</code> BOOLEAN, <code>current_year_n_months_active</code> INT64, <code>prev_year_n_months_active</code> INT64, <code>has_not_null_last_month_monthly_contracted_ads</code> BOOLEAN, <code>has_not_null_last_month_monthly_published_ads</code> BOOLEAN, <code>has_not_null_last_month_monthly_total_calls</code> BOOLEAN, <code>has_not_null_last_month_monthly_total_invoice</code> BOOLEAN, <code>has_not_null_last_month_monthly_total_invoice_isc</code> BOOLEAN, <code>has_not_null_last_month_monthly_total_leads</code> BOOLEAN, <code>has_not_null_last_month_monthly_total_reference_price_isc</code> BOOLEAN, <code>has_not_null_last_month_monthly_total_reference_price</code> BOOLEAN, <code>has_not_null_last_month_monthly_visits</code> BOOLEAN, <code>current_year_sum_monthly_published_ads</code> INT64, <code>current_year_sum_monthly_total_leads</code> INT64, <code>current_year_sum_monthly_total_invoice</code> FLOAT64, <code>has_contracted_ads_last_month</code> BOOLEAN, <code>is_pricing</code> BOOLEAN</li>
+<li><strong>Dependencias</strong>: <code>prod__int.int_advertisers_is_withdrawal</code>, <code>prod__mrt.cpc_province</code>, <code>prod__mrt.dim_ad</code>, <code>prod__mrt.dim_advertiser</code>, <code>prod__mrt.fct_acc_snapshot_product</code>, <code>prod__mrt.fct_monthly_snapshot_ad</code>, <code>prod__mrt.fct_monthly_snapshot_advertiser</code>, <code>prod__stg.stg_seed__advertisers__groups_not_considered</code></li>
+</ul>
+<p><strong>Observaciones del data mart</strong>
+- El núcleo del caso Sumauto/Clasificados está en <code>dim_advertiser</code>, <code>dim_ad</code>, <code>dim_car</code>, <code>dim_comercial</code>, <code>dim_contact</code>, <code>dim_date</code>, <code>dim_sf</code> y los facts <code>fct_monthly_snapshot_advertiser</code> / <code>fct_monthly_snapshot_ad</code>.
+- <code>pricing_advertiser</code>, <code>pricing_cluster</code> y <code>query_pricing</code> forman un submodelo específico de pricing/churn/clusterización.
+- <code>access_control_list__*</code> publican listas de acceso por comercial y anunciante para vistas de consumo controlado.</p>
+<h3 id="otros-sqlx-de-casos-de-uso-eedd-ruta-5-documentacion-espacio-datos">Otros SQLX de casos de uso EEDD (ruta 5. Documentación Espacio Datos)<a class="headerlink" href="#otros-sqlx-de-casos-de-uso-eedd-ruta-5-documentacion-espacio-datos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Modelo SQLX</th>
+<th>Dominio</th>
+<th>Descripción resumida</th>
+<th>Dependencias</th>
+<th>Columnas / resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cu_eedd_clasificados_cookies</code></td>
+<td>Clasificados</td>
+<td>Tabla intermedia Gold del DP-2 Clasificados. Normaliza identificadores de navegación de Automóviles de Ocasión y Renting, incorpora marca, segmento, combustible, tipo de interés y…</td>
+<td></td>
+<td>date, v_marca, v_segmento, v_combustible, v_interes, v_es_lead, id</td>
+</tr>
+<tr>
+<td><code>cu_eedd_clasificados_intereses_agregados_por_horizonte</code></td>
+<td>Clasificados</td>
+<td>Tabla Gold final del DP-2 Clasificados. Agrega visitantes únicos anónimos por marca, segmento de carrocería, combustible, condición de lead y ventanas temporales de 15, 30, 60 y 9…</td>
+<td>cu_eedd_clasificados_cookies</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cu_eedd_clasificados_ref_combustibles</code></td>
+<td>Clasificados</td>
+<td>Catálogo dinámico de combustibles del DP-2 Clasificados. Incluye combustibles con más de 2.000 visitantes únicos durante el mes natural anterior y los valores técnicos 'otros' e '…</td>
+<td></td>
+<td>combustible_id, display_name, cantidad, is_active</td>
+</tr>
+<tr>
+<td><code>cu_eedd_clasificados_ref_marcas</code></td>
+<td>Clasificados</td>
+<td>Catálogo dinámico de marcas del DP-2 Clasificados. Incluye marcas con más de 2.000 visitantes únicos durante el mes natural anterior y los valores técnicos 'otros' e 'indiferente'.</td>
+<td></td>
+<td>marca_id, display_name, cantidad, is_active</td>
+</tr>
+<tr>
+<td><code>cu_eedd_clasificados_ref_segmentos_carroceria</code></td>
+<td>Clasificados</td>
+<td>Catálogo dinámico de segmentos de carrocería del DP-2 Clasificados. Incluye segmentos con más de 2.000 visitantes únicos durante el mes natural anterior y los valores técnicos 'ot…</td>
+<td></td>
+<td>segmento_id, display_name, cantidad, is_active</td>
+</tr>
+<tr>
+<td><code>ref_eedd_catalogo_dcat</code></td>
+<td>Governance / catálogo</td>
+<td>Tabla unificada de catálogo federado del EEDD conforme a DCAT-AP-ES v1.0.0 (NTI-RISP). Una fila por recurso RDF publicado, con entity para distinguir dataset y distribution y un c…</td>
+<td></td>
+<td>dp_id, dp_status, entity, uri, dcat_distribution, dct_identifier, dct_title, dct_description, dct_publisher_uri, dct_publisher_name, dct_publisher_identifier, dcat_theme</td>
+</tr>
+<tr>
+<td><code>cu_eedd_propuestas_comerciales_egm_base</code></td>
+<td>Propuestas comerciales</td>
+<td>Tabla intermedia Gold del DP-3 Propuestas comerciales. Enriquece la tabla de hechos EGM con las dimensiones de ola y soporte para disponer de una base EGM completa antes de cruzar…</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cu_eedd_propuestas_comerciales_egm_galileo</code></td>
+<td>Propuestas comerciales</td>
+<td>Tabla intermedia Gold del DP-3 Propuestas comerciales. Filtra soportes Vocento, normaliza comunidades autónomas y añade la correspondencia entre soportes EGM/Galileo y marca GFK.</td>
+<td>cu_eedd_propuestas_comerciales_egm_base</td>
+<td>comunidad_autonoma, gfk_dam, galileo, vocento</td>
+</tr>
+<tr>
+<td><code>cu_eedd_propuestas_comerciales_egm_gfk</code></td>
+<td>Propuestas comerciales</td>
+<td>Tabla Gold final del DP-3 Propuestas comerciales. Publica los datos GFK por comunidad autónoma filtrados al perímetro de marcas Vocento definido en la versión v5 del SQL original.</td>
+<td></td>
+<td>load_date</td>
+</tr>
+<tr>
+<td><code>cu_eedd_propuestas_comerciales_egm_mensual</code></td>
+<td>Propuestas comerciales</td>
+<td>Tabla intermedia Gold deshabilitada desde la versión v5 del SQL original. La v5 elimina la mensualización EGM y el cruce EGM/GFK, y publica GFK filtrado a marcas Vocento.</td>
+<td>cu_eedd_propuestas_comerciales_egm_galileo</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cu_eedd_publicidad_digital</code></td>
+<td>Publicidad</td>
+<td>Tabla Gold de audiencias anónimas de publicidad digital. Recuentos de visitantes únicos por segmento de interés (taxonomía IAB Content Taxonomy) y ventana temporal (1, 7, 15 y 30 …</td>
+<td></td>
+<td>segmento, last_1, last_7, last_15, last_30</td>
+</tr>
+<tr>
+<td><code>cu_eedd_publicidad_ref_segmentos_iab</code></td>
+<td>Publicidad</td>
+<td>Catálogo maestro de segmentos IAB Content Taxonomy. Fuente de verdad para assertions, DataScan y Aspect Types.</td>
+<td></td>
+<td>segment_id, display_name, iab_category, is_active</td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_mdl_kmeans_global</code></td>
+<td>Suscripciones</td>
+<td>Modelo BigQuery ML K-means del DP-4 Suscripciones digitales. Segmenta secciones editoriales según señales agregadas de atención, alcance y consumo de suscriptores.</td>
+<td>cu_eedd_suscripciones_secciones_global</td>
+<td></td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_ref_secciones</code></td>
+<td>Suscripciones</td>
+<td>Tabla de referencia del DP-4 Suscripciones digitales. Normaliza los canales editoriales de navegación WEB y APP en secciones temáticas agregadas para analizar consumo de suscripto…</td>
+<td></td>
+<td>post_channel, seccion, is_active</td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_resumen_clusters</code></td>
+<td>Suscripciones</td>
+<td>Tabla Gold de resumen del DP-4 Suscripciones digitales. Describe cada cluster de secciones editoriales mediante medias, desviaciones, score estratégico, etiqueta funcional y lista…</td>
+<td>cu_eedd_suscripciones_mdl_kmeans_global, cu_eedd_suscripciones_secciones_global</td>
+<td>cluster_asignado, total_secciones, avg_tiempo_seg, std_tiempo_seg, avg_alcance_pct, std_alcance_pct, avg_consumo_pct, std_consumo_pct, score_producto, secciones_incluidas, posicion_cluster, etiqueta_cluster</td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_secciones_clusterizadas</code></td>
+<td>Suscripciones</td>
+<td>Tabla Gold final del DP-4 Suscripciones digitales. Publica métricas mensuales agregadas por sección editorial e incorpora el cluster K-means asignado a cada sección según su perfi…</td>
+<td>cu_eedd_suscripciones_mdl_kmeans_global, cu_eedd_suscripciones_secciones_global, cu_eedd_suscripciones_secciones_metricas</td>
+<td>anio_mes, seccion, avg_tiempo_por_pagina_seg, alcance_seccion_pct, ratio_consumo_pct, cluster_asignado, load_date</td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_secciones_global</code></td>
+<td>Suscripciones</td>
+<td>Tabla Gold agregada del DP-4 Suscripciones digitales. Resume por sección editorial las medias de atención, alcance y consumo usadas como variables de entrada del modelo K-means.</td>
+<td>cu_eedd_suscripciones_secciones_metricas</td>
+<td>seccion, avg_tiempo_por_pagina_seg_mean, alcance_seccion_pct_mean, ratio_consumo_pct_mean, load_date</td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_secciones_metricas</code></td>
+<td>Suscripciones</td>
+<td>Tabla Gold del DP-4 Suscripciones digitales. Une las métricas mensuales de alcance, consumo y atención lectora por sección editorial para análisis agregado de engagement de suscri…</td>
+<td>cu_eedd_suscripciones_secciones_people_pageviews, cu_eedd_suscripciones_secciones_tiempos</td>
+<td>anio_mes, seccion, avg_tiempo_por_pagina_seg, alcance_seccion_pct, ratio_consumo_pct, load_date</td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_secciones_people_pageviews</code></td>
+<td>Suscripciones</td>
+<td>Tabla Gold intermedia del DP-4 Suscripciones digitales. Calcula, por mes y sección editorial, el alcance de usuarios suscriptores identificados y el peso relativo de consumo sobre…</td>
+<td>cu_eedd_suscripciones_ref_secciones</td>
+<td>anio_mes, seccion, alcance_seccion_pct, ratio_consumo_pct, load_date</td>
+</tr>
+<tr>
+<td><code>cu_eedd_suscripciones_secciones_tiempos</code></td>
+<td>Suscripciones</td>
+<td>Tabla Gold intermedia del DP-4 Suscripciones digitales. Calcula señales agregadas de atención lectora de suscriptores por mes y sección editorial a partir de la secuencia de pagev…</td>
+<td>cu_eedd_suscripciones_ref_secciones</td>
+<td>anio_mes, seccion, avg_tiempo_por_pagina_seg, load_date</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>erDiagram
+  LANDING_ADVERTISER {
+    INT64 advertiser_id PK
+    INT64 client_id
+    INT64 province_id
+    STRING advertiser_name
+    INT64 salesforce_id
+  }
+  STG_MYSQL_ADVERTISERS {
+    INT64 advertiser_id PK
+    INT64 advertiser_sf_id
+    INT64 client_id
+    INT64 province_id
+    STRING advertiser_name
+  }
+  STG_MYSQL_ADS {
+    INT64 ad_id PK
+    INT64 advertiser_id FK
+    INT64 product_id FK
+    INT64 province_id FK
+  }
+  STG_SF_ACCOUNTS {
+    INT64 advertiser_sf_id PK
+    STRING comercial_sf_id FK
+  }
+  STG_SF_PROPOSALS {
+    INT64 propuesta_id PK
+    INT64 advertiser_sf_id FK
+    DATE start_contrato_date
+    STRING tipo_propuesta
+  }
+  STG_SF_PROPOSAL_PRODUCTS {
+    INT64 propuesta_id FK
+    STRING product_sf_id PK
+    FLOAT64 quantity
+  }
+  STG_MYSQL_PRODUCTS {
+    INT64 product_id PK
+    INT64 brand_id FK
+    INT64 fuel_id FK
+  }
+  STG_MYSQL_BRANDS {
+    INT64 brand_id PK
+    STRING brand_name
+  }
+  STG_MYSQL_FUELS {
+    INT64 fuel_id PK
+    STRING fuel_name
+  }
+  STG_SEED_PROVINCES {
+    INT64 province_id PK
+    STRING province_name
+  }
+  INT_ADVERTISER {
+    INT64 advertiser_id PK
+    INT64 advertiser_sf_id
+    INT64 client_id
+    INT64 province_id
+  }
+  INT_ACCOUNTS {
+    INT64 advertiser_sf_id PK
+    STRING comercial_sf_id FK
+    INT64 autobiz_id
+  }
+  INT_PROPOSALS {
+    INT64 propuesta_id PK
+    INT64 advertiser_sf_id FK
+    STRING grupo_tipo_propuesta
+  }
+  INT_PRODUCT {
+    INT64 propuesta_id FK
+    STRING product_sf_id PK
+    INT64 advertiser_sf_id FK
+  }
+  INT_CAR {
+    INT64 product_id PK
+    INT64 brand_id FK
+    INT64 fuel_id FK
+    STRING modelo
+  }
+  INT_AD {
+    INT64 ad_id PK
+    INT64 advertiser_sf_id FK
+    INT64 product_id FK
+    INT64 province_id FK
+  }
+  INT_PROPOSALS_ACTIVE_AGG {
+    INT64 advertiser_sf_id PK
+    BOOLEAN is_advertiser_active_today
+  }
+  INT_ZOOM_ADVERTISERS_DAILY {
+    INT64 advertiser_sf_id FK
+    INT64 period_int FK
+    INT64 contracted_ads
+  }
+  INT_MONGO_ADS_MONTHLY {
+    INT64 ad_id FK
+    INT64 period_int FK
+    INT64 n_contacts
+  }
+  INT_INVOICING_ADVERTISERS_MONTHLY {
+    INT64 advertiser_sf_id FK
+    INT64 period_int FK
+    FLOAT64 monthly_total_invoice
+  }
+  DIM_ADVERTISER {
+    INT64 advertiser_sf_id PK
+    STRING advertiser_name
+    INT64 advertiser_group_id
+    INT64 province_id FK
+  }
+  DIM_AD {
+    INT64 ad_id PK
+    INT64 advertiser_sf_id FK
+    INT64 product_id FK
+  }
+  DIM_CAR {
+    INT64 product_id PK
+    INT64 brand_id FK
+    INT64 fuel_id FK
+  }
+  DIM_COMERCIAL {
+    STRING comercial_sf_id PK
+    STRING comercial_email
+  }
+  DIM_DATE {
+    INT64 period_int PK
+    INT64 year
+    INT64 month
+  }
+  FCT_MONTHLY_SNAPSHOT_ADVERTISER {
+    INT64 advertiser_sf_id PK
+    INT64 period_int PK
+    FLOAT64 monthly_total_invoice
+    INT64 monthly_total_leads
+  }
+  FCT_MONTHLY_SNAPSHOT_AD {
+    INT64 ad_id PK
+    INT64 period_int PK
+    INT64 n_contacts
+    INT64 n_views
+  }
+  FCT_ACC_SNAPSHOT_PRODUCT {
+    INT64 advertiser_sf_id FK
+    INT64 propuesta_id FK
+    STRING product_sf_id FK
+  }
+  PRICING_ADVERTISER {
+    INT64 advertiser_sf_id PK
+    INT64 cluster_id FK
+    FLOAT64 churn_prob
+  }
+  PRICING_CLUSTER {
+    INT64 cluster_id PK
+    STRING cluster_name
+  }
+  CU_EEDD_CLASIFICADOS_COOKIES {
+    DATE date
+    STRING id
+    STRING v_marca
+    STRING v_segmento
+  }
+  CU_EEDD_CLASIFICADOS_INTERESES {
+    STRING Marca
+    STRING Segmento
+    STRING Combustible
+  }
+  CU_EEDD_PUBLICIDAD_DIGITAL {
+    STRING segmento PK
+    INT64 last_1
+    INT64 last_7
+  }
+  CU_EEDD_SUSCRIPCIONES_REF_SECCIONES {
+    STRING post_channel PK
+    STRING seccion
+  }
+  CU_EEDD_SUSCRIPCIONES_METRICAS {
+    STRING seccion FK
+    STRING anio_mes
+    FLOAT64 avg_tiempo_por_pagina_seg
+  }
+
+  LANDING_ADVERTISER ||--|| STG_MYSQL_ADVERTISERS : cast_dedup
+  STG_MYSQL_ADVERTISERS ||--|| INT_ADVERTISER : dedup
+  STG_MYSQL_ADS ||--o{ INT_AD : normaliza
+  STG_SF_ACCOUNTS ||--|| INT_ACCOUNTS : comercial_owner
+  STG_SF_PROPOSALS ||--o{ INT_PROPOSALS : contratos
+  STG_SF_PROPOSAL_PRODUCTS ||--o{ INT_PRODUCT : lineas
+  STG_MYSQL_PRODUCTS ||--|| INT_CAR : producto
+  STG_MYSQL_BRANDS ||--o{ INT_CAR : brand_id
+  STG_MYSQL_FUELS ||--o{ INT_CAR : fuel_id
+  STG_SEED_PROVINCES ||--o{ INT_AD : province_id
+  STG_SEED_PROVINCES ||--o{ DIM_ADVERTISER : province_id
+  INT_ADVERTISER ||--|| DIM_ADVERTISER : advertiser_sf_id
+  INT_AD ||--|| DIM_AD : ad_id
+  INT_CAR ||--|| DIM_CAR : product_id
+  INT_PROPOSALS ||--o{ INT_PROPOSALS_ACTIVE_AGG : advertiser_sf_id
+  INT_PROPOSALS ||--o{ FCT_ACC_SNAPSHOT_PRODUCT : propuesta_id
+  INT_PRODUCT ||--o{ FCT_ACC_SNAPSHOT_PRODUCT : product_sf_id
+  INT_ZOOM_ADVERTISERS_DAILY }o--|| DIM_DATE : period_int
+  INT_ZOOM_ADVERTISERS_DAILY }o--|| DIM_ADVERTISER : advertiser_sf_id
+  INT_MONGO_ADS_MONTHLY }o--|| DIM_DATE : period_int
+  INT_MONGO_ADS_MONTHLY }o--|| DIM_AD : ad_id
+  INT_INVOICING_ADVERTISERS_MONTHLY }o--|| DIM_DATE : period_int
+  INT_INVOICING_ADVERTISERS_MONTHLY }o--|| DIM_ADVERTISER : advertiser_sf_id
+  DIM_ADVERTISER ||--o{ FCT_MONTHLY_SNAPSHOT_ADVERTISER : advertiser_sf_id
+  DIM_COMERCIAL ||--o{ FCT_MONTHLY_SNAPSHOT_ADVERTISER : comercial_sf_id
+  DIM_DATE ||--o{ FCT_MONTHLY_SNAPSHOT_ADVERTISER : period_int
+  DIM_AD ||--o{ FCT_MONTHLY_SNAPSHOT_AD : ad_id
+  DIM_DATE ||--o{ FCT_MONTHLY_SNAPSHOT_AD : period_int
+  DIM_CAR ||--o{ DIM_AD : product_id
+  DIM_ADVERTISER ||--o{ PRICING_ADVERTISER : advertiser_sf_id
+  PRICING_CLUSTER ||--o{ PRICING_ADVERTISER : cluster_id
+  CU_EEDD_CLASIFICADOS_COOKIES ||--o{ CU_EEDD_CLASIFICADOS_INTERESES : aggregate
+  CU_EEDD_SUSCRIPCIONES_REF_SECCIONES ||--o{ CU_EEDD_SUSCRIPCIONES_METRICAS : seccion</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Fuentes documentales</p>
+<p><code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Propuesta Modelo de Gobierno del Dato (Draft).docx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Propuesta de gestión de la demada.docx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Estandarización reglas de calidad.docx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Código Dataplex\Dataplex\Glosario de negocio\Dataplex_CargaMasiva_GlosarioNegocio.docx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Código Dataplex\Dataplex\Glosario de negocio\Plantilla_Glosario_Terminos_VF.xlsx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Código Dataplex\Dataplex\Análisis y reglas de calidad\Dataplex_CargaMasiva_ReglasCalidad.docx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Código Dataplex\Dataplex\Carga masiva Aspect-types\Dataplex_CargaMasiva_AspectType.docx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\Modelado DW.xlsx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\dataform-consum-dlk\definitions\01_source\declare_source.js</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\dataform-consum-dlk\definitions\02_staging\load_staging.js</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\dataform-consum-dlk\definitions\03_intermediate\*.sqlx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\dataform-consum-dlk\definitions\04_data_mart\*.sqlx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\bq_queries_20260210\prod__stg\*.sql</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\bq_queries_20260210\prod__mrt\*.sql</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Modelo de Gobierno\Calidad del dato\Dataform Sumauto\bq_queries_assertions_20251020\**\*.sql</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Código Dataplex\Dataplex\Carga masiva Aspect-types\**\*.xlsx</code>
+<code>4. Documentación Plataforma Tecnológica\2 - Gobierno del Dato\Código Dataplex\Dataplex\Análisis y reglas de calidad\**\*.zip</code>
+<code>5. Documentación Espacio Datos\2. Casos de uso\Código Dataplex\Análisis y reglas de calidad\*.zip</code>
+<code>5. Documentación Espacio Datos\2. Casos de uso\Código Dataplex\Carga masiva Aspect-types\*.zip</code>
+<code>5. Documentación Espacio Datos\2. Casos de uso\Código BigQuery\Queries\*.zip</code></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Pendientes/incertidumbres</p>
+<p>No hay DDL tipado explícito para <code>01_source</code>; el detalle de esquema se ha reconstruido desde vistas staging y SQL compilado.
+Staging e intermediate son mayoritariamente vistas; cuando el SQL no expone tipo explícito (<code>CAST</code>/<code>SAFE_CAST</code>), he preferido no inventarlo.
+Las PK/FK no están declaradas físicamente en la mayoría de vistas; las relaciones del <code>erDiagram</code> se infieren desde <code>JOIN</code>, nombres de columnas y PK lógicas de marts.
+La nomenclatura no es homogénea entre repositorios: en Sumauto/Dataform aparecen prefijos <code>stg__/int__/dim__/fct__</code>, mientras que en Aspect-types y EEDD aparecen datasets funcionales (<code>dm_*</code>, <code>silver_*</code>, <code>cu_eedd_*</code>).
+No se localizaron PPTX/PDF/diagramas relacionales dedicados en las rutas permitidas; la reconstrucción técnica se ha hecho principalmente desde SQL/SQLX, workbooks y documentación DOCX.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

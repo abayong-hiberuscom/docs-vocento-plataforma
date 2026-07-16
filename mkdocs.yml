@@ -1,0 +1,88 @@
+site_name: Proyecto Data Vocento — Documentación Técnico-Funcional
+site_description: Documentación técnico-funcional consolidada del Proyecto Data (Espacio de Datos, Publicidad, Clasificados, Suscripciones, Propuestas Comerciales, Gobierno del Dato)
+docs_dir: docs
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - attr_list
+
+nav:
+  - Inicio: index.md
+  - Visión general del proyecto:
+      - Resumen ejecutivo: vision-general/resumen-ejecutivo.md
+      - Seguimiento del programa: vision-general/seguimiento-programa.md
+      - Memoria técnica (Entregables E1-E23): vision-general/entregables.md
+  - Espacio de Datos (EEDD):
+      - Definición y modelo operativo: espacio-datos/modelo-operativo.md
+      - Arquitectura desplegada: espacio-datos/arquitectura.md
+      - Gobierno y accesos: espacio-datos/gobierno-accesos.md
+      - Aspectos legales y DPO: espacio-datos/legal-dpo.md
+      - Consentimientos: espacio-datos/consentimientos.md
+  - Gobierno del Dato y Calidad:
+      - Modelo de gobierno: gobierno-dato/modelo-gobierno.md
+      - Glosario de negocio: gobierno-dato/glosario.md
+      - Reglas de calidad de datos: gobierno-dato/calidad-datos.md
+      - Dataplex y metadatos: gobierno-dato/dataplex.md
+      - Modelo entidad-relación técnico: gobierno-dato/modelo-entidad-relacion.md
+  - Publicidad:
+      - Resumen funcional: publicidad/resumen.md
+      - Arquitectura y fuentes de datos: publicidad/arquitectura.md
+      - Modelo de datos: publicidad/modelo-datos.md
+  - Clasificados:
+      - Resumen funcional: clasificados/resumen.md
+      - Arquitectura y fuentes de datos: clasificados/arquitectura.md
+      - Modelo de datos: clasificados/modelo-datos.md
+  - Suscripciones:
+      - Resumen funcional: suscripciones/resumen.md
+      - Reporting y objetivos: suscripciones/reporting-objetivos.md
+      - Modelo de datos: suscripciones/modelo-datos.md
+  - Propuestas Comerciales, BI y Plan Data:
+      - Propuestas comerciales: otros-dominios/propuestas-comerciales.md
+      - Plataforma tecnológica y Plan Data: otros-dominios/plataforma-plan-data.md
+      - Inteligencia de negocio: otros-dominios/inteligencia-negocio.md
+      - Catálogo de casos de uso: otros-dominios/catalogo-casos-uso.md
+  - Formación y comunicación:
+      - Formación EEDD: formacion/formacion-eedd.md
+      - Notas de sesiones de gobernanza: formacion/notas-gobernanza.md
+  - Anexos:
+      - Inventario documental: anexos/inventario.md
+      - Grabaciones (no transcritas): anexos/grabaciones.md
+
+extra:
+  generator: false
