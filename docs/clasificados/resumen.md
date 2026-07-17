@@ -38,7 +38,3 @@ tabla intermedia `cu_clasificados_cookies` unifica dos ramas: **AutoOcasión/oca
 **Rentingcoches/renting**. La tabla final agrega por marca, segmento, combustible, interés, lead y
 horizontes 15/30/60/90 días.
 
-!!! info "Fuentes"
-    - `4. Documentación Plataforma Tecnológica\4 - Clasificados\Vocento - Documentación técnica - Clasificados.docx`
-    - `5. Documentación Espacio Datos\2. Casos de uso\CdU Clasificados\E18 Memoria Caso de Uso Clasificados (Original).docx`
-

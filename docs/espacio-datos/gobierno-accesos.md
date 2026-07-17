@@ -94,9 +94,3 @@ Obligaciones funcionales clave del Rulebook:
 - Anexos: tarifas fijas, penalidades (incumplimiento de propósito, redistribución no autorizada,
   incumplimiento RGPD, manipulación de trazabilidad), certificaciones requeridas/recomendadas.
 
-!!! info "Fuentes"
-    - `5. Documentación Espacio Datos\1. Aspectos Legales y DPO\Modelos contractuales\20260518  Borrador Modelo contrato freemium v. 0.2.docx`
-    - `5. Documentación Espacio Datos\1. Aspectos Legales y DPO\20260501_EEDD_Rulebook.docx`
-    - `2. Grabaciones de sesiones\Sesiones formativas EEDD\Marco de gobierno para el EEDD\*`
-    - `2. Grabaciones de sesiones\Sesión Telefónica Modelo operativo EEDD\ModeloContratoParticipanteED_fFreemium.docx`
-

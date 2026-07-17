@@ -25,7 +25,7 @@
     
     
       
-        <title>Modelo de datos - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
+        <title>📊 Modelo de datos - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
       
     
     
@@ -51,12 +51,28 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+  <!-- Force shadow DOMs to be 'open' so we can access Mermaid SVGs for full-screen zoom -->
+  <script>
+    (function() {
+      console.log("Hooking Element.prototype.attachShadow...");
+      const originalAttachShadow = Element.prototype.attachShadow;
+      Element.prototype.attachShadow = function(init) {
+        if (init && init.mode === 'closed') {
+          init.mode = 'open';
+        }
+        return originalAttachShadow.call(this, init);
+      };
+    })();
+  </script>
+
   </head>
   
   
@@ -110,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modelo de datos
+              📊 Modelo de datos
             
           </span>
         </div>
@@ -217,7 +233,7 @@
   
     
   
-  Inicio
+  🏠 Inicio
 
       </a>
     </li>
@@ -238,7 +254,7 @@
   
     
   
-  Visión general del proyecto
+  🎯 Visión General
 
         </a>
       </li>
@@ -260,7 +276,7 @@
   
     
   
-  Espacio de Datos (EEDD)
+  🌐 Espacio de Datos (EEDD)
 
         </a>
       </li>
@@ -282,7 +298,7 @@
   
     
   
-  Gobierno del Dato y Calidad
+  🛡️ Gobierno y Calidad
 
         </a>
       </li>
@@ -304,7 +320,7 @@
   
     
   
-  Publicidad
+  📢 Publicidad
 
         </a>
       </li>
@@ -328,7 +344,7 @@
   
     
   
-  Clasificados
+  🚗 Clasificados
 
         </a>
       </li>
@@ -350,7 +366,7 @@
   
     
   
-  Suscripciones
+  🔄 Suscripciones
 
         </a>
       </li>
@@ -372,7 +388,7 @@
   
     
   
-  Propuestas Comerciales, BI y Plan Data
+  💡 Propuestas y BI
 
         </a>
       </li>
@@ -394,29 +410,7 @@
   
     
   
-  Formación y comunicación
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../anexos/inventario/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Anexos
+  🎓 Formación
 
         </a>
       </li>
@@ -473,7 +467,7 @@
   <span class="md-ellipsis">
     
   
-    Inicio
+    🏠 Inicio
   
 
     
@@ -524,7 +518,7 @@
   <span class="md-ellipsis">
     
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
     
@@ -540,7 +534,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
           </label>
@@ -560,7 +554,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen ejecutivo
+    📝 Resumen ejecutivo
   
 
     
@@ -588,7 +582,7 @@
   <span class="md-ellipsis">
     
   
-    Seguimiento del programa
+    📅 Seguimiento del programa
   
 
     
@@ -616,7 +610,7 @@
   <span class="md-ellipsis">
     
   
-    Memoria técnica (Entregables E1-E23)
+    📁 Memoria técnica (E1-E23)
   
 
     
@@ -679,7 +673,7 @@
   <span class="md-ellipsis">
     
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
     
@@ -695,7 +689,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
           </label>
@@ -715,7 +709,7 @@
   <span class="md-ellipsis">
     
   
-    Definición y modelo operativo
+    ⚙️ Definición y modelo operativo
   
 
     
@@ -743,7 +737,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura desplegada
+    🏗️ Arquitectura desplegada
   
 
     
@@ -771,7 +765,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno y accesos
+    🔑 Gobierno y accesos
   
 
     
@@ -799,7 +793,7 @@
   <span class="md-ellipsis">
     
   
-    Aspectos legales y DPO
+    ⚖️ Aspectos legales y DPO
   
 
     
@@ -827,7 +821,7 @@
   <span class="md-ellipsis">
     
   
-    Consentimientos
+    📋 Consentimientos
   
 
     
@@ -890,7 +884,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
     
@@ -906,7 +900,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
           </label>
@@ -926,7 +920,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de gobierno
+    🏛️ Modelo de gobierno
   
 
     
@@ -954,7 +948,7 @@
   <span class="md-ellipsis">
     
   
-    Glosario de negocio
+    📖 Glosario de negocio
   
 
     
@@ -982,7 +976,7 @@
   <span class="md-ellipsis">
     
   
-    Reglas de calidad de datos
+    🔎 Reglas de calidad de datos
   
 
     
@@ -1010,7 +1004,7 @@
   <span class="md-ellipsis">
     
   
-    Dataplex y metadatos
+    🗂️ Dataplex y metadatos
   
 
     
@@ -1038,7 +1032,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo entidad-relación técnico
+    📊 Modelo entidad-relación técnico
   
 
     
@@ -1097,7 +1091,7 @@
   <span class="md-ellipsis">
     
   
-    Publicidad
+    📢 Publicidad
   
 
     
@@ -1113,7 +1107,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Publicidad
+    📢 Publicidad
   
 
           </label>
@@ -1133,7 +1127,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1161,7 +1155,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1189,7 +1183,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1253,7 +1247,7 @@
   <span class="md-ellipsis">
     
   
-    Clasificados
+    🚗 Clasificados
   
 
     
@@ -1269,7 +1263,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Clasificados
+    🚗 Clasificados
   
 
           </label>
@@ -1289,7 +1283,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1317,7 +1311,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1347,6 +1341,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Modelo de datos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1354,7 +1366,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1363,6 +1375,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-analitica-de-anunciantes-permisos-y-facturacion-dm_clasificados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Analítica de Anunciantes, Permisos y Facturación (dm_clasificados)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-segmentos-e-intereses-espacio-de-datos-dm_eedd_clasificados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Segmentos e Intereses - Espacio de Datos (dm_eedd_clasificados)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origenes-de-datos-y-linaje-de-clasificados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orígenes de Datos y Linaje de Clasificados
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1414,7 +1478,7 @@
   <span class="md-ellipsis">
     
   
-    Suscripciones
+    🔄 Suscripciones
   
 
     
@@ -1430,7 +1494,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Suscripciones
+    🔄 Suscripciones
   
 
           </label>
@@ -1450,7 +1514,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1478,7 +1542,7 @@
   <span class="md-ellipsis">
     
   
-    Reporting y objetivos
+    📈 Reporting y objetivos
   
 
     
@@ -1506,7 +1570,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1567,7 +1631,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
     
@@ -1583,7 +1647,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
           </label>
@@ -1603,7 +1667,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas comerciales
+    💼 Propuestas comerciales
   
 
     
@@ -1631,7 +1695,7 @@
   <span class="md-ellipsis">
     
   
-    Plataforma tecnológica y Plan Data
+    💻 Plataforma y Plan Data
   
 
     
@@ -1659,7 +1723,7 @@
   <span class="md-ellipsis">
     
   
-    Inteligencia de negocio
+    📊 Inteligencia de negocio
   
 
     
@@ -1687,7 +1751,7 @@
   <span class="md-ellipsis">
     
   
-    Catálogo de casos de uso
+    🗂️ Catálogo de casos de uso
   
 
     
@@ -1744,7 +1808,7 @@
   <span class="md-ellipsis">
     
   
-    Formación y comunicación
+    🎓 Formación
   
 
     
@@ -1760,7 +1824,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Formación y comunicación
+    🎓 Formación
   
 
           </label>
@@ -1780,7 +1844,7 @@
   <span class="md-ellipsis">
     
   
-    Formación EEDD
+    📚 Formación EEDD
   
 
     
@@ -1808,128 +1872,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de sesiones de gobernanza
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anexos
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Anexos
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/inventario/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inventario documental
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/grabaciones/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Grabaciones (no transcritas)
+    📝 Notas de sesiones
   
 
     
@@ -1968,110 +1911,155 @@
 
 
 <h1 id="modelo-de-datos-clasificados">Modelo de datos — Clasificados<a class="headerlink" href="#modelo-de-datos-clasificados" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>El ER siguiente resume el modelo Gold mejor documentado en validaciones, plantillas y drawios.
-No intenta representar todas las tablas de staging/silver.</p>
-</blockquote>
+<p>La arquitectura de datos de <strong>Clasificados</strong> en BigQuery procesa la información procedente de los portales de motor (<strong>Autocasión</strong> y <strong>AutoScout24</strong>) y CRM corporativo (<strong>Salesforce</strong>). Se divide en dos esquemas de datos analíticos analizados bajo el proyecto <code>prj-dataplatform-prod-vocento</code> para facilitar la gestión comercial, auditoría de leads y perfilado de intenciones de compra.</p>
+<p>A continuación, se detallan los diagramas entidad-relación (ER) actualizados según las tablas físicas reales que residen en BigQuery.</p>
+<hr />
+<h2 id="1-analitica-de-anunciantes-permisos-y-facturacion-dm_clasificados">1. Analítica de Anunciantes, Permisos y Facturación (<code>dm_clasificados</code>)<a class="headerlink" href="#1-analitica-de-anunciantes-permisos-y-facturacion-dm_clasificados" title="Permanent link">&para;</a></h2>
+<p>Este datamart consolida los anuncios de vehículos unificados con los anunciantes de Salesforce. Adicionalmente, incluye el control de acceso comercial para los analistas de negocio y los snapshots mensuales de rentabilidad y CPL.</p>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Modelo interactivo</p>
+<p>Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.</p>
+</div>
 <pre class="mermaid"><code>erDiagram
-    DIM_ADVERTISER_SALESFORCE {
-        string advertiser_id PK
-        string advertiser_sf_id
+    dim_advertiser_salesforce {
+        int64 advertiser_id PK
+        int64 advertiser_sf_id FK
     }
-    DIM_ADVERTISER {
-        string advertiser_id PK
+    dim_advertiser {
+        int64 advertiser_sf_id PK
+        int64 advertiser_id FK
+        string id_as24
+        string customer_as24id
         string advertiser_name
+        string advertiser_province
+        string sector_anunciante
+        bool is_ballena
+        bool is_delivery
     }
-    DIM_CAR {
-        string product_id PK
+    dim_car {
+        int64 product_id PK
+        string car_version
+        string brand_name
+        string fuel_name
+        string modelo
+    }
+    dim_ad {
+        int64 ad_id PK
+        int64 advertiser_sf_id FK
+        int64 product_id FK
+        datetime fecha_publicacion
+        int64 price
+        int64 status
         string brand_name
         string fuel_name
     }
-    DIM_AD {
-        string ad_id PK
-        string advertiser_id FK
-        string advertiser_sf_id FK
-        string product_id FK
-    }
-    DIM_COMERCIAL {
+    dim_comercial {
         string comercial_sf_id PK
+        string comercial_username
         string comercial_email
+        string comercial_des
     }
-    ACCESS_LIST_PRICING {
-        string advertiser_sf_id FK
+    access_list_pricing {
         string comercial_email FK
+        int64 advertiser_sf_id FK
+        bool is_super_user
     }
-    ACCESS_LIST_COMMERCIAL {
-        string advertiser_sf_id FK
+    access_list_commercial {
         string comercial_email FK
+        int64 advertiser_sf_id FK
+        bool is_super_user
     }
-    ACCESS_LIST_ZOOM {
-        string advertiser_sf_id FK
+    access_list_zoom {
         string comercial_email FK
+        int64 advertiser_sf_id FK
+        bool is_super_user
     }
-    FACT_MONTHLY_SNAPSHOT_ADVERTISER {
-        string advertiser_sf_id FK
-        int period_int
-        float monthly_total_leads
-        float monthly_total_invoice_isc
+    fact_monthly_snapshot_advertiser {
+        int64 advertiser_sf_id FK
+        int64 period_int PK
+        string comercial_sf_id FK
+        int64 monthly_published_ads
+        int64 monthly_total_leads
+        int64 monthly_visits
+        float64 monthly_total_invoice_isc
+        float64 monthly_total_invoice
+        float64 monthly_cpl
     }
-    REF_CU_CLASIFICADOS_MARCAS {
+
+    dim_advertiser_salesforce ||--o{ dim_ad : "mapea_leads (advertiser_sf_id)"
+    dim_advertiser ||--o{ dim_ad : "publica (advertiser_id)"
+    dim_car ||--o{ dim_ad : "caracteriza (product_id)"
+    dim_advertiser_salesforce ||--o{ fact_monthly_snapshot_advertiser : "audita (advertiser_sf_id)"
+    dim_comercial ||--o{ fact_monthly_snapshot_advertiser : "atiende (comercial_sf_id)"
+
+    dim_advertiser_salesforce ||--o{ access_list_pricing : "regula (advertiser_sf_id)"
+    dim_advertiser_salesforce ||--o{ access_list_commercial : "regula (advertiser_sf_id)"
+    dim_advertiser_salesforce ||--o{ access_list_zoom : "regula (advertiser_sf_id)"
+
+    dim_comercial ||--o{ access_list_pricing : "accede (comercial_email)"
+    dim_comercial ||--o{ access_list_commercial : "accede (comercial_email)"
+    dim_comercial ||--o{ access_list_zoom : "accede (comercial_email)"</code></pre>
+<hr />
+<h2 id="2-segmentos-e-intereses-espacio-de-datos-dm_eedd_clasificados">2. Segmentos e Intereses - Espacio de Datos (<code>dm_eedd_clasificados</code>)<a class="headerlink" href="#2-segmentos-e-intereses-espacio-de-datos-dm_eedd_clasificados" title="Permanent link">&para;</a></h2>
+<p>Es el esquema analítico encargado de perfilar las intenciones de compra (interés en marcas, combustibles y tipos de carrocería) de los usuarios navegantes. Permite calcular el volumen de leads y búsquedas agregadas por horizontes temporales.</p>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Modelo interactivo</p>
+<p>Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.</p>
+</div>
+<pre class="mermaid"><code>erDiagram
+    ref_cu_eedd_clasificados_marcas {
         string marca_id PK
-        boolean is_active
+        string display_name
+        bool is_active
     }
-    REF_CU_CLASIFICADOS_SEGMENTOS {
+    ref_cu_eedd_clasificados_segmentos_carroceria {
         string segmento_id PK
-        boolean is_active
+        string display_name
+        bool is_active
     }
-    REF_CU_CLASIFICADOS_COMBUSTIBLES {
+    ref_cu_eedd_clasificados_combustibles {
         string combustible_id PK
-        boolean is_active
+        string display_name
+        bool is_active
     }
-    CU_CLASIFICADOS_COOKIES {
+    cu_eedd_clasificados_cookies {
+        string id PK
         date date
-        string id
         string v_marca
         string v_segmento
         string v_combustible
-        string v_interes
-        boolean v_es_lead
+        bool v_es_lead
     }
-    CU_CLASIFICADOS_INTERESES_AGREGADOS {
+    cu_eedd_clasificados_intereses_agregados_por_horizonte {
         string Marca FK
         string Segmento FK
         string Combustible FK
-        string Interes
-        boolean Es_Lead
-        int total_15d
-        int total_30d
-        int total_60d
-        int total_90d
+        bool Es_Lead
+        int64 total_15d
+        int64 total_30d
+        int64 total_60d
+        int64 total_90d
+        date load_date
     }
 
-    DIM_ADVERTISER ||--o{ DIM_AD : advertiser_id
-    DIM_ADVERTISER_SALESFORCE ||--o{ DIM_AD : advertiser_sf_id
-    DIM_CAR ||--o{ DIM_AD : product_id
-
-    DIM_ADVERTISER_SALESFORCE ||--o{ FACT_MONTHLY_SNAPSHOT_ADVERTISER : advertiser_sf_id
-    DIM_ADVERTISER_SALESFORCE ||--o{ ACCESS_LIST_PRICING : permiso_pricing
-    DIM_ADVERTISER_SALESFORCE ||--o{ ACCESS_LIST_COMMERCIAL : permiso_comercial
-    DIM_ADVERTISER_SALESFORCE ||--o{ ACCESS_LIST_ZOOM : permiso_zoom
-    DIM_COMERCIAL ||--o{ ACCESS_LIST_PRICING : comercial_email
-    DIM_COMERCIAL ||--o{ ACCESS_LIST_COMMERCIAL : comercial_email
-    DIM_COMERCIAL ||--o{ ACCESS_LIST_ZOOM : comercial_email
-
-    CU_CLASIFICADOS_COOKIES ||--o{ CU_CLASIFICADOS_INTERESES_AGREGADOS : agrega
-    REF_CU_CLASIFICADOS_MARCAS ||--o{ CU_CLASIFICADOS_INTERESES_AGREGADOS : marca
-    REF_CU_CLASIFICADOS_SEGMENTOS ||--o{ CU_CLASIFICADOS_INTERESES_AGREGADOS : segmento
-    REF_CU_CLASIFICADOS_COMBUSTIBLES ||--o{ CU_CLASIFICADOS_INTERESES_AGREGADOS : combustible</code></pre>
-<div class="admonition info">
-<p class="admonition-title">Fuentes</p>
-<ul>
-<li><code>4. Documentación Plataforma Tecnológica\4 - Clasificados\Clasificados - Modelado DW.xlsx</code></li>
-<li><code>4. Documentación Plataforma Tecnológica\4 - Clasificados\Informes de validación de datos\Informe de Validación - CdM Clasificados v1.docx</code></li>
-<li><code>4. Documentación Plataforma Tecnológica\4 - Clasificados\Avance reunión 2026-02-02\Catálogo modelado de datos.xlsx</code></li>
-<li><code>5. Documentación Espacio Datos\2. Casos de uso\CdU Clasificados\Plantilla Metadatos Caso de Uso Clasificados.xlsx</code></li>
-</ul>
-</div>
+    cu_eedd_clasificados_cookies ||--o{ cu_eedd_clasificados_intereses_agregados_por_horizonte : "consolida (id)"
+    ref_cu_eedd_clasificados_marcas ||--o{ cu_eedd_clasificados_intereses_agregados_por_horizonte : "cataloga (marca_id -&gt; Marca)"
+    ref_cu_eedd_clasificados_segmentos_carroceria ||--o{ cu_eedd_clasificados_intereses_agregados_por_horizonte : "cataloga (segmento_id -&gt; Segmento)"
+    ref_cu_eedd_clasificados_combustibles ||--o{ cu_eedd_clasificados_intereses_agregados_por_horizonte : "cataloga (combustible_id -&gt; Combustible)"</code></pre>
+<hr />
+<h2 id="origenes-de-datos-y-linaje-de-clasificados">Orígenes de Datos y Linaje de Clasificados<a class="headerlink" href="#origenes-de-datos-y-linaje-de-clasificados" title="Permanent link">&para;</a></h2>
+<p>El linaje de datos de clasificados sigue una segmentación en tres capas de refino:</p>
+<ol>
+<li><strong>Pasarelas de Motor &amp; CRM (Capa Bronce)</strong>:</li>
+<li>Los inventarios físicos de Autocasión y AutoScout24 se cargan diariamente en la capa <code>bronce_clasificados_raw</code>.</li>
+<li>Los maestros de clientes y las carteras de gestores comerciales se ingestan desde Salesforce.</li>
+<li><strong>Normalización Silver (<code>silver_clasificados_refined</code>)</strong>:</li>
+<li>Homogeneiza las taxonomías de vehículos (marcas, modelos y combustibles) que difieren entre portales.</li>
+<li>Realiza la unificación de los identificadores de anunciantes lógicos frente a las cuentas de Salesforce.</li>
+<li><strong>Modelado Analítico Gold (<code>dm_*</code>)</strong>:</li>
+<li><strong><code>dm_clasificados</code></strong>: Diseña el modelo estrella de anunciantes, campañas y snapshots financieros agregados por mes fiscal para alimentar los paneles directivos.</li>
+<li><strong><code>dm_eedd_clasificados</code></strong>: Agrupa y anonimiza las cookies de comportamiento navegante por horizontes (15, 30, 60 y 90 días) para activar audiencias de motor.</li>
+</ol>
 
 
 
@@ -2126,6 +2114,8 @@ No intenta representar todas las tablas de staging/silver.</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
       
     
   </body>

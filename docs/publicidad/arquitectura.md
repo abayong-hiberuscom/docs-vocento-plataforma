@@ -53,10 +53,3 @@ Patrón dominante **Bronze → Silver → Gold** sobre **GCS + BigQuery**:
 - `4. Documentación Plataforma Tecnológica\3 - Publicidad\Diagramas\Vocento - Fuentes externas negocio v2.png`
 - `4. Documentación Plataforma Tecnológica\3 - Publicidad\Diagramas\Common - Adobe lógica_evar51.drawio`
 
-!!! warning "Pendientes/incertidumbres"
-    - El drawio de Publicidad lista muchas tablas `dbo_*`, pero no todas las claves de join quedan
-      visibles; el modelo de datos resume solo relaciones suficientemente documentadas.
-    - La ingesta SAP aparece documentada a nivel de estructuras de tabla y también como "próximo
-      paso"; su incorporación productiva no parece cerrada.
-    - En `fact_daily` la PK usada en validación no replica el mismo grano que Qlik.
-

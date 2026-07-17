@@ -11,10 +11,6 @@ Documento de síntesis elaborado a partir de la carpeta compartida `6. Entregabl
 
 **Modelo de datos (si aplica):** No se explicita un esquema tabular reutilizable; predomina la gestión de proyecto, riesgos, gasto y KPIs.
 
-**Fuentes:** `E1 ---- OK\ENTREGABLE E1  Plan de gestión y coordinación del proyecto.docx`
-
-**Notas/pendientes:** El valor está en la PMO y el marco de seguimiento; no aporta modelo lógico detallado de datos de negocio.
-
 ## E2: Maestro de Gestión administrativa y de participantes
 **Dominio:** Gobierno del Dato / Espacio de Datos
 
@@ -24,10 +20,6 @@ Documento de síntesis elaborado a partir de la carpeta compartida `6. Entregabl
 
 **Modelo de datos (si aplica):** No se explicita un ER formal; el documento modela relaciones de gobernanza y responsabilidad más que entidades de datos persistentes.
 
-**Fuentes:** `E2 ---- OK\ENTREGABLE E2  Maestro de Gestión administrativa y de participantes .docx`; `E2 ---- OK\Ejemplo_E2.pdf`
-
-**Notas/pendientes:** Los `.gdoc` del directorio no se han podido explotar. El entregable es normativo/organizativo y no técnico en términos de esquema físico.
-
 ## E3: Valoración final de la consecución de los objetivos del proyecto
 **Dominio:** Transversal
 
@@ -36,10 +28,6 @@ Documento de síntesis elaborado a partir de la carpeta compartida `6. Entregabl
 **Contenido técnico:** Consolida la arquitectura realmente ejecutada: DSpacer/EDC, microservicios Python/FastAPI, frontales Angular, Keycloak, Vault, PostgreSQL, GCP, Dataplex, Dataform y BigQuery Gold. Resume la política de privacidad por diseño (k-anonimidad >= 15), la validación E2E, los controles DQ y el pipeline CI/CD con lint, unit, API, integration, coverage, E2E, seguridad y rendimiento.
 
 **Modelo de datos (si aplica):** No introduce un modelo adicional; referencia y sintetiza los modelos de catálogo y de los cuatro data products descritos en otros entregables.
-
-**Fuentes:** `E3\ENTREGABLE E3  Valoración final de la consecución de los objetivos del proyecto .docx`
-
-**Notas/pendientes:** Es un documento consolidado y muy útil para cruzar narrativamente E10-E20, pero no sustituye el detalle de cada caso de uso.
 
 ## E4: Definición de la herramienta: alcance, diseño y funcionalidad del espacio de datos
 **Dominio:** Espacio de Datos
@@ -74,10 +62,6 @@ erDiagram
   }
 ```
 
-**Fuentes:** `E4 ---- OK\ENTREGABLE E4_ Definición de la herramienta_ Alcance, diseño y funcionalidad del espacio de datos .docx`
-
-**Notas/pendientes:** Modelo funcional, no implementación detallada. No desciende a tablas internas del catálogo o de los microservicios.
-
 ## E5: Plan de arquitectura de la solución
 **Dominio:** Plataforma Tecnológica
 
@@ -86,10 +70,6 @@ erDiagram
 **Contenido técnico:** Detalla la arquitectura lógica y física en GCP: Cloud Storage por capas y verticales, BigQuery como núcleo analítico, Cloud Composer para orquestación, Dataform/SQLX para transformaciones, Dataplex para catálogo/linaje/calidad y Looker Core como capa semántica. Introduce convenciones de datasets (`silver_<vertical>_refined`, `sta_<vertical>`, `dm_<vertical>`), lifecycle rules, particionado, clusterización, controles IAM/RLS y estrategia FinOps.
 
 **Modelo de datos (si aplica):** No se documentan tablas de negocio con campos cerrados; el entregable define zonas, datasets y patrones de modelado dimensional.
-
-**Fuentes:** `E5 ---- OK\ENTREGABLE E5_ Plan de arquitectura de la solución .docx`
-
-**Notas/pendientes:** Muy valioso para entender la arquitectura macro, pero los modelos concretos aparecen más adelante en E16-E19.
 
 ## E6: Informe de implementación y configuración de la plataforma
 **Dominio:** Plataforma Tecnológica
@@ -100,10 +80,6 @@ erDiagram
 
 **Modelo de datos (si aplica):** No hay un ER de negocio; sí se fijan convenciones físicas de proyectos, buckets, datasets y tablas externas/nativas.
 
-**Fuentes:** `E6 ---- OK\ENTREGABLE E6_ Informe de implementación y configuración de la plataforma .docx`
-
-**Notas/pendientes:** Documento eminentemente de infraestructura y operación, no de dominio funcional de negocio.
-
 ## E7: Plataforma de explotación de datos
 **Dominio:** BI / Plataforma Tecnológica
 
@@ -112,10 +88,6 @@ erDiagram
 **Contenido técnico:** Recorre Cloud Storage (medallón y buckets por vertical), Cloud Composer y Dataproc para procesamiento batch, BigQuery para datasets analíticos y Dataform para transformaciones/assertions/linaje. Explicita tres niveles de datasets de explotación: `silver_<vertical>_refined`, `sta_<vertical>` y `dm_<vertical>`. Cierra con Secret Manager, Cloud Logging y Cloud Monitoring para seguridad y observabilidad.
 
 **Modelo de datos (si aplica):** No se especifican campos de tablas de negocio; el modelo es de capas/datasets y gobierno técnico.
-
-**Fuentes:** `E7 ---- OK\ENTREGABLE E7 Plataforma de explotación de datos.docx`
-
-**Notas/pendientes:** Referencia no transcrita: `E7 ---- OK\E7- Plataforma de explotación de datos.mp4`.
 
 ## E8: Documento de arquitectura del espacio de datos
 **Dominio:** Espacio de Datos / Plataforma Tecnológica
@@ -126,10 +98,6 @@ erDiagram
 
 **Modelo de datos (si aplica):** No expone un modelo relacional; el entregable es de componentes, interfaces y flujos.
 
-**Fuentes:** `E8 ---- OK\ENTREGABLE E8_ Documento de arquitectura del espacio de datos.docx`; `E8 ---- OK\ENTREGABLE E8_ Documento de arquitectura del espacio de datos_v2.docx`; `E8 ---- OK\ENTREGABLE E8_ Documento de arquitectura del espacio de datos_v3.docx`
-
-**Notas/pendientes:** Se ha priorizado la versión `v3`. No se localizan tablas internas persistentes con campos documentados.
-
 ## E9: Plan de despliegue y actualización de la infraestructura
 **Dominio:** Plataforma Tecnológica
 
@@ -138,10 +106,6 @@ erDiagram
 **Contenido técnico:** Fases entre febrero y abril de 2025: preparación del entorno, acceso a clústeres GKE dev/pro, GSAs con Workload Identity, despliegue de conectores EDC vía Helm, despliegue de microservicios Docker/Kubernetes, Ingress, secretos, rolling updates, SLAs y gestión del riesgo. Incluye estrategia de versionado, separación de configuración sensible y funcional, y mantenimiento preventivo.
 
 **Modelo de datos (si aplica):** No aplica; se documenta infraestructura y procedimiento de despliegue.
-
-**Fuentes:** `E9 ---- OK\ENTREGABLE E9_ Plan de despliegue y actualización de la infraestructura .docx`
-
-**Notas/pendientes:** El cronograma e hitos son claros; no hay modelo de dominio ni esquema físico de datos.
 
 ## E10: Documento de definición del catálogo de datos
 **Dominio:** Gobierno del Dato
@@ -203,10 +167,6 @@ erDiagram
   }
 ```
 
-**Fuentes:** `E10  ---- OK\ENTREGABLE E10  Documento de definición del catálogo de datos .docx`
-
-**Notas/pendientes:** Modelo muy sólido para metadatos y publicación. No sustituye el detalle físico de cada Gold table, que reside en E16-E19.
-
 ## E11: Documento de definición del proceso de registro de participantes
 **Dominio:** Espacio de Datos / Gobierno del Dato
 
@@ -250,10 +210,6 @@ erDiagram
   }
 ```
 
-**Fuentes:** `E11 ---- OK\Entregables_E11.docx`
-
-**Notas/pendientes:** El `.gdoc` de notas no se ha explotado. El proceso se apoya conceptualmente en referencias Catena-X/Tractus-X para BPN e identidad.
-
 ## E12: Espacio de datos (manual técnico back-end)
 **Dominio:** Plataforma Tecnológica / Espacio de Datos
 
@@ -262,10 +218,6 @@ erDiagram
 **Contenido técnico:** Describe Conector EDC, Keycloak, Connector Core Service, Login Service, External Storage Service, SSI Wallet, Servicio de Monitorización, Keycloak del módulo de control, Servicio de Onboarding, Servicio Únete, Gestión de Kits, Vault, PostgreSQL y Sub Model Server. Las tecnologías dominantes son Python/FastAPI/Uvicorn, Pydantic, PostgreSQL, Keycloak/OIDC y AAS para representación semántica de activos. Explica flujos de autenticación, descubrimiento, publicación de assets y onboarding.
 
 **Modelo de datos (si aplica):** No hay un ER de negocio; el foco es arquitectura back-end, componentes y APIs.
-
-**Fuentes:** `E12 ---- OK\ENTREGABLE E12_BACK.docx`; `E12 ---- OK\ENTREGABLE E12_BACK_v2.docx`; `E12 ---- OK\ENTREGABLE E12_BACK_v3.docx`; `E12 ---- OK\NOTA Entregables_Vocento.docx`
-
-**Notas/pendientes:** Se ha priorizado la rama `BACK`/`v3`. Referencias no transcritas: `Entregable E12 Video .mp4`, `Entregable E12_FRONT Espacio de datos.mp4`, `VOCENTO_Nueva version_MAYO_V2.mp4`. No se localiza documentación textual equivalente del front-end.
 
 ## E13: Resultados de las pruebas de validación realizadas: espacio de datos
 **Dominio:** Plataforma Tecnológica / Espacio de Datos
@@ -276,10 +228,6 @@ erDiagram
 
 **Modelo de datos (si aplica):** No aplica; es un entregable de aseguramiento de calidad del software.
 
-**Fuentes:** `E13  ---- OK\Entregables_E13.docx`
-
-**Notas/pendientes:** Muy útil para evidenciar madurez operativa, pero no introduce nuevas entidades de negocio.
-
 ## E14: Plan de explotación: espacio de datos
 **Dominio:** Espacio de Datos / Transversal
 
@@ -289,10 +237,6 @@ erDiagram
 
 **Modelo de datos (si aplica):** No formaliza tablas con campos; sí define roles, activos, tipos de participante y mecanismos de acceso.
 
-**Fuentes:** `E14 ---- OK\ENTREGABLE E14 Plan de explotación  Espacio de datos.docx`
-
-**Notas/pendientes:** Entregable clave para sostenibilidad, pero más orientado a operating model que a modelado de datos.
-
 ## E15: Espacio de datos: solución validada
 **Dominio:** Espacio de Datos
 
@@ -301,10 +245,6 @@ erDiagram
 **Contenido técnico:** El grueso del documento son tablas de ejecución de pruebas `TC-VOC-*` con fecha y estado `PASSED`. Cubre portal, login, catálogo, partners BPN, alta de assets, políticas, contratos, monitoring y creación de casos de uso. Es una evidencia de validación operativa más que un diseño técnico.
 
 **Modelo de datos (si aplica):** No aplica; el entregable es una matriz masiva de pruebas y resultados.
-
-**Fuentes:** `E15 ----- OK\ENTREGABLE E15 Espacio de datos_ Solución validada.docx`; `E15 ----- OK\NOTA Entregables_Vocento.docx`
-
-**Notas/pendientes:** El documento contiene cientos de tablas de pruebas; apenas aporta definición de entidades o campos reutilizables para un ER.
 
 ## E16: Solución y resultados de los Casos de uso: Publicidad digital – Audiencias como valor
 **Dominio:** Publicidad
@@ -331,10 +271,6 @@ erDiagram
     int last_30
   }
 ```
-
-**Fuentes:** `E16 ---- OK\ENTREGABLE E16 Solución y resultados de los Casos de uso  Publicidad digital – Audiencias como valor.docx`
-
-**Notas/pendientes:** Referencia no transcrita: `E16 ---- OK\Entregable E16_FRONT Publicidad Espacio de datos.mkv`. El documento aporta ejemplos de segmentos (`VM_*`) y políticas de calidad, pero no detalla la tabla Silver completa.
 
 ## E17: Solución y resultados de los Casos de uso: Analítica y activación del dato para aumento del valor del dato de las suscripciones
 **Dominio:** Suscripciones
@@ -387,10 +323,6 @@ erDiagram
   }
 ```
 
-**Fuentes:** `E17 ---- OK\ENTREGABLE E17 Solución y resultados de los Casos de uso_ Analítica y activación del dato para aumento del valor del dato de las suscripciones.docx`
-
-**Notas/pendientes:** Referencia no transcrita: `E17 ---- OK\NOTA Entregables_Vocento.docx` (nota genérica). El documento describe más de un Gold table; parte de los nombres definitivos y owners siguen en maduración.
-
 ## E18: Solución y resultados de los Casos de uso: Cualificación de datos para optimización de estrategias de comunicación y de negocio
 **Dominio:** Clasificados
 
@@ -439,10 +371,6 @@ erDiagram
     date load_date
   }
 ```
-
-**Fuentes:** `E18 ---- OK\ENTREGABLE E18 Solución y resultados de los Casos de uso  Cualificación de datos para optimización de estrategias de comunicación y de negocio.docx`; `E18 ---- OK\E18 - evidencia - Información de Entidad Legal Omnicom Media.pdf`; `E18 ---- OK\E18 - evidencia - Logs y telemetría Conector BPNL00000003AVTH.txt`
-
-**Notas/pendientes:** Referencia no transcrita: `E18 ---- OK\Entregable E18_FRONT Espacio de datos.mkv`. El nombre del entregable es amplio, pero el contenido técnico corresponde claramente al dominio de Clasificados/automoción.
 
 ## E19: Solución y resultados de los Casos de uso: Optimización de campañas comerciales a través de los datos
 **Dominio:** Propuestas Comerciales / BI
@@ -517,10 +445,6 @@ erDiagram
   }
 ```
 
-**Fuentes:** `E19 ---- OK\ENTREGABLE E19 Solución y resultados de los Casos de uso  Optimización de campañas comerciales a través de los datos.docx`; `E19 ---- OK\ENTREGABLE E19  Muestra asset propuestas comerciales.txt`
-
-**Notas/pendientes:** La muestra tabular aporta campos, pero no documenta exhaustivamente todas las métricas GFK posibles (en el TXT aparecen más columnas que en la tabla-resumen del DOCX). `NOTA Entregables_Vocento.docx` es una nota genérica y no añade modelo.
-
 ## E20: Plan de consultoría y apoyo a empresas participantes
 **Dominio:** Transversal
 
@@ -529,10 +453,6 @@ erDiagram
 **Contenido técnico:** No entra en diseño técnico profundo; sí aterriza cómo explicar casos de uso, catálogo, onboarding, publicación/descubrimiento de datos y buenas prácticas de preparación del dato. Funciona como capa de enablement y transferencia hacia participantes potenciales.
 
 **Modelo de datos (si aplica):** No aplica; el entregable es de acompañamiento y soporte.
-
-**Fuentes:** `E20 ---- OK\Entregables_E20.docx`
-
-**Notas/pendientes:** El valor está en la adopción y extensión a nuevos participantes, no en el modelado de datos.
 
 ## E21: Plan de comunicación
 **Dominio:** Transversal
@@ -543,10 +463,6 @@ erDiagram
 
 **Modelo de datos (si aplica):** No aplica.
 
-**Fuentes:** `E21\Modelo_Entregables_E21.docx`
-
-**Notas/pendientes:** Entregable de comunicación y transparencia regulatoria; no contiene esquemas de datos.
-
 ## E22: Generación de herramientas de apoyo
 **Dominio:** Transversal
 
@@ -556,10 +472,6 @@ erDiagram
 
 **Modelo de datos (si aplica):** No aplica; no hay definición tabular ni entidades persistentes nuevas.
 
-**Fuentes:** `E22\Modelo_Entregables_E22.docx`
-
-**Notas/pendientes:** Es un entregable de soporte visual y lecciones aprendidas, no de diseño lógico.
-
 ## E23: Página web para publicación de resultados obtenidos y publicación de catálogos de recursos
 **Dominio:** Transversal
 
@@ -568,10 +480,6 @@ erDiagram
 **Contenido técnico:** El documento principal describe el portal de resultados y la idea de catálogo de recursos. Los documentos auxiliares “(EJEMPLO DELOITTE NOTAS)” son plantillas: una ficha genérica de catálogo de recursos y una plantilla de resultados del proyecto con placeholders. Por tanto, el contenido técnico real de E23 es más de publicación/diseminación que de catálogo operativo implementado.
 
 **Modelo de datos (si aplica):** No se consolida un modelo de datos definitivo; solo aparece una plantilla de ficha de recurso con campos como tipo de recurso, formato/interfaz, mecanismo de acceso, proveedor y estándar/modelo de datos.
-
-**Fuentes:** `E23\Modelo_Entregables_E23.docx`; `E23\(EJEMPLO DELOITTE NOTAS) - Catálogo de recursos.docx`; `E23\(EJEMPLO DELOITTE NOTAS) - Resultados del Proyecto.docx`
-
-**Notas/pendientes:** Los dos documentos de ejemplo son claramente plantillas/placeholder, no evidencias finales cerradas. Conviene tratarlos como apoyo conceptual, no como catálogo productivo definitivo.
 
 ## Índice de entidades detectadas
 

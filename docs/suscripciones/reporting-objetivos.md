@@ -55,9 +55,3 @@ Definiciones operativas de cálculo (validaciones/mockups):
 - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Exports diagramas\*.png` (visión
   genérica, AS-IS/TO-BE, ecosistema con Mulesoft)
 
-!!! info "Fuentes"
-    - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\CDM Suscripciones - Definición negocio.xlsx`
-    - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\Objetivos\Objetivos 2026 *.xlsx`
-    - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\Mockup\*` (mockups D1/D2, G3, C1)
-    - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\Mockup\Validaciones\*`
-

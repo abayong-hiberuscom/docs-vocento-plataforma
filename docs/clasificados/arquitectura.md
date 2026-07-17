@@ -63,9 +63,3 @@ Arquitectura **Bronze → Silver → Gold** sobre **GCS + BigQuery**:
 - `4. Documentación Plataforma Tecnológica\4 - Clasificados\Diagramas\Clasificados AS_IS-TO_BE 20260115.png`
 - `4. Documentación Plataforma Tecnológica\4 - Clasificados\Diagramas\Vocento - Clasificados AS-IS + TO-BE v2 20260709.png`
 
-!!! warning "Pendientes/incertidumbres"
-    - Varias relaciones exactas del modelo `dm_clasificados` se infieren de validaciones/catálogos;
-      no todas las FK Gold están explicitadas con el mismo nivel de detalle.
-    - La propuesta inicial contemplaba hashed emails; la versión final deja como salida gobernada
-      principal el dato agregado (pendiente de decisión DPO/negocio).
-

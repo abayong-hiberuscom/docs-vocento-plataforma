@@ -25,7 +25,7 @@
     
     
       
-        <title>Aspectos legales y DPO - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
+        <title>⚖️ Aspectos legales y DPO - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
       
     
     
@@ -51,12 +51,28 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+  <!-- Force shadow DOMs to be 'open' so we can access Mermaid SVGs for full-screen zoom -->
+  <script>
+    (function() {
+      console.log("Hooking Element.prototype.attachShadow...");
+      const originalAttachShadow = Element.prototype.attachShadow;
+      Element.prototype.attachShadow = function(init) {
+        if (init && init.mode === 'closed') {
+          init.mode = 'open';
+        }
+        return originalAttachShadow.call(this, init);
+      };
+    })();
+  </script>
+
   </head>
   
   
@@ -110,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aspectos legales y DPO
+              ⚖️ Aspectos legales y DPO
             
           </span>
         </div>
@@ -217,7 +233,7 @@
   
     
   
-  Inicio
+  🏠 Inicio
 
       </a>
     </li>
@@ -238,7 +254,7 @@
   
     
   
-  Visión general del proyecto
+  🎯 Visión General
 
         </a>
       </li>
@@ -262,7 +278,7 @@
   
     
   
-  Espacio de Datos (EEDD)
+  🌐 Espacio de Datos (EEDD)
 
         </a>
       </li>
@@ -284,7 +300,7 @@
   
     
   
-  Gobierno del Dato y Calidad
+  🛡️ Gobierno y Calidad
 
         </a>
       </li>
@@ -306,7 +322,7 @@
   
     
   
-  Publicidad
+  📢 Publicidad
 
         </a>
       </li>
@@ -328,7 +344,7 @@
   
     
   
-  Clasificados
+  🚗 Clasificados
 
         </a>
       </li>
@@ -350,7 +366,7 @@
   
     
   
-  Suscripciones
+  🔄 Suscripciones
 
         </a>
       </li>
@@ -372,7 +388,7 @@
   
     
   
-  Propuestas Comerciales, BI y Plan Data
+  💡 Propuestas y BI
 
         </a>
       </li>
@@ -394,29 +410,7 @@
   
     
   
-  Formación y comunicación
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../anexos/inventario/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Anexos
+  🎓 Formación
 
         </a>
       </li>
@@ -473,7 +467,7 @@
   <span class="md-ellipsis">
     
   
-    Inicio
+    🏠 Inicio
   
 
     
@@ -524,7 +518,7 @@
   <span class="md-ellipsis">
     
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
     
@@ -540,7 +534,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
           </label>
@@ -560,7 +554,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen ejecutivo
+    📝 Resumen ejecutivo
   
 
     
@@ -588,7 +582,7 @@
   <span class="md-ellipsis">
     
   
-    Seguimiento del programa
+    📅 Seguimiento del programa
   
 
     
@@ -616,7 +610,7 @@
   <span class="md-ellipsis">
     
   
-    Memoria técnica (Entregables E1-E23)
+    📁 Memoria técnica (E1-E23)
   
 
     
@@ -684,7 +678,7 @@
   <span class="md-ellipsis">
     
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
     
@@ -700,7 +694,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
           </label>
@@ -720,7 +714,7 @@
   <span class="md-ellipsis">
     
   
-    Definición y modelo operativo
+    ⚙️ Definición y modelo operativo
   
 
     
@@ -748,7 +742,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura desplegada
+    🏗️ Arquitectura desplegada
   
 
     
@@ -776,7 +770,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno y accesos
+    🔑 Gobierno y accesos
   
 
     
@@ -813,7 +807,7 @@
   <span class="md-ellipsis">
     
   
-    Aspectos legales y DPO
+    ⚖️ Aspectos legales y DPO
   
 
     
@@ -831,7 +825,7 @@
   <span class="md-ellipsis">
     
   
-    Aspectos legales y DPO
+    ⚖️ Aspectos legales y DPO
   
 
     
@@ -912,7 +906,7 @@
   <span class="md-ellipsis">
     
   
-    Consentimientos
+    📋 Consentimientos
   
 
     
@@ -975,7 +969,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
     
@@ -991,7 +985,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
           </label>
@@ -1011,7 +1005,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de gobierno
+    🏛️ Modelo de gobierno
   
 
     
@@ -1039,7 +1033,7 @@
   <span class="md-ellipsis">
     
   
-    Glosario de negocio
+    📖 Glosario de negocio
   
 
     
@@ -1067,7 +1061,7 @@
   <span class="md-ellipsis">
     
   
-    Reglas de calidad de datos
+    🔎 Reglas de calidad de datos
   
 
     
@@ -1095,7 +1089,7 @@
   <span class="md-ellipsis">
     
   
-    Dataplex y metadatos
+    🗂️ Dataplex y metadatos
   
 
     
@@ -1123,7 +1117,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo entidad-relación técnico
+    📊 Modelo entidad-relación técnico
   
 
     
@@ -1182,7 +1176,7 @@
   <span class="md-ellipsis">
     
   
-    Publicidad
+    📢 Publicidad
   
 
     
@@ -1198,7 +1192,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Publicidad
+    📢 Publicidad
   
 
           </label>
@@ -1218,7 +1212,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1246,7 +1240,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1274,7 +1268,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1333,7 +1327,7 @@
   <span class="md-ellipsis">
     
   
-    Clasificados
+    🚗 Clasificados
   
 
     
@@ -1349,7 +1343,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Clasificados
+    🚗 Clasificados
   
 
           </label>
@@ -1369,7 +1363,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1397,7 +1391,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1425,7 +1419,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1484,7 +1478,7 @@
   <span class="md-ellipsis">
     
   
-    Suscripciones
+    🔄 Suscripciones
   
 
     
@@ -1500,7 +1494,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Suscripciones
+    🔄 Suscripciones
   
 
           </label>
@@ -1520,7 +1514,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1548,7 +1542,7 @@
   <span class="md-ellipsis">
     
   
-    Reporting y objetivos
+    📈 Reporting y objetivos
   
 
     
@@ -1576,7 +1570,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1637,7 +1631,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
     
@@ -1653,7 +1647,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
           </label>
@@ -1673,7 +1667,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas comerciales
+    💼 Propuestas comerciales
   
 
     
@@ -1701,7 +1695,7 @@
   <span class="md-ellipsis">
     
   
-    Plataforma tecnológica y Plan Data
+    💻 Plataforma y Plan Data
   
 
     
@@ -1729,7 +1723,7 @@
   <span class="md-ellipsis">
     
   
-    Inteligencia de negocio
+    📊 Inteligencia de negocio
   
 
     
@@ -1757,7 +1751,7 @@
   <span class="md-ellipsis">
     
   
-    Catálogo de casos de uso
+    🗂️ Catálogo de casos de uso
   
 
     
@@ -1814,7 +1808,7 @@
   <span class="md-ellipsis">
     
   
-    Formación y comunicación
+    🎓 Formación
   
 
     
@@ -1830,7 +1824,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Formación y comunicación
+    🎓 Formación
   
 
           </label>
@@ -1850,7 +1844,7 @@
   <span class="md-ellipsis">
     
   
-    Formación EEDD
+    📚 Formación EEDD
   
 
     
@@ -1878,128 +1872,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de sesiones de gobernanza
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anexos
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Anexos
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/inventario/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inventario documental
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/grabaciones/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Grabaciones (no transcritas)
+    📝 Notas de sesiones
   
 
     
@@ -2093,29 +1966,6 @@ respuesta a incidentes</strong> (brecha de control).</p>
 <h2 id="modelos-contractuales-y-gobernanza">Modelos contractuales y gobernanza<a class="headerlink" href="#modelos-contractuales-y-gobernanza" title="Permanent link">&para;</a></h2>
 <p>Ver el detalle de Rulebook, roles de gobierno y contrato de participante en
 <a href="../gobierno-accesos/#modelos-contractuales-rulebook-y-adhesion">Gobierno y accesos</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Pendientes/incertidumbres</p>
-<ul>
-<li>Los <code>.gdoc</code>/<code>.gsheet</code> (incluidos Cuestionarios CRED y algunos shortcuts legales) no son
-  legibles directamente desde la carpeta compartida; no se ha podido extraer su contenido.</li>
-<li>Parte de los cuestionarios EIPD están incompletos: retención, borrado, sensibilidad, naming
-  final, plan de incidentes y, en algunos casos, proveedores/flujo final.</li>
-<li>El cierre legal a julio 2026 seguía abierto en textos definitivos de privacidad/cookies,
-  culminación de EIPD y aterrizaje final de legitimaciones.</li>
-</ul>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Fuentes</p>
-<ul>
-<li><code>5. Documentación Espacio Datos\1. Aspectos Legales y DPO\EIPD_PIA\*</code> (7 cuestionarios por caso de uso)</li>
-<li><code>5. Documentación Espacio Datos\1. Aspectos Legales y DPO\GESTIÓN LEGITIMACIÓN OPT-INS OUT\*</code></li>
-<li><code>20260325_VOCENTO - Informe jurídico datos personales Casos 1 y 3 v.r_v1.01 (1).docx</code></li>
-<li><code>20260409_VOCENTO - Informe jurídico Modelo Pay or Consent.docx</code></li>
-<li><code>28012026 VOCENTO - Informe jurídico obligaciones RGPD.pdf</code></li>
-<li><code>28012026_GOVERTIS - Plan Privacidad EEDD VOCENTO.xlsx</code></li>
-<li><code>VOCENTO - Informe de Seguridad 2.pdf</code></li>
-</ul>
-</div>
 
 
 
@@ -2170,6 +2020,8 @@ respuesta a incidentes</strong> (brecha de control).</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
       
     
   </body>

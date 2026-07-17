@@ -67,10 +67,3 @@ revisados es la de **Publicidad**.
   sesiones formativas y comunicación.
 - **Junio 2026** — Primer consumidor real en Clasificados (**Renault**); primeras descargas/pruebas.
 
-!!! info "Fuentes"
-    - `2. Grabaciones de sesiones\Sesión Telefónica Modelo operativo EEDD\Manual_Usuario_Espacio_Datos_Vocento.docx`
-    - `5. Documentación Espacio Datos\3. Espacio de Datos (técnica)\Accesos EEDD\Guión E2E.docx`
-    - `5. Documentación Espacio Datos\3. Espacio de Datos (técnica)\Accesos EEDD\User_Stories_vocento DOCUMENTACION_v1.0.docx`
-    - `5. Documentación Espacio Datos\3. Espacio de Datos (técnica)\Planificación y arquitectura\Interacción funcional del Espacio de Datos.docx`
-    - `2. Grabaciones de sesiones\Sesiones formativas EEDD\Bloque 1\Fundamentos de los EEDD\*`
-

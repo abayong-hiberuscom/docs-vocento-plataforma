@@ -37,16 +37,3 @@ Publicidad, EEDD Clasificados, EEDD Suscripciones, EEDD Comercial, Asistente IA 
 - **Comercial**: EEDD Comercial / propuestas y oportunidades comerciales.
 - **IA**: agentes para presentaciones, clipping, asistente y recomendador.
 
-!!! warning "Pendientes/incertidumbres"
-    - El Plan Data es más portafolio/roadmap que especificación técnica; muchas iniciativas no
-      bajan a tablas, KPIs o contratos de datos concretos.
-    - No existe un modelo relacional clásico de la infraestructura GCP.
-    - Aunque el despliegue PROD figura al 100%, queda pendiente cargar los DAGs en Composer PROD.
-
-!!! info "Fuentes"
-    - `4. Documentación Plataforma Tecnológica\1 - Plataforma Tecnológica\Despliegue PROD\Guia_Despliegue_PROD_DataPlatform_v1.docx`
-    - `4. Documentación Plataforma Tecnológica\1 - Plataforma Tecnológica\Despliegue PROD\Inventario_DEV_20260318.xlsx`
-    - `4. Documentación Plataforma Tecnológica\1 - Plataforma Tecnológica\Despliegue PROD\Estado_Despliegue_PROD_20260323.xlsx`
-    - `4. Documentación Plataforma Tecnológica\6 - Plan Data\Proyecto DATA - Vocento.xlsx`
-    - `4. Documentación Plataforma Tecnológica\6 - Plan Data\Roadmap Data Sumauto 2026.xlsx`
-

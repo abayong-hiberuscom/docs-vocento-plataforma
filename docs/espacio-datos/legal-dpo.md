@@ -53,20 +53,3 @@ respuesta a incidentes** (brecha de control).
 Ver el detalle de Rulebook, roles de gobierno y contrato de participante en
 [Gobierno y accesos](gobierno-accesos.md#modelos-contractuales-rulebook-y-adhesion).
 
-!!! warning "Pendientes/incertidumbres"
-    - Los `.gdoc`/`.gsheet` (incluidos Cuestionarios CRED y algunos shortcuts legales) no son
-      legibles directamente desde la carpeta compartida; no se ha podido extraer su contenido.
-    - Parte de los cuestionarios EIPD están incompletos: retención, borrado, sensibilidad, naming
-      final, plan de incidentes y, en algunos casos, proveedores/flujo final.
-    - El cierre legal a julio 2026 seguía abierto en textos definitivos de privacidad/cookies,
-      culminación de EIPD y aterrizaje final de legitimaciones.
-
-!!! info "Fuentes"
-    - `5. Documentación Espacio Datos\1. Aspectos Legales y DPO\EIPD_PIA\*` (7 cuestionarios por caso de uso)
-    - `5. Documentación Espacio Datos\1. Aspectos Legales y DPO\GESTIÓN LEGITIMACIÓN OPT-INS OUT\*`
-    - `20260325_VOCENTO - Informe jurídico datos personales Casos 1 y 3 v.r_v1.01 (1).docx`
-    - `20260409_VOCENTO - Informe jurídico Modelo Pay or Consent.docx`
-    - `28012026 VOCENTO - Informe jurídico obligaciones RGPD.pdf`
-    - `28012026_GOVERTIS - Plan Privacidad EEDD VOCENTO.xlsx`
-    - `VOCENTO - Informe de Seguridad 2.pdf`
-

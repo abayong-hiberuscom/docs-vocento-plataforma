@@ -52,10 +52,3 @@ siguen pendientes de validación DPO/negocio.
   producción/facturación/acumulado, +120 filtros) y *Producción Publicidad Digital* (dashboards
   Diario/Mensual en Looker, hojas Tendencia/Comparativos/Tops/Analizador).
 
-!!! info "Fuentes"
-    - `4. Documentación Plataforma Tecnológica\3 - Publicidad\Vocento - Documentación técnica - Publicidad.docx`
-    - `4. Documentación Plataforma Tecnológica\3 - Publicidad\CdM gestion comercial\CdM_Gestion_Comercial.pptx`
-    - `5. Documentación Espacio Datos\2. Casos de uso\CdU Publicidad\E16 Memoria Caso de Uso Publicidad (Original).docx`
-    - `2. Grabaciones de sesiones\Reuniones con negocio\Publicidad digital\07042026_CdM Publicidad Digital - negocio.docx`
-    - `3. Formaciones\Gestión Comercial.pptx`, `3. Formaciones\Prod.Pub.Digital.pptx`
-

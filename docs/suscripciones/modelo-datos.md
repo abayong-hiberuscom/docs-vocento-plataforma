@@ -1,111 +1,118 @@
 # Modelo de datos — Suscripciones
 
-> El diagrama mezcla tablas físicas (documentadas en validaciones/migración) y entidades lógicas
-> intermedias del caso EEDD. Varias relaciones son **inferidas** a partir de comentarios de
-> mockups/validaciones, no de un DDL completo — no se ha localizado un diccionario PK/FK completo
-> del vertical.
+La arquitectura de datos de **Suscripciones y Clientes** en BigQuery unifica la información transaccional de la pasarela de pago de identidad (**Evolok**) con los modelos analíticos agregados del **Espacio de Datos (EEDD)**. Esta integración permite analizar el comportamiento de navegación de los suscriptores y clusterizar las secciones editoriales según el valor aportado.
+
+A continuación, se detallan los diagramas entidad-relación (ER) actualizados según los esquemas físicos reales que se ejecutan en BigQuery.
+
+---
+
+## 1. Espacio de Datos: Métricas de Consumo y Clústeres (`dm_eedd_suscripciones`)
+
+Este datamart procesa de forma agregada el tiempo medio de permanencia, las páginas vistas y la frecuencia de consumo para agrupar las secciones de los diarios en clústeres temáticos de comportamiento.
+
+!!! tip "🔍 Modelo interactivo"
+    Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.
 
 ```mermaid
 erDiagram
-    MAP_SECCIONES_TEMATICAS {
+    cu_eedd_suscripciones_ref_secciones {
         string post_channel PK
         string seccion
+        bool is_active
     }
-    NAVEGAWEB_ACUM {
-        string ecid
-        string visit_id
-        string post_channel
-        datetime date_time
+    cu_eedd_suscripciones_secciones_tiempos {
+        string anio_mes PK
+        string seccion PK
+        float64 avg_tiempo_por_pagina_seg
+        date load_date
     }
-    NAVEGAAPP_ACUM {
-        string ecid
-        string visit_id
-        string post_channel
-        datetime date_time
+    cu_eedd_suscripciones_secciones_people_pageviews {
+        string anio_mes PK
+        string seccion PK
+        float64 alcance_seccion_pct
+        float64 ratio_consumo_pct
+        date load_date
     }
-    SECCIONES_TIEMPOS_2 {
-        string anio_mes
-        string seccion
-        float avg_tiempo_por_pagina_seg
+    cu_eedd_suscripciones_secciones_clusterizadas {
+        string anio_mes PK
+        string seccion PK
+        float64 avg_tiempo_por_pagina_seg
+        float64 alcance_seccion_pct
+        float64 ratio_consumo_pct
+        int64 cluster_asignado FK
+        date load_date
     }
-    SECCIONES_PEOPLE_PAGEVIEWS {
-        string anio_mes
-        string seccion
-        int usuarios_unicos
-        float ratio_consumo
+    cu_eedd_suscripciones_resumen_clusters {
+        int64 cluster_asignado PK
+        int64 total_secciones
+        float64 avg_tiempo_seg
+        float64 avg_alcance_pct
+        float64 avg_consumo_pct
+        string secciones_incluidas
+        date load_date
     }
-    CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS {
-        string anio_mes
-        string seccion
-        float alcance_pct
-        float ratio_consumo
-        int cluster_asignado
-    }
-    CU_EEDD_SUSCRIPCIONES_RESUMEN_CLUSTERS {
-        int cluster_asignado
-        int total_secciones
-        string listado_secciones
-    }
-    SUSCRIPCIONES_AVANZADO {
-        string id_suscripcion PK
-        date fecha_inicio
-        date fecha_fin
-        string estado_suscripcion
-        string tier
-    }
-    SUSCRIPCIONES_HISTORICO {
-        date fecha PK
-        string tienda PK
-        int activas
-        int altas
-        int bajas
-    }
-    SD_DETALLE_CLIENTES {
-        string id_medio PK
-        string cod_local PK
+
+    cu_eedd_suscripciones_ref_secciones ||--o{ cu_eedd_suscripciones_secciones_tiempos : "clasifica (post_channel -> seccion)"
+    cu_eedd_suscripciones_ref_secciones ||--o{ cu_eedd_suscripciones_secciones_people_pageviews : "clasifica (post_channel -> seccion)"
+    cu_eedd_suscripciones_secciones_tiempos ||--o{ cu_eedd_suscripciones_secciones_clusterizadas : "alimenta (seccion)"
+    cu_eedd_suscripciones_secciones_people_pageviews ||--o{ cu_eedd_suscripciones_secciones_clusterizadas : "alimenta (seccion)"
+    cu_eedd_suscripciones_secciones_clusterizadas ||--o{ cu_eedd_suscripciones_resumen_clusters : "agrupa (cluster_asignado)"
+```
+
+---
+
+## 2. Ingesta Transaccional de Paywall e Identidad (`silver_suscripciones_refined` / `Evolok`)
+
+Este modelo representa el flujo de datos transaccional en tiempo real ingestado a través de Pub/Sub desde la pasarela **Evolok**. Contiene la creación de clientes, gestión de suscripciones activas, pasarela de productos y auditoría de pedidos.
+
+!!! tip "🔍 Modelo interactivo"
+    Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.
+
+```mermaid
+erDiagram
+    evolok_online_clientes_pubsub {
+        string id_usuario PK
+        string name
+        string email
         string origen
         string provincia
     }
-    RFV_USUARIO {
-        string usuario_id PK
-        string segmento_rfv
-    }
-    NAVEGACION_AGREGADA_USUARIO_SECCION {
-        string usuario_id PK
-        string seccion PK
-        int pageviews
-    }
-    PERFIL_SUSCRIPTOR {
-        string usuario_id PK
-        string tier
+    evolok_online_products_pubsub {
+        string id_producto PK
+        string nombre_producto
+        float64 precio
         string periodicidad
     }
-    ALTAS_BAJAS_ACTIVAS {
-        date fecha PK
-        string tienda PK
-        int altas
-        int bajas
-        int activas
+    evolok_online_subscriptions_pubsub {
+        string id_suscripcion PK
+        string id_usuario FK
+        string id_producto FK
+        date fecha_inicio
+        date fecha_fin
+        string estado
+    }
+    evolok_online_orders_pubsub {
+        string id_pedido PK
+        string id_suscripcion FK
+        float64 monto
+        timestamp fecha_pago
     }
 
-    MAP_SECCIONES_TEMATICAS ||--o{ NAVEGAWEB_ACUM : clasifica
-    MAP_SECCIONES_TEMATICAS ||--o{ NAVEGAAPP_ACUM : clasifica
-    NAVEGAWEB_ACUM ||--o{ SECCIONES_TIEMPOS_2 : agrega
-    NAVEGAAPP_ACUM ||--o{ SECCIONES_TIEMPOS_2 : agrega
-    NAVEGAWEB_ACUM ||--o{ SECCIONES_PEOPLE_PAGEVIEWS : agrega
-    NAVEGAAPP_ACUM ||--o{ SECCIONES_PEOPLE_PAGEVIEWS : agrega
-    SECCIONES_TIEMPOS_2 ||--o{ CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS : unifica
-    SECCIONES_PEOPLE_PAGEVIEWS ||--o{ CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS : unifica
-    CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS ||--o{ CU_EEDD_SUSCRIPCIONES_RESUMEN_CLUSTERS : resume
-    SUSCRIPCIONES_AVANZADO ||--o{ SUSCRIPCIONES_HISTORICO : alimenta
-    SUSCRIPCIONES_HISTORICO ||--o{ ALTAS_BAJAS_ACTIVAS : deriva
-    SD_DETALLE_CLIENTES ||--o{ PERFIL_SUSCRIPTOR : enriquece
-    RFV_USUARIO ||--o{ NAVEGACION_AGREGADA_USUARIO_SECCION : cruza
-    RFV_USUARIO ||--o{ PERFIL_SUSCRIPTOR : segmenta
+    evolok_online_clientes_pubsub ||--o{ evolok_online_subscriptions_pubsub : "adquiere (id_usuario)"
+    evolok_online_products_pubsub ||--o{ evolok_online_subscriptions_pubsub : "ofrece (id_producto)"
+    evolok_online_subscriptions_pubsub ||--o{ evolok_online_orders_pubsub : "genera (id_suscripcion)"
 ```
 
-!!! info "Fuentes"
-    - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\Mockup\Validaciones\validaciones_navegacion_suscriptor.docx`
-    - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\Mockup\Validaciones\analisis_discrepancia_sd_detalle_clientes.docx`
-    - `5. Documentación Espacio Datos\2. Casos de uso\CdU Suscripciones\ENTREGABLE E17 ...docx`
+---
+
+## Orígenes de Datos y Linaje de Suscriptores
+
+El ciclo de vida del dato de suscripciones se divide en los siguientes flujos de procesamiento:
+
+1. **Pasarela Evolok (Capa Bronce & Silver)**:
+   * Los eventos de suscripción, productos y usuarios se capturan en tiempo real a través de Google Cloud Pub/Sub, volcándose de manera estructurada en las tablas `evolok_online_*_pubsub` de la capa **Silver** (`silver_suscripciones_refined`).
+   * Adicionalmente, se mantiene una réplica relacional histórica importada desde el motor original en la capa **PostgreSQL Evolok** (`postgresql_evolok`), que expone tablas maestros como `detalle_clientes` y `suscripciones`.
+2. **Segmentación Web & App (Capa Gold)**:
+   * Los flujos de navegación unificados de Adobe Analytics alimentan de manera agregada las métricas de consumo de secciones editoriales.
+   * Tras aplicar los pesos del clasificador temático de secciones, el orquestador (Dataform) ejecuta los algoritmos de clústeres analíticos salvando los resultados finales en el datamart del Espacio de Datos: `dm_eedd_suscripciones`.
 

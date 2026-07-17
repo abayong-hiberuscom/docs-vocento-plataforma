@@ -55,11 +55,3 @@ vigilancia de churn, cruce con Adobe Analytics, uso de datos de Evolok y Stripe.
     No se localizó documento de texto acompañante para la sesión del 28/05/2026 (Gago, Ana
     González, Iñigo, Víctor); solo existe la grabación (no procesada).
 
-!!! info "Fuentes"
-    - `2. Grabaciones de sesiones\Grabaciones Gobernanza Datos\20251215 - Grabación gobernanza dato - Notas de Gemini.docx`
-    - `2. Grabaciones de sesiones\Grabaciones Gobernanza Datos\Clasificados\Next steps Roadmap Gobernanza Clasificados Sesión 1-4.docx`
-    - `2. Grabaciones de sesiones\Grabaciones Gobernanza Datos\Publicidad\Next steps Roadmap Gobernanza Publicidad Sesión 1-2.docx`
-    - `2. Grabaciones de sesiones\Reuniones con negocio\Publicidad digital\07042026_CdM Publicidad Digital - negocio.docx`
-    - `2. Grabaciones de sesiones\Reuniones con negocio\Suscripciones\08042026_Suscripciones - Captación B2C.docx`
-    - `2. Grabaciones de sesiones\Reuniones con negocio\Suscripciones\09042026_Suscripciones - Clientes B2C.docx`
-

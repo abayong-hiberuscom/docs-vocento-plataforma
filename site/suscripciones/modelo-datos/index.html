@@ -25,7 +25,7 @@
     
     
       
-        <title>Modelo de datos - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
+        <title>📊 Modelo de datos - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
       
     
     
@@ -51,12 +51,28 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+  <!-- Force shadow DOMs to be 'open' so we can access Mermaid SVGs for full-screen zoom -->
+  <script>
+    (function() {
+      console.log("Hooking Element.prototype.attachShadow...");
+      const originalAttachShadow = Element.prototype.attachShadow;
+      Element.prototype.attachShadow = function(init) {
+        if (init && init.mode === 'closed') {
+          init.mode = 'open';
+        }
+        return originalAttachShadow.call(this, init);
+      };
+    })();
+  </script>
+
   </head>
   
   
@@ -110,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modelo de datos
+              📊 Modelo de datos
             
           </span>
         </div>
@@ -217,7 +233,7 @@
   
     
   
-  Inicio
+  🏠 Inicio
 
       </a>
     </li>
@@ -238,7 +254,7 @@
   
     
   
-  Visión general del proyecto
+  🎯 Visión General
 
         </a>
       </li>
@@ -260,7 +276,7 @@
   
     
   
-  Espacio de Datos (EEDD)
+  🌐 Espacio de Datos (EEDD)
 
         </a>
       </li>
@@ -282,7 +298,7 @@
   
     
   
-  Gobierno del Dato y Calidad
+  🛡️ Gobierno y Calidad
 
         </a>
       </li>
@@ -304,7 +320,7 @@
   
     
   
-  Publicidad
+  📢 Publicidad
 
         </a>
       </li>
@@ -326,7 +342,7 @@
   
     
   
-  Clasificados
+  🚗 Clasificados
 
         </a>
       </li>
@@ -350,7 +366,7 @@
   
     
   
-  Suscripciones
+  🔄 Suscripciones
 
         </a>
       </li>
@@ -372,7 +388,7 @@
   
     
   
-  Propuestas Comerciales, BI y Plan Data
+  💡 Propuestas y BI
 
         </a>
       </li>
@@ -394,29 +410,7 @@
   
     
   
-  Formación y comunicación
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../anexos/inventario/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Anexos
+  🎓 Formación
 
         </a>
       </li>
@@ -473,7 +467,7 @@
   <span class="md-ellipsis">
     
   
-    Inicio
+    🏠 Inicio
   
 
     
@@ -524,7 +518,7 @@
   <span class="md-ellipsis">
     
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
     
@@ -540,7 +534,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
           </label>
@@ -560,7 +554,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen ejecutivo
+    📝 Resumen ejecutivo
   
 
     
@@ -588,7 +582,7 @@
   <span class="md-ellipsis">
     
   
-    Seguimiento del programa
+    📅 Seguimiento del programa
   
 
     
@@ -616,7 +610,7 @@
   <span class="md-ellipsis">
     
   
-    Memoria técnica (Entregables E1-E23)
+    📁 Memoria técnica (E1-E23)
   
 
     
@@ -679,7 +673,7 @@
   <span class="md-ellipsis">
     
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
     
@@ -695,7 +689,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
           </label>
@@ -715,7 +709,7 @@
   <span class="md-ellipsis">
     
   
-    Definición y modelo operativo
+    ⚙️ Definición y modelo operativo
   
 
     
@@ -743,7 +737,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura desplegada
+    🏗️ Arquitectura desplegada
   
 
     
@@ -771,7 +765,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno y accesos
+    🔑 Gobierno y accesos
   
 
     
@@ -799,7 +793,7 @@
   <span class="md-ellipsis">
     
   
-    Aspectos legales y DPO
+    ⚖️ Aspectos legales y DPO
   
 
     
@@ -827,7 +821,7 @@
   <span class="md-ellipsis">
     
   
-    Consentimientos
+    📋 Consentimientos
   
 
     
@@ -890,7 +884,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
     
@@ -906,7 +900,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
           </label>
@@ -926,7 +920,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de gobierno
+    🏛️ Modelo de gobierno
   
 
     
@@ -954,7 +948,7 @@
   <span class="md-ellipsis">
     
   
-    Glosario de negocio
+    📖 Glosario de negocio
   
 
     
@@ -982,7 +976,7 @@
   <span class="md-ellipsis">
     
   
-    Reglas de calidad de datos
+    🔎 Reglas de calidad de datos
   
 
     
@@ -1010,7 +1004,7 @@
   <span class="md-ellipsis">
     
   
-    Dataplex y metadatos
+    🗂️ Dataplex y metadatos
   
 
     
@@ -1038,7 +1032,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo entidad-relación técnico
+    📊 Modelo entidad-relación técnico
   
 
     
@@ -1097,7 +1091,7 @@
   <span class="md-ellipsis">
     
   
-    Publicidad
+    📢 Publicidad
   
 
     
@@ -1113,7 +1107,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Publicidad
+    📢 Publicidad
   
 
           </label>
@@ -1133,7 +1127,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1161,7 +1155,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1189,7 +1183,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1248,7 +1242,7 @@
   <span class="md-ellipsis">
     
   
-    Clasificados
+    🚗 Clasificados
   
 
     
@@ -1264,7 +1258,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Clasificados
+    🚗 Clasificados
   
 
           </label>
@@ -1284,7 +1278,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1312,7 +1306,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1340,7 +1334,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1404,7 +1398,7 @@
   <span class="md-ellipsis">
     
   
-    Suscripciones
+    🔄 Suscripciones
   
 
     
@@ -1420,7 +1414,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Suscripciones
+    🔄 Suscripciones
   
 
           </label>
@@ -1440,7 +1434,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1468,7 +1462,7 @@
   <span class="md-ellipsis">
     
   
-    Reporting y objetivos
+    📈 Reporting y objetivos
   
 
     
@@ -1498,6 +1492,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Modelo de datos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1505,7 +1517,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1514,6 +1526,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-espacio-de-datos-metricas-de-consumo-y-clusteres-dm_eedd_suscripciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Espacio de Datos: Métricas de Consumo y Clústeres (dm_eedd_suscripciones)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ingesta-transaccional-de-paywall-e-identidad-silver_suscripciones_refined-evolok" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ingesta Transaccional de Paywall e Identidad (silver_suscripciones_refined / Evolok)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origenes-de-datos-y-linaje-de-suscriptores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orígenes de Datos y Linaje de Suscriptores
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1567,7 +1631,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
     
@@ -1583,7 +1647,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
           </label>
@@ -1603,7 +1667,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas comerciales
+    💼 Propuestas comerciales
   
 
     
@@ -1631,7 +1695,7 @@
   <span class="md-ellipsis">
     
   
-    Plataforma tecnológica y Plan Data
+    💻 Plataforma y Plan Data
   
 
     
@@ -1659,7 +1723,7 @@
   <span class="md-ellipsis">
     
   
-    Inteligencia de negocio
+    📊 Inteligencia de negocio
   
 
     
@@ -1687,7 +1751,7 @@
   <span class="md-ellipsis">
     
   
-    Catálogo de casos de uso
+    🗂️ Catálogo de casos de uso
   
 
     
@@ -1744,7 +1808,7 @@
   <span class="md-ellipsis">
     
   
-    Formación y comunicación
+    🎓 Formación
   
 
     
@@ -1760,7 +1824,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Formación y comunicación
+    🎓 Formación
   
 
           </label>
@@ -1780,7 +1844,7 @@
   <span class="md-ellipsis">
     
   
-    Formación EEDD
+    📚 Formación EEDD
   
 
     
@@ -1808,128 +1872,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de sesiones de gobernanza
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anexos
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Anexos
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/inventario/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inventario documental
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/grabaciones/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Grabaciones (no transcritas)
+    📝 Notas de sesiones
   
 
     
@@ -1968,116 +1911,108 @@
 
 
 <h1 id="modelo-de-datos-suscripciones">Modelo de datos — Suscripciones<a class="headerlink" href="#modelo-de-datos-suscripciones" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>El diagrama mezcla tablas físicas (documentadas en validaciones/migración) y entidades lógicas
-intermedias del caso EEDD. Varias relaciones son <strong>inferidas</strong> a partir de comentarios de
-mockups/validaciones, no de un DDL completo — no se ha localizado un diccionario PK/FK completo
-del vertical.</p>
-</blockquote>
+<p>La arquitectura de datos de <strong>Suscripciones y Clientes</strong> en BigQuery unifica la información transaccional de la pasarela de pago de identidad (<strong>Evolok</strong>) con los modelos analíticos agregados del <strong>Espacio de Datos (EEDD)</strong>. Esta integración permite analizar el comportamiento de navegación de los suscriptores y clusterizar las secciones editoriales según el valor aportado.</p>
+<p>A continuación, se detallan los diagramas entidad-relación (ER) actualizados según los esquemas físicos reales que se ejecutan en BigQuery.</p>
+<hr />
+<h2 id="1-espacio-de-datos-metricas-de-consumo-y-clusteres-dm_eedd_suscripciones">1. Espacio de Datos: Métricas de Consumo y Clústeres (<code>dm_eedd_suscripciones</code>)<a class="headerlink" href="#1-espacio-de-datos-metricas-de-consumo-y-clusteres-dm_eedd_suscripciones" title="Permanent link">&para;</a></h2>
+<p>Este datamart procesa de forma agregada el tiempo medio de permanencia, las páginas vistas y la frecuencia de consumo para agrupar las secciones de los diarios en clústeres temáticos de comportamiento.</p>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Modelo interactivo</p>
+<p>Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.</p>
+</div>
 <pre class="mermaid"><code>erDiagram
-    MAP_SECCIONES_TEMATICAS {
+    cu_eedd_suscripciones_ref_secciones {
         string post_channel PK
         string seccion
+        bool is_active
     }
-    NAVEGAWEB_ACUM {
-        string ecid
-        string visit_id
-        string post_channel
-        datetime date_time
+    cu_eedd_suscripciones_secciones_tiempos {
+        string anio_mes PK
+        string seccion PK
+        float64 avg_tiempo_por_pagina_seg
+        date load_date
     }
-    NAVEGAAPP_ACUM {
-        string ecid
-        string visit_id
-        string post_channel
-        datetime date_time
+    cu_eedd_suscripciones_secciones_people_pageviews {
+        string anio_mes PK
+        string seccion PK
+        float64 alcance_seccion_pct
+        float64 ratio_consumo_pct
+        date load_date
     }
-    SECCIONES_TIEMPOS_2 {
-        string anio_mes
-        string seccion
-        float avg_tiempo_por_pagina_seg
+    cu_eedd_suscripciones_secciones_clusterizadas {
+        string anio_mes PK
+        string seccion PK
+        float64 avg_tiempo_por_pagina_seg
+        float64 alcance_seccion_pct
+        float64 ratio_consumo_pct
+        int64 cluster_asignado FK
+        date load_date
     }
-    SECCIONES_PEOPLE_PAGEVIEWS {
-        string anio_mes
-        string seccion
-        int usuarios_unicos
-        float ratio_consumo
+    cu_eedd_suscripciones_resumen_clusters {
+        int64 cluster_asignado PK
+        int64 total_secciones
+        float64 avg_tiempo_seg
+        float64 avg_alcance_pct
+        float64 avg_consumo_pct
+        string secciones_incluidas
+        date load_date
     }
-    CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS {
-        string anio_mes
-        string seccion
-        float alcance_pct
-        float ratio_consumo
-        int cluster_asignado
-    }
-    CU_EEDD_SUSCRIPCIONES_RESUMEN_CLUSTERS {
-        int cluster_asignado
-        int total_secciones
-        string listado_secciones
-    }
-    SUSCRIPCIONES_AVANZADO {
-        string id_suscripcion PK
-        date fecha_inicio
-        date fecha_fin
-        string estado_suscripcion
-        string tier
-    }
-    SUSCRIPCIONES_HISTORICO {
-        date fecha PK
-        string tienda PK
-        int activas
-        int altas
-        int bajas
-    }
-    SD_DETALLE_CLIENTES {
-        string id_medio PK
-        string cod_local PK
+
+    cu_eedd_suscripciones_ref_secciones ||--o{ cu_eedd_suscripciones_secciones_tiempos : "clasifica (post_channel -&gt; seccion)"
+    cu_eedd_suscripciones_ref_secciones ||--o{ cu_eedd_suscripciones_secciones_people_pageviews : "clasifica (post_channel -&gt; seccion)"
+    cu_eedd_suscripciones_secciones_tiempos ||--o{ cu_eedd_suscripciones_secciones_clusterizadas : "alimenta (seccion)"
+    cu_eedd_suscripciones_secciones_people_pageviews ||--o{ cu_eedd_suscripciones_secciones_clusterizadas : "alimenta (seccion)"
+    cu_eedd_suscripciones_secciones_clusterizadas ||--o{ cu_eedd_suscripciones_resumen_clusters : "agrupa (cluster_asignado)"</code></pre>
+<hr />
+<h2 id="2-ingesta-transaccional-de-paywall-e-identidad-silver_suscripciones_refined-evolok">2. Ingesta Transaccional de Paywall e Identidad (<code>silver_suscripciones_refined</code> / <code>Evolok</code>)<a class="headerlink" href="#2-ingesta-transaccional-de-paywall-e-identidad-silver_suscripciones_refined-evolok" title="Permanent link">&para;</a></h2>
+<p>Este modelo representa el flujo de datos transaccional en tiempo real ingestado a través de Pub/Sub desde la pasarela <strong>Evolok</strong>. Contiene la creación de clientes, gestión de suscripciones activas, pasarela de productos y auditoría de pedidos.</p>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Modelo interactivo</p>
+<p>Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.</p>
+</div>
+<pre class="mermaid"><code>erDiagram
+    evolok_online_clientes_pubsub {
+        string id_usuario PK
+        string name
+        string email
         string origen
         string provincia
     }
-    RFV_USUARIO {
-        string usuario_id PK
-        string segmento_rfv
-    }
-    NAVEGACION_AGREGADA_USUARIO_SECCION {
-        string usuario_id PK
-        string seccion PK
-        int pageviews
-    }
-    PERFIL_SUSCRIPTOR {
-        string usuario_id PK
-        string tier
+    evolok_online_products_pubsub {
+        string id_producto PK
+        string nombre_producto
+        float64 precio
         string periodicidad
     }
-    ALTAS_BAJAS_ACTIVAS {
-        date fecha PK
-        string tienda PK
-        int altas
-        int bajas
-        int activas
+    evolok_online_subscriptions_pubsub {
+        string id_suscripcion PK
+        string id_usuario FK
+        string id_producto FK
+        date fecha_inicio
+        date fecha_fin
+        string estado
+    }
+    evolok_online_orders_pubsub {
+        string id_pedido PK
+        string id_suscripcion FK
+        float64 monto
+        timestamp fecha_pago
     }
 
-    MAP_SECCIONES_TEMATICAS ||--o{ NAVEGAWEB_ACUM : clasifica
-    MAP_SECCIONES_TEMATICAS ||--o{ NAVEGAAPP_ACUM : clasifica
-    NAVEGAWEB_ACUM ||--o{ SECCIONES_TIEMPOS_2 : agrega
-    NAVEGAAPP_ACUM ||--o{ SECCIONES_TIEMPOS_2 : agrega
-    NAVEGAWEB_ACUM ||--o{ SECCIONES_PEOPLE_PAGEVIEWS : agrega
-    NAVEGAAPP_ACUM ||--o{ SECCIONES_PEOPLE_PAGEVIEWS : agrega
-    SECCIONES_TIEMPOS_2 ||--o{ CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS : unifica
-    SECCIONES_PEOPLE_PAGEVIEWS ||--o{ CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS : unifica
-    CU_EEDD_SUSCRIPCIONES_SECCIONES_CLUSTERIZADAS ||--o{ CU_EEDD_SUSCRIPCIONES_RESUMEN_CLUSTERS : resume
-    SUSCRIPCIONES_AVANZADO ||--o{ SUSCRIPCIONES_HISTORICO : alimenta
-    SUSCRIPCIONES_HISTORICO ||--o{ ALTAS_BAJAS_ACTIVAS : deriva
-    SD_DETALLE_CLIENTES ||--o{ PERFIL_SUSCRIPTOR : enriquece
-    RFV_USUARIO ||--o{ NAVEGACION_AGREGADA_USUARIO_SECCION : cruza
-    RFV_USUARIO ||--o{ PERFIL_SUSCRIPTOR : segmenta</code></pre>
-<div class="admonition info">
-<p class="admonition-title">Fuentes</p>
-<ul>
-<li><code>4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\Mockup\Validaciones\validaciones_navegacion_suscriptor.docx</code></li>
-<li><code>4. Documentación Plataforma Tecnológica\5 - Suscripciones\Definición Reporting\Mockup\Validaciones\analisis_discrepancia_sd_detalle_clientes.docx</code></li>
-<li><code>5. Documentación Espacio Datos\2. Casos de uso\CdU Suscripciones\ENTREGABLE E17 ...docx</code></li>
-</ul>
-</div>
+    evolok_online_clientes_pubsub ||--o{ evolok_online_subscriptions_pubsub : "adquiere (id_usuario)"
+    evolok_online_products_pubsub ||--o{ evolok_online_subscriptions_pubsub : "ofrece (id_producto)"
+    evolok_online_subscriptions_pubsub ||--o{ evolok_online_orders_pubsub : "genera (id_suscripcion)"</code></pre>
+<hr />
+<h2 id="origenes-de-datos-y-linaje-de-suscriptores">Orígenes de Datos y Linaje de Suscriptores<a class="headerlink" href="#origenes-de-datos-y-linaje-de-suscriptores" title="Permanent link">&para;</a></h2>
+<p>El ciclo de vida del dato de suscripciones se divide en los siguientes flujos de procesamiento:</p>
+<ol>
+<li><strong>Pasarela Evolok (Capa Bronce &amp; Silver)</strong>:</li>
+<li>Los eventos de suscripción, productos y usuarios se capturan en tiempo real a través de Google Cloud Pub/Sub, volcándose de manera estructurada en las tablas <code>evolok_online_*_pubsub</code> de la capa <strong>Silver</strong> (<code>silver_suscripciones_refined</code>).</li>
+<li>Adicionalmente, se mantiene una réplica relacional histórica importada desde el motor original en la capa <strong>PostgreSQL Evolok</strong> (<code>postgresql_evolok</code>), que expone tablas maestros como <code>detalle_clientes</code> y <code>suscripciones</code>.</li>
+<li><strong>Segmentación Web &amp; App (Capa Gold)</strong>:</li>
+<li>Los flujos de navegación unificados de Adobe Analytics alimentan de manera agregada las métricas de consumo de secciones editoriales.</li>
+<li>Tras aplicar los pesos del clasificador temático de secciones, el orquestador (Dataform) ejecuta los algoritmos de clústeres analíticos salvando los resultados finales en el datamart del Espacio de Datos: <code>dm_eedd_suscripciones</code>.</li>
+</ol>
 
 
 
@@ -2132,6 +2067,8 @@ del vertical.</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
       
     
   </body>

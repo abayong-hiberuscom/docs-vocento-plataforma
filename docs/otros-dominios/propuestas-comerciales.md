@@ -57,16 +57,3 @@ erDiagram
     MAPEO_GFK_GALILEO ||--o{ CU_EEDD_PROPUESTAS_COMERCIALES_EGM_GFK : normaliza
 ```
 
-!!! warning "Pendientes/incertidumbres"
-    - Material funcional muy incompleto: no hay memoria de caso de uso, mockup ni SQLX comparable
-      a otros dominios.
-    - Tensión entre fuentes: el catálogo DCAT lo marca "pendiente/develop" mientras el zip de
-      calidad ya presupone una tabla Gold concreta.
-    - Fuentes adicionales del plan (MAS-i2p, OJD, AMI, INFOADEX) no se han visto modeladas
-      técnicamente en los ficheros localizados.
-
-!!! info "Fuentes"
-    - `5. Documentación Espacio Datos\2. Casos de uso\CdU Propuestas Comerciales\Calidad - dm_eedd_propuestas_comerciales.zip`
-    - `5. Documentación Espacio Datos\2. Casos de uso\CdU Propuestas Comerciales\gfk_galileo.csv`
-    - `4. Documentación Plataforma Tecnológica\6 - Plan Data\Proyecto DATA - Vocento.xlsx`
-

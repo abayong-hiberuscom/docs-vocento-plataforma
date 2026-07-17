@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <!-- Force shadow DOMs to be 'open' so we can access Mermaid SVGs for full-screen zoom -->
+  <script>
+    (function() {
+      console.log("Hooking Element.prototype.attachShadow...");
+      const originalAttachShadow = Element.prototype.attachShadow;
+      Element.prototype.attachShadow = function(init) {
+        if (init && init.mode === 'closed') {
+          init.mode = 'open';
+        }
+        return originalAttachShadow.call(this, init);
+      };
+    })();
+  </script>
+{% endblock %}

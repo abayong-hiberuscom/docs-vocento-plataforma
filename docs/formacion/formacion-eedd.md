@@ -59,8 +59,3 @@ Guía de uso de los dashboards **Publicidad Digital — Diario** y **Mensual** e
 por hojas: Tendencia, Comparativos, Tops, Analizador. Ejemplos con combinaciones de métricas,
 dimensiones, periodos y filtros (cabecera, país, dispositivo, tipo de página, impresiones/clicks).
 
-!!! info "Fuentes"
-    - `2. Grabaciones de sesiones\Sesión Telefónica Modelo operativo EEDD\Manual_Usuario_Espacio_Datos_Vocento.docx`
-    - `3. Formaciones\Gestión Comercial.pptx`, `Looker_Funciones_Basicas.pptx`, `Prod.Pub.Digital.pptx`
-    - `2. Grabaciones de sesiones\Sesiones formativas EEDD\Bloque 1\*`, `Bloque 2\*`, `Bloque 3\*`
-

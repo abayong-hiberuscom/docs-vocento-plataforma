@@ -105,13 +105,3 @@ erDiagram
     DIM_GFK_GEOGRAFIA ||--o{ FACT_GFK : localiza
 ```
 
-!!! warning "Pendientes/incertidumbres"
-    Defectos funcionales abiertos en las pruebas del agente: ruteo incorrecto entre OJD/EGM/GFK,
-    redondeos/decimales, ranking print vs digital, manejo de cierres mensuales históricos GFK,
-    categorías/segmentos mal interpretados.
-
-!!! info "Fuentes"
-    - `4. Documentación Plataforma Tecnológica\7 - Inteligencia Negocio\CdM Inteligencia Negocio.pptx`
-    - `4. Documentación Plataforma Tecnológica\7 - Inteligencia Negocio\Revisión CU Agente Int. Negocio.xlsx`
-    - `4. Documentación Plataforma Tecnológica\7 - Inteligencia Negocio\Agente_Int_Negocio - Pruebas 25_06.pptx`
-

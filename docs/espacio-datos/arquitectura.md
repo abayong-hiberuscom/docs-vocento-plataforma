@@ -79,7 +79,3 @@ Relaciones técnicas clave:
     En algunas notas de formación aparece la grafía "Kicklock/Kiclock"; por contexto técnico y las
     diapositivas fuente, se interpreta como **Keycloak**.
 
-!!! info "Fuentes"
-    - `2. Grabaciones de sesiones\Sesiones formativas EEDD\Bloque 2\Arquitectura de la solución desplegada\*`
-    - `5. Documentación Espacio Datos\3. Espacio de Datos (técnica)\Planificación y arquitectura\EEDD Arquitectura Planificacion.pdf`
-

@@ -25,7 +25,7 @@
     
     
       
-        <title>Memoria técnica (Entregables E1-E23) - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
+        <title>📁 Memoria técnica (E1-E23) - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
       
     
     
@@ -51,12 +51,28 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+  <!-- Force shadow DOMs to be 'open' so we can access Mermaid SVGs for full-screen zoom -->
+  <script>
+    (function() {
+      console.log("Hooking Element.prototype.attachShadow...");
+      const originalAttachShadow = Element.prototype.attachShadow;
+      Element.prototype.attachShadow = function(init) {
+        if (init && init.mode === 'closed') {
+          init.mode = 'open';
+        }
+        return originalAttachShadow.call(this, init);
+      };
+    })();
+  </script>
+
   </head>
   
   
@@ -110,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Memoria técnica (Entregables E1-E23)
+              📁 Memoria técnica (E1-E23)
             
           </span>
         </div>
@@ -217,7 +233,7 @@
   
     
   
-  Inicio
+  🏠 Inicio
 
       </a>
     </li>
@@ -240,7 +256,7 @@
   
     
   
-  Visión general del proyecto
+  🎯 Visión General
 
         </a>
       </li>
@@ -262,7 +278,7 @@
   
     
   
-  Espacio de Datos (EEDD)
+  🌐 Espacio de Datos (EEDD)
 
         </a>
       </li>
@@ -284,7 +300,7 @@
   
     
   
-  Gobierno del Dato y Calidad
+  🛡️ Gobierno y Calidad
 
         </a>
       </li>
@@ -306,7 +322,7 @@
   
     
   
-  Publicidad
+  📢 Publicidad
 
         </a>
       </li>
@@ -328,7 +344,7 @@
   
     
   
-  Clasificados
+  🚗 Clasificados
 
         </a>
       </li>
@@ -350,7 +366,7 @@
   
     
   
-  Suscripciones
+  🔄 Suscripciones
 
         </a>
       </li>
@@ -372,7 +388,7 @@
   
     
   
-  Propuestas Comerciales, BI y Plan Data
+  💡 Propuestas y BI
 
         </a>
       </li>
@@ -394,29 +410,7 @@
   
     
   
-  Formación y comunicación
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../anexos/inventario/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Anexos
+  🎓 Formación
 
         </a>
       </li>
@@ -473,7 +467,7 @@
   <span class="md-ellipsis">
     
   
-    Inicio
+    🏠 Inicio
   
 
     
@@ -529,7 +523,7 @@
   <span class="md-ellipsis">
     
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
     
@@ -545,7 +539,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
           </label>
@@ -565,7 +559,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen ejecutivo
+    📝 Resumen ejecutivo
   
 
     
@@ -593,7 +587,7 @@
   <span class="md-ellipsis">
     
   
-    Seguimiento del programa
+    📅 Seguimiento del programa
   
 
     
@@ -630,7 +624,7 @@
   <span class="md-ellipsis">
     
   
-    Memoria técnica (Entregables E1-E23)
+    📁 Memoria técnica (E1-E23)
   
 
     
@@ -648,7 +642,7 @@
   <span class="md-ellipsis">
     
   
-    Memoria técnica (Entregables E1-E23)
+    📁 Memoria técnica (E1-E23)
   
 
     
@@ -1078,7 +1072,7 @@
   <span class="md-ellipsis">
     
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
     
@@ -1094,7 +1088,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
           </label>
@@ -1114,7 +1108,7 @@
   <span class="md-ellipsis">
     
   
-    Definición y modelo operativo
+    ⚙️ Definición y modelo operativo
   
 
     
@@ -1142,7 +1136,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura desplegada
+    🏗️ Arquitectura desplegada
   
 
     
@@ -1170,7 +1164,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno y accesos
+    🔑 Gobierno y accesos
   
 
     
@@ -1198,7 +1192,7 @@
   <span class="md-ellipsis">
     
   
-    Aspectos legales y DPO
+    ⚖️ Aspectos legales y DPO
   
 
     
@@ -1226,7 +1220,7 @@
   <span class="md-ellipsis">
     
   
-    Consentimientos
+    📋 Consentimientos
   
 
     
@@ -1289,7 +1283,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
     
@@ -1305,7 +1299,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
           </label>
@@ -1325,7 +1319,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de gobierno
+    🏛️ Modelo de gobierno
   
 
     
@@ -1353,7 +1347,7 @@
   <span class="md-ellipsis">
     
   
-    Glosario de negocio
+    📖 Glosario de negocio
   
 
     
@@ -1381,7 +1375,7 @@
   <span class="md-ellipsis">
     
   
-    Reglas de calidad de datos
+    🔎 Reglas de calidad de datos
   
 
     
@@ -1409,7 +1403,7 @@
   <span class="md-ellipsis">
     
   
-    Dataplex y metadatos
+    🗂️ Dataplex y metadatos
   
 
     
@@ -1437,7 +1431,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo entidad-relación técnico
+    📊 Modelo entidad-relación técnico
   
 
     
@@ -1496,7 +1490,7 @@
   <span class="md-ellipsis">
     
   
-    Publicidad
+    📢 Publicidad
   
 
     
@@ -1512,7 +1506,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Publicidad
+    📢 Publicidad
   
 
           </label>
@@ -1532,7 +1526,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1560,7 +1554,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1588,7 +1582,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1647,7 +1641,7 @@
   <span class="md-ellipsis">
     
   
-    Clasificados
+    🚗 Clasificados
   
 
     
@@ -1663,7 +1657,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Clasificados
+    🚗 Clasificados
   
 
           </label>
@@ -1683,7 +1677,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1711,7 +1705,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1739,7 +1733,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1798,7 +1792,7 @@
   <span class="md-ellipsis">
     
   
-    Suscripciones
+    🔄 Suscripciones
   
 
     
@@ -1814,7 +1808,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Suscripciones
+    🔄 Suscripciones
   
 
           </label>
@@ -1834,7 +1828,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1862,7 +1856,7 @@
   <span class="md-ellipsis">
     
   
-    Reporting y objetivos
+    📈 Reporting y objetivos
   
 
     
@@ -1890,7 +1884,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1951,7 +1945,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
     
@@ -1967,7 +1961,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
           </label>
@@ -1987,7 +1981,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas comerciales
+    💼 Propuestas comerciales
   
 
     
@@ -2015,7 +2009,7 @@
   <span class="md-ellipsis">
     
   
-    Plataforma tecnológica y Plan Data
+    💻 Plataforma y Plan Data
   
 
     
@@ -2043,7 +2037,7 @@
   <span class="md-ellipsis">
     
   
-    Inteligencia de negocio
+    📊 Inteligencia de negocio
   
 
     
@@ -2071,7 +2065,7 @@
   <span class="md-ellipsis">
     
   
-    Catálogo de casos de uso
+    🗂️ Catálogo de casos de uso
   
 
     
@@ -2128,7 +2122,7 @@
   <span class="md-ellipsis">
     
   
-    Formación y comunicación
+    🎓 Formación
   
 
     
@@ -2144,7 +2138,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Formación y comunicación
+    🎓 Formación
   
 
           </label>
@@ -2164,7 +2158,7 @@
   <span class="md-ellipsis">
     
   
-    Formación EEDD
+    📚 Formación EEDD
   
 
     
@@ -2192,128 +2186,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de sesiones de gobernanza
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anexos
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Anexos
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/inventario/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inventario documental
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/grabaciones/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Grabaciones (no transcritas)
+    📝 Notas de sesiones
   
 
     
@@ -2358,22 +2231,16 @@
 <p><strong>Resumen funcional:</strong> Define la gobernanza operativa del proyecto DATAGORA, la coordinación entre Vocento y partners, el plan de riesgos, el control económico de la subvención y el modelo de seguimiento del valor generado. Sitúa los cuatro casos de uso del programa (Publicidad, Suscripciones, Clasificados y Propuestas Comerciales) y fija responsables de negocio, métricas y cadencias de seguimiento.</p>
 <p><strong>Contenido técnico:</strong> El documento no diseña la solución software, pero sí fija el marco de operación: matriz de riesgos con probabilidad/impacto/mitigación, control presupuestario triple (Memoria, SAP y objetivo teórico), timesheets y seguimiento mensual, gestión del cambio y monitorización de KPIs con BigQuery/Looker. Introduce requisitos de calidad, trazabilidad, seguridad y reporting ligados a la futura plataforma GCP.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No se explicita un esquema tabular reutilizable; predomina la gestión de proyecto, riesgos, gasto y KPIs.</p>
-<p><strong>Fuentes:</strong> <code>E1 ---- OK\ENTREGABLE E1  Plan de gestión y coordinación del proyecto.docx</code></p>
-<p><strong>Notas/pendientes:</strong> El valor está en la PMO y el marco de seguimiento; no aporta modelo lógico detallado de datos de negocio.</p>
 <h2 id="e2-maestro-de-gestion-administrativa-y-de-participantes">E2: Maestro de Gestión administrativa y de participantes<a class="headerlink" href="#e2-maestro-de-gestion-administrativa-y-de-participantes" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Gobierno del Dato / Espacio de Datos</p>
 <p><strong>Resumen funcional:</strong> Establece el marco ético, administrativo, contractual y organizativo del espacio de datos. Incluye plan de responsabilidad social, órganos de gobierno, acta de constitución, código de conducta, principios contractuales y contrato marco de adhesión. El foco es garantizar soberanía del dato, neutralidad, transparencia, cumplimiento RGPD/DGA y reglas comunes de participación.</p>
 <p><strong>Contenido técnico:</strong> Describe roles estandarizados del ecosistema (promotor, autoridad de gobierno, operador, data provider, data consumer e intermediario), comités estratégicos/operativos, rulebook y mecanismos de compliance. No define pipelines ni tablas técnicas, pero sí el modelo organizativo que debe trasladarse a contratos, onboarding y controles de acceso.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No se explicita un ER formal; el documento modela relaciones de gobernanza y responsabilidad más que entidades de datos persistentes.</p>
-<p><strong>Fuentes:</strong> <code>E2 ---- OK\ENTREGABLE E2  Maestro de Gestión administrativa y de participantes .docx</code>; <code>E2 ---- OK\Ejemplo_E2.pdf</code></p>
-<p><strong>Notas/pendientes:</strong> Los <code>.gdoc</code> del directorio no se han podido explotar. El entregable es normativo/organizativo y no técnico en términos de esquema físico.</p>
 <h2 id="e3-valoracion-final-de-la-consecucion-de-los-objetivos-del-proyecto">E3: Valoración final de la consecución de los objetivos del proyecto<a class="headerlink" href="#e3-valoracion-final-de-la-consecucion-de-los-objetivos-del-proyecto" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Transversal</p>
 <p><strong>Resumen funcional:</strong> Cierra el expediente y valora la consecución de objetivos: espacio de datos soberano, cuatro casos de uso activados, catálogo federado, onboarding, gobierno y plan de explotación. Presenta DATAGORA como un ecosistema operativo para monetización de audiencias, analítica de suscripciones, leads cualificados y propuestas comerciales.</p>
 <p><strong>Contenido técnico:</strong> Consolida la arquitectura realmente ejecutada: DSpacer/EDC, microservicios Python/FastAPI, frontales Angular, Keycloak, Vault, PostgreSQL, GCP, Dataplex, Dataform y BigQuery Gold. Resume la política de privacidad por diseño (k-anonimidad &gt;= 15), la validación E2E, los controles DQ y el pipeline CI/CD con lint, unit, API, integration, coverage, E2E, seguridad y rendimiento.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No introduce un modelo adicional; referencia y sintetiza los modelos de catálogo y de los cuatro data products descritos en otros entregables.</p>
-<p><strong>Fuentes:</strong> <code>E3\ENTREGABLE E3  Valoración final de la consecución de los objetivos del proyecto .docx</code></p>
-<p><strong>Notas/pendientes:</strong> Es un documento consolidado y muy útil para cruzar narrativamente E10-E20, pero no sustituye el detalle de cada caso de uso.</p>
 <h2 id="e4-definicion-de-la-herramienta-alcance-diseno-y-funcionalidad-del-espacio-de-datos">E4: Definición de la herramienta: alcance, diseño y funcionalidad del espacio de datos<a class="headerlink" href="#e4-definicion-de-la-herramienta-alcance-diseno-y-funcionalidad-del-espacio-de-datos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Espacio de Datos</p>
 <p><strong>Resumen funcional:</strong> Define qué es la “herramienta” del proyecto: un espacio de datos basado en DSpacer v2.0 con tres conectores EDC (1 proveedor y 2 consumidores). Describe cómo los proveedores publican assets, asignan políticas, negocian contratos y exponen datos a consumidores autorizados; y cómo los consumidores descubren, aceptan contratos y descargan datos.</p>
@@ -2401,43 +2268,31 @@
   CONTRACT {
     string condicion_uso
   }</code></pre></p>
-<p><strong>Fuentes:</strong> <code>E4 ---- OK\ENTREGABLE E4_ Definición de la herramienta_ Alcance, diseño y funcionalidad del espacio de datos .docx</code></p>
-<p><strong>Notas/pendientes:</strong> Modelo funcional, no implementación detallada. No desciende a tablas internas del catálogo o de los microservicios.</p>
 <h2 id="e5-plan-de-arquitectura-de-la-solucion">E5: Plan de arquitectura de la solución<a class="headerlink" href="#e5-plan-de-arquitectura-de-la-solucion" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Plataforma Tecnológica</p>
 <p><strong>Resumen funcional:</strong> Define la arquitectura objetivo de la nueva plataforma analítica de datos de Vocento: medallón Landing/Bronze/Silver/Gold, gobierno del dato, explotación analítica y plan de implantación por fases. Sirve como blueprint técnico de la plataforma que alimenta el espacio de datos.</p>
 <p><strong>Contenido técnico:</strong> Detalla la arquitectura lógica y física en GCP: Cloud Storage por capas y verticales, BigQuery como núcleo analítico, Cloud Composer para orquestación, Dataform/SQLX para transformaciones, Dataplex para catálogo/linaje/calidad y Looker Core como capa semántica. Introduce convenciones de datasets (<code>silver_&lt;vertical&gt;_refined</code>, <code>sta_&lt;vertical&gt;</code>, <code>dm_&lt;vertical&gt;</code>), lifecycle rules, particionado, clusterización, controles IAM/RLS y estrategia FinOps.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No se documentan tablas de negocio con campos cerrados; el entregable define zonas, datasets y patrones de modelado dimensional.</p>
-<p><strong>Fuentes:</strong> <code>E5 ---- OK\ENTREGABLE E5_ Plan de arquitectura de la solución .docx</code></p>
-<p><strong>Notas/pendientes:</strong> Muy valioso para entender la arquitectura macro, pero los modelos concretos aparecen más adelante en E16-E19.</p>
 <h2 id="e6-informe-de-implementacion-y-configuracion-de-la-plataforma">E6: Informe de implementación y configuración de la plataforma<a class="headerlink" href="#e6-informe-de-implementacion-y-configuracion-de-la-plataforma" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Plataforma Tecnológica</p>
 <p><strong>Resumen funcional:</strong> Documenta la plataforma ya desplegada en GCP y justifica su viabilidad técnica, operativa y metodológica. Describe cómo Vocento configura la base cloud que soporta ingesta, transformación, explotación, gobierno, observabilidad y control de costes.</p>
 <p><strong>Contenido técnico:</strong> Se detallan VPC, GKE Autopilot, Cloud Composer, BigQuery, Cloud Storage, Secret Manager, Security Command Center, Pub/Sub, Dataflow, Cloud Run Functions, Dataproc y Cloud Build. El despliegue se gobierna con Terraform, naming corporativo (<code>prj-dataplatform-dev-vocento</code>, <code>prj-dataplatform-pro-vocento</code>, etc.), service accounts, buckets/datasets etiquetados, CI/CD, logging en BigQuery y cuadros FinOps en Looker Studio. También describe el patrón de ingesta por tipos de fuente (FTP/S3/APIs/RabbitMQ/DTS).</p>
 <p><strong>Modelo de datos (si aplica):</strong> No hay un ER de negocio; sí se fijan convenciones físicas de proyectos, buckets, datasets y tablas externas/nativas.</p>
-<p><strong>Fuentes:</strong> <code>E6 ---- OK\ENTREGABLE E6_ Informe de implementación y configuración de la plataforma .docx</code></p>
-<p><strong>Notas/pendientes:</strong> Documento eminentemente de infraestructura y operación, no de dominio funcional de negocio.</p>
 <h2 id="e7-plataforma-de-explotacion-de-datos">E7: Plataforma de explotación de datos<a class="headerlink" href="#e7-plataforma-de-explotacion-de-datos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> BI / Plataforma Tecnológica</p>
 <p><strong>Resumen funcional:</strong> Es el manual conceptual de la plataforma de explotación de datos. Explica cómo se almacenan, procesan, transforman y explotan los datos dentro del ecosistema cloud de Vocento, con foco en trazabilidad, eficiencia operativa y gobierno.</p>
 <p><strong>Contenido técnico:</strong> Recorre Cloud Storage (medallón y buckets por vertical), Cloud Composer y Dataproc para procesamiento batch, BigQuery para datasets analíticos y Dataform para transformaciones/assertions/linaje. Explicita tres niveles de datasets de explotación: <code>silver_&lt;vertical&gt;_refined</code>, <code>sta_&lt;vertical&gt;</code> y <code>dm_&lt;vertical&gt;</code>. Cierra con Secret Manager, Cloud Logging y Cloud Monitoring para seguridad y observabilidad.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No se especifican campos de tablas de negocio; el modelo es de capas/datasets y gobierno técnico.</p>
-<p><strong>Fuentes:</strong> <code>E7 ---- OK\ENTREGABLE E7 Plataforma de explotación de datos.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Referencia no transcrita: <code>E7 ---- OK\E7- Plataforma de explotación de datos.mp4</code>.</p>
 <h2 id="e8-documento-de-arquitectura-del-espacio-de-datos">E8: Documento de arquitectura del espacio de datos<a class="headerlink" href="#e8-documento-de-arquitectura-del-espacio-de-datos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Espacio de Datos / Plataforma Tecnológica</p>
 <p><strong>Resumen funcional:</strong> Describe la arquitectura técnica del EEDD de Vocento y sus flujos clave: autenticación, negociación de contratos, transferencia de datos, monitorización y onboarding. Organiza el sistema en tres bloques: conector, módulo de control y servicios transversales.</p>
 <p><strong>Contenido técnico:</strong> Arquitectura basada en DSpacer/EDC, con capas de conectividad/datos, identidad/seguridad, servicios de negocio y frontales. Componentes principales: Conector, Keycloak, Connector Core Service, Login Service, External Storage Service, Aplicación Web del Conector, SSI Wallet, Portal+Onboarding, Servicio de Monitorización y Front del Módulo de Control; más Vault y resto de piezas de soporte. Emplea estándares EDC, OIDC, AAS y JSON-LD, y persigue soberanía, trazabilidad e interoperabilidad.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No expone un modelo relacional; el entregable es de componentes, interfaces y flujos.</p>
-<p><strong>Fuentes:</strong> <code>E8 ---- OK\ENTREGABLE E8_ Documento de arquitectura del espacio de datos.docx</code>; <code>E8 ---- OK\ENTREGABLE E8_ Documento de arquitectura del espacio de datos_v2.docx</code>; <code>E8 ---- OK\ENTREGABLE E8_ Documento de arquitectura del espacio de datos_v3.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Se ha priorizado la versión <code>v3</code>. No se localizan tablas internas persistentes con campos documentados.</p>
 <h2 id="e9-plan-de-despliegue-y-actualizacion-de-la-infraestructura">E9: Plan de despliegue y actualización de la infraestructura<a class="headerlink" href="#e9-plan-de-despliegue-y-actualizacion-de-la-infraestructura" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Plataforma Tecnológica</p>
 <p><strong>Resumen funcional:</strong> Define el plan de despliegue, actualización y mantenimiento evolutivo del ecosistema desplegado. Su objetivo es asegurar que conectores y microservicios puedan operar y evolucionar sin interrupciones relevantes.</p>
 <p><strong>Contenido técnico:</strong> Fases entre febrero y abril de 2025: preparación del entorno, acceso a clústeres GKE dev/pro, GSAs con Workload Identity, despliegue de conectores EDC vía Helm, despliegue de microservicios Docker/Kubernetes, Ingress, secretos, rolling updates, SLAs y gestión del riesgo. Incluye estrategia de versionado, separación de configuración sensible y funcional, y mantenimiento preventivo.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No aplica; se documenta infraestructura y procedimiento de despliegue.</p>
-<p><strong>Fuentes:</strong> <code>E9 ---- OK\ENTREGABLE E9_ Plan de despliegue y actualización de la infraestructura .docx</code></p>
-<p><strong>Notas/pendientes:</strong> El cronograma e hitos son claros; no hay modelo de dominio ni esquema físico de datos.</p>
 <h2 id="e10-documento-de-definicion-del-catalogo-de-datos">E10: Documento de definición del catálogo de datos<a class="headerlink" href="#e10-documento-de-definicion-del-catalogo-de-datos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Gobierno del Dato</p>
 <p><strong>Resumen funcional:</strong> Define el catálogo de datos publicable del espacio de datos de Vocento. Delimita qué productos de datos entran en catálogo, cómo se describen, cómo se descubren y bajo qué controles pueden solicitarse/consumirse. El catálogo cubre cuatro productos: DP-1 Publicidad, DP-2 Clasificados, DP-3 Suscripciones y DP-4 Propuestas Comerciales.</p>
@@ -2492,8 +2347,6 @@
   LOCATION {
     string uri
   }</code></pre></p>
-<p><strong>Fuentes:</strong> <code>E10  ---- OK\ENTREGABLE E10  Documento de definición del catálogo de datos .docx</code></p>
-<p><strong>Notas/pendientes:</strong> Modelo muy sólido para metadatos y publicación. No sustituye el detalle físico de cada Gold table, que reside en E16-E19.</p>
 <h2 id="e11-documento-de-definicion-del-proceso-de-registro-de-participantes">E11: Documento de definición del proceso de registro de participantes<a class="headerlink" href="#e11-documento-de-definicion-del-proceso-de-registro-de-participantes" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Espacio de Datos / Gobierno del Dato</p>
 <p><strong>Resumen funcional:</strong> Define cómo una entidad se registra y entra en el espacio de datos. La organización interesada consulta el portal y el catálogo federado, solicita adhesión, pasa una evaluación administrativa/técnica y, si procede, recibe alta, contrato y credenciales. Regula normas de participación, identidades y trazabilidad del proceso.</p>
@@ -2531,36 +2384,26 @@
     string esquema_datos
     string ejemplo_datos
   }</code></pre></p>
-<p><strong>Fuentes:</strong> <code>E11 ---- OK\Entregables_E11.docx</code></p>
-<p><strong>Notas/pendientes:</strong> El <code>.gdoc</code> de notas no se ha explotado. El proceso se apoya conceptualmente en referencias Catena-X/Tractus-X para BPN e identidad.</p>
 <h2 id="e12-espacio-de-datos-manual-tecnico-back-end">E12: Espacio de datos (manual técnico back-end)<a class="headerlink" href="#e12-espacio-de-datos-manual-tecnico-back-end" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Plataforma Tecnológica / Espacio de Datos</p>
 <p><strong>Resumen funcional:</strong> Manual técnico del back-end del conector y del ecosistema de microservicios del EEDD. Sirve como guía para desarrolladores, arquitectos y administradores, explicando responsabilidades por capa, endpoints y flujos operativos.</p>
 <p><strong>Contenido técnico:</strong> Describe Conector EDC, Keycloak, Connector Core Service, Login Service, External Storage Service, SSI Wallet, Servicio de Monitorización, Keycloak del módulo de control, Servicio de Onboarding, Servicio Únete, Gestión de Kits, Vault, PostgreSQL y Sub Model Server. Las tecnologías dominantes son Python/FastAPI/Uvicorn, Pydantic, PostgreSQL, Keycloak/OIDC y AAS para representación semántica de activos. Explica flujos de autenticación, descubrimiento, publicación de assets y onboarding.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No hay un ER de negocio; el foco es arquitectura back-end, componentes y APIs.</p>
-<p><strong>Fuentes:</strong> <code>E12 ---- OK\ENTREGABLE E12_BACK.docx</code>; <code>E12 ---- OK\ENTREGABLE E12_BACK_v2.docx</code>; <code>E12 ---- OK\ENTREGABLE E12_BACK_v3.docx</code>; <code>E12 ---- OK\NOTA Entregables_Vocento.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Se ha priorizado la rama <code>BACK</code>/<code>v3</code>. Referencias no transcritas: <code>Entregable E12 Video .mp4</code>, <code>Entregable E12_FRONT Espacio de datos.mp4</code>, <code>VOCENTO_Nueva version_MAYO_V2.mp4</code>. No se localiza documentación textual equivalente del front-end.</p>
 <h2 id="e13-resultados-de-las-pruebas-de-validacion-realizadas-espacio-de-datos">E13: Resultados de las pruebas de validación realizadas: espacio de datos<a class="headerlink" href="#e13-resultados-de-las-pruebas-de-validacion-realizadas-espacio-de-datos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Plataforma Tecnológica / Espacio de Datos</p>
 <p><strong>Resumen funcional:</strong> Documenta el plan de pruebas y la validación integral del EEDD. Aporta evidencia formal de funcionamiento efectivo de los componentes desplegados y de los flujos críticos de negocio.</p>
 <p><strong>Contenido técnico:</strong> Define una estrategia multinivel basada en pirámide de testing y siete tipos de prueba: unitarias, integración, API, E2E, seguridad, rendimiento y smoke/observabilidad. Cubre conectores EDC, Keycloak, Core Service, Login Service, frontales Angular, monitorización, infraestructura Kubernetes, Vault y PostgreSQL. Describe CI/CD con GitHub Actions y herramientas como pytest, FastAPI TestClient, Postman, Cypress/Playwright, OWASP ZAP y k6, además de objetivos de cobertura y criterios de aceptación.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No aplica; es un entregable de aseguramiento de calidad del software.</p>
-<p><strong>Fuentes:</strong> <code>E13  ---- OK\Entregables_E13.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Muy útil para evidenciar madurez operativa, pero no introduce nuevas entidades de negocio.</p>
 <h2 id="e14-plan-de-explotacion-espacio-de-datos">E14: Plan de explotación: espacio de datos<a class="headerlink" href="#e14-plan-de-explotacion-espacio-de-datos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Espacio de Datos / Transversal</p>
 <p><strong>Resumen funcional:</strong> Define el modelo de explotación económica y de gobernanza del espacio de datos. Plantea un enfoque freemium inicial para ganar masa crítica y una evolución posterior hacia monetización por acceso, suscripción o servicios de valor añadido. Identifica participantes potenciales, misión/visión, gobierno y mecanismos de consumo/ingesta.</p>
 <p><strong>Contenido técnico:</strong> Aunque el foco es de negocio, aterriza conceptos técnicos: rulebook, BPN, Keycloak, control de accesos a servicios y APIs, catálogo de activos, publicación/consumo vía API o consultas BigQuery, y monitorización del ecosistema. Reutiliza el marco de roles y comités del EEDD para sostener la explotación futura.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No formaliza tablas con campos; sí define roles, activos, tipos de participante y mecanismos de acceso.</p>
-<p><strong>Fuentes:</strong> <code>E14 ---- OK\ENTREGABLE E14 Plan de explotación  Espacio de datos.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Entregable clave para sostenibilidad, pero más orientado a operating model que a modelado de datos.</p>
 <h2 id="e15-espacio-de-datos-solucion-validada">E15: Espacio de datos: solución validada<a class="headerlink" href="#e15-espacio-de-datos-solucion-validada" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Espacio de Datos</p>
 <p><strong>Resumen funcional:</strong> Recoge la ejecución de casos de prueba funcionales/UAT del EEDD con evidencias de validación. Verifica acceso al portal, catálogo, políticas, contratos, BPNs, solicitudes, gestión de casos de uso, monitorización y demás funciones visibles para usuario y administrador.</p>
 <p><strong>Contenido técnico:</strong> El grueso del documento son tablas de ejecución de pruebas <code>TC-VOC-*</code> con fecha y estado <code>PASSED</code>. Cubre portal, login, catálogo, partners BPN, alta de assets, políticas, contratos, monitoring y creación de casos de uso. Es una evidencia de validación operativa más que un diseño técnico.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No aplica; el entregable es una matriz masiva de pruebas y resultados.</p>
-<p><strong>Fuentes:</strong> <code>E15 ----- OK\ENTREGABLE E15 Espacio de datos_ Solución validada.docx</code>; <code>E15 ----- OK\NOTA Entregables_Vocento.docx</code></p>
-<p><strong>Notas/pendientes:</strong> El documento contiene cientos de tablas de pruebas; apenas aporta definición de entidades o campos reutilizables para un ER.</p>
 <h2 id="e16-solucion-y-resultados-de-los-casos-de-uso-publicidad-digital-audiencias-como-valor">E16: Solución y resultados de los Casos de uso: Publicidad digital – Audiencias como valor<a class="headerlink" href="#e16-solucion-y-resultados-de-los-casos-de-uso-publicidad-digital-audiencias-como-valor" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Publicidad</p>
 <p><strong>Resumen funcional:</strong> Construye un data product de audiencias anónimas para anunciantes y agencias a partir de navegación digital de Vocento. El objetivo es monetizar first-party data de forma soberana, auditada y compatible con privacidad, aportando segmentos de interés explotables comercialmente y visualizaciones de negocio.</p>
@@ -2581,8 +2424,6 @@
     int last_15
     int last_30
   }</code></pre></p>
-<p><strong>Fuentes:</strong> <code>E16 ---- OK\ENTREGABLE E16 Solución y resultados de los Casos de uso  Publicidad digital – Audiencias como valor.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Referencia no transcrita: <code>E16 ---- OK\Entregable E16_FRONT Publicidad Espacio de datos.mkv</code>. El documento aporta ejemplos de segmentos (<code>VM_*</code>) y políticas de calidad, pero no detalla la tabla Silver completa.</p>
 <h2 id="e17-solucion-y-resultados-de-los-casos-de-uso-analitica-y-activacion-del-dato-para-aumento-del-valor-del-dato-de-las-suscripciones">E17: Solución y resultados de los Casos de uso: Analítica y activación del dato para aumento del valor del dato de las suscripciones<a class="headerlink" href="#e17-solucion-y-resultados-de-los-casos-de-uso-analitica-y-activacion-del-dato-para-aumento-del-valor-del-dato-de-las-suscripciones" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Suscripciones</p>
 <p><strong>Resumen funcional:</strong> Construye assets analíticos para mejorar conocimiento, retención y activación sobre la base suscriptora. El caso usa consumo editorial y navegación anónima para entender intereses, tiempos de lectura, penetración de secciones y métricas agregadas del ciclo de vida del suscriptor.</p>
@@ -2628,8 +2469,6 @@
     float tasa_retencion
     date load_date
   }</code></pre></p>
-<p><strong>Fuentes:</strong> <code>E17 ---- OK\ENTREGABLE E17 Solución y resultados de los Casos de uso_ Analítica y activación del dato para aumento del valor del dato de las suscripciones.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Referencia no transcrita: <code>E17 ---- OK\NOTA Entregables_Vocento.docx</code> (nota genérica). El documento describe más de un Gold table; parte de los nombres definitivos y owners siguen en maduración.</p>
 <h2 id="e18-solucion-y-resultados-de-los-casos-de-uso-cualificacion-de-datos-para-optimizacion-de-estrategias-de-comunicacion-y-de-negocio">E18: Solución y resultados de los Casos de uso: Cualificación de datos para optimización de estrategias de comunicación y de negocio<a class="headerlink" href="#e18-solucion-y-resultados-de-los-casos-de-uso-cualificacion-de-datos-para-optimizacion-de-estrategias-de-comunicacion-y-de-negocio" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Clasificados</p>
 <p><strong>Resumen funcional:</strong> El caso de uso de Clasificados detecta y cualifica intención de compra en automoción (VO y renting) para convertir navegación en señales comerciales accionables. Busca exponer de forma segura recuentos de interés por marca/segmento/combustible, útiles para OEMs, concesionarios, CRM/CDP y analítica comercial.</p>
@@ -2673,8 +2512,6 @@
     int total_90d
     date load_date
   }</code></pre></p>
-<p><strong>Fuentes:</strong> <code>E18 ---- OK\ENTREGABLE E18 Solución y resultados de los Casos de uso  Cualificación de datos para optimización de estrategias de comunicación y de negocio.docx</code>; <code>E18 ---- OK\E18 - evidencia - Información de Entidad Legal Omnicom Media.pdf</code>; <code>E18 ---- OK\E18 - evidencia - Logs y telemetría Conector BPNL00000003AVTH.txt</code></p>
-<p><strong>Notas/pendientes:</strong> Referencia no transcrita: <code>E18 ---- OK\Entregable E18_FRONT Espacio de datos.mkv</code>. El nombre del entregable es amplio, pero el contenido técnico corresponde claramente al dominio de Clasificados/automoción.</p>
 <h2 id="e19-solucion-y-resultados-de-los-casos-de-uso-optimizacion-de-campanas-comerciales-a-traves-de-los-datos">E19: Solución y resultados de los Casos de uso: Optimización de campañas comerciales a través de los datos<a class="headerlink" href="#e19-solucion-y-resultados-de-los-casos-de-uso-optimizacion-de-campanas-comerciales-a-traves-de-los-datos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Propuestas Comerciales / BI</p>
 <p><strong>Resumen funcional:</strong> Construye una solución de inteligencia de audiencias para agencias de publicidad cruzando datos de cobertura EGM, consumo digital GFK, intereses publicitarios y navegación anonimizada. Su objetivo es mejorar planificación, afinidad, cobertura y conversión de campañas a partir de segmentos de alto valor.</p>
@@ -2742,36 +2579,26 @@
     int month
     timestamp update_date
   }</code></pre></p>
-<p><strong>Fuentes:</strong> <code>E19 ---- OK\ENTREGABLE E19 Solución y resultados de los Casos de uso  Optimización de campañas comerciales a través de los datos.docx</code>; <code>E19 ---- OK\ENTREGABLE E19  Muestra asset propuestas comerciales.txt</code></p>
-<p><strong>Notas/pendientes:</strong> La muestra tabular aporta campos, pero no documenta exhaustivamente todas las métricas GFK posibles (en el TXT aparecen más columnas que en la tabla-resumen del DOCX). <code>NOTA Entregables_Vocento.docx</code> es una nota genérica y no añade modelo.</p>
 <h2 id="e20-plan-de-consultoria-y-apoyo-a-empresas-participantes">E20: Plan de consultoría y apoyo a empresas participantes<a class="headerlink" href="#e20-plan-de-consultoria-y-apoyo-a-empresas-participantes" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Transversal</p>
 <p><strong>Resumen funcional:</strong> Define el marco documental y metodológico para acompañar a empresas interesadas en el EEDD de Vocento. Prevé dossiers, one-pagers, presentaciones ejecutivas, guías de incorporación y materiales prácticos para reducir barreras de entrada y acelerar la adopción.</p>
 <p><strong>Contenido técnico:</strong> No entra en diseño técnico profundo; sí aterriza cómo explicar casos de uso, catálogo, onboarding, publicación/descubrimiento de datos y buenas prácticas de preparación del dato. Funciona como capa de enablement y transferencia hacia participantes potenciales.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No aplica; el entregable es de acompañamiento y soporte.</p>
-<p><strong>Fuentes:</strong> <code>E20 ---- OK\Entregables_E20.docx</code></p>
-<p><strong>Notas/pendientes:</strong> El valor está en la adopción y extensión a nuevos participantes, no en el modelado de datos.</p>
 <h2 id="e21-plan-de-comunicacion">E21: Plan de comunicación<a class="headerlink" href="#e21-plan-de-comunicacion" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Transversal</p>
 <p><strong>Resumen funcional:</strong> Organiza la difusión interna y externa del proyecto entre abril y julio de 2026. Incluye newsletter interna, campaña print/digital, redes sociales, contenido editorial, evento propio y acciones para captar partners y consolidar visibilidad del espacio de datos.</p>
 <p><strong>Contenido técnico:</strong> No aporta arquitectura de datos, pero sí evidencia el packaging narrativo de los cuatro casos de uso y el pipeline comercial/comunicacional de nuevos interesados. Centraliza mensajes de valor, públicos objetivo, calendario y canales empleados.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No aplica.</p>
-<p><strong>Fuentes:</strong> <code>E21\Modelo_Entregables_E21.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Entregable de comunicación y transparencia regulatoria; no contiene esquemas de datos.</p>
 <h2 id="e22-generacion-de-herramientas-de-apoyo">E22: Generación de herramientas de apoyo<a class="headerlink" href="#e22-generacion-de-herramientas-de-apoyo" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Transversal</p>
 <p><strong>Resumen funcional:</strong> Describe las herramientas visuales y documentales creadas para apoyar comunicación y entendimiento del proyecto: plan de comunicación, piezas publicitarias, infografía, newsletter y manual de uso. Busca alinear equipos internos y hacer comprensibles los casos de uso hacia usuarios/clientes.</p>
 <p><strong>Contenido técnico:</strong> La parte más técnica es la infografía, que conecta fuentes de información, procesos ETL y outputs de negocio. No documenta tablas nuevas, pero sí resume visualmente la arquitectura y los flujos del proyecto.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No aplica; no hay definición tabular ni entidades persistentes nuevas.</p>
-<p><strong>Fuentes:</strong> <code>E22\Modelo_Entregables_E22.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Es un entregable de soporte visual y lecciones aprendidas, no de diseño lógico.</p>
 <h2 id="e23-pagina-web-para-publicacion-de-resultados-obtenidos-y-publicacion-de-catalogos-de-recursos">E23: Página web para publicación de resultados obtenidos y publicación de catálogos de recursos<a class="headerlink" href="#e23-pagina-web-para-publicacion-de-resultados-obtenidos-y-publicacion-de-catalogos-de-recursos" title="Permanent link">&para;</a></h2>
 <p><strong>Dominio:</strong> Transversal</p>
 <p><strong>Resumen funcional:</strong> Define el espacio web corporativo creado para publicar resultados, casos de uso y recursos del proyecto. Centraliza en un único enlace la difusión de los cuatro casos y de los resultados finales, y plantea la publicación de catálogos de recursos para equipos técnicos y de negocio.</p>
 <p><strong>Contenido técnico:</strong> El documento principal describe el portal de resultados y la idea de catálogo de recursos. Los documentos auxiliares “(EJEMPLO DELOITTE NOTAS)” son plantillas: una ficha genérica de catálogo de recursos y una plantilla de resultados del proyecto con placeholders. Por tanto, el contenido técnico real de E23 es más de publicación/diseminación que de catálogo operativo implementado.</p>
 <p><strong>Modelo de datos (si aplica):</strong> No se consolida un modelo de datos definitivo; solo aparece una plantilla de ficha de recurso con campos como tipo de recurso, formato/interfaz, mecanismo de acceso, proveedor y estándar/modelo de datos.</p>
-<p><strong>Fuentes:</strong> <code>E23\Modelo_Entregables_E23.docx</code>; <code>E23\(EJEMPLO DELOITTE NOTAS) - Catálogo de recursos.docx</code>; <code>E23\(EJEMPLO DELOITTE NOTAS) - Resultados del Proyecto.docx</code></p>
-<p><strong>Notas/pendientes:</strong> Los dos documentos de ejemplo son claramente plantillas/placeholder, no evidencias finales cerradas. Conviene tratarlos como apoyo conceptual, no como catálogo productivo definitivo.</p>
 <h2 id="indice-de-entidades-detectadas">Índice de entidades detectadas<a class="headerlink" href="#indice-de-entidades-detectadas" title="Permanent link">&para;</a></h2>
 <h3 id="metadatos-y-catalogo-e10">Metadatos y catálogo (E10)<a class="headerlink" href="#metadatos-y-catalogo-e10" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2887,6 +2714,8 @@
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
       
     
   </body>

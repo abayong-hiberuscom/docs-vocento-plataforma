@@ -74,12 +74,3 @@ erDiagram
 Todos los datasets se documentan como **NON_PUBLIC**, bajo licencia y derechos de reutilización
 específicos del espacio de datos.
 
-!!! warning "Pendientes/incertidumbres"
-    - Dos ficheros `.gdoc` del catálogo ("Catalogación EEDD" e "Inventario de tablas, esquemas y
-      diagramas EAR del EEDD") no son legibles desde la carpeta compartida.
-    - No se ha localizado un EAR físico ni inventario tabular adicional más allá del TTL.
-    - El dataset de Propuestas Comerciales sigue figurando como pendiente/develop.
-
-!!! info "Fuentes"
-    - `5. Documentación Espacio Datos\2. Casos de uso\Catálogo\data\ref_eedd_catalogo_dcat.ttl`
-

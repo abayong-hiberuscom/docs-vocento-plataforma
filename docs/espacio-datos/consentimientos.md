@@ -57,15 +57,3 @@ requiere rellenar la "Base a consentimiento pleno" por palanca; el resto se calc
 2. Aportar la base para el análisis de sensibilidad (valor de la palanca a consentimiento pleno).
 3. Negocio y Dirección comparan el coste de cada opción para decidir sobre el botón.
 
-## Fuentes documentales
-- `7. Consentimientos\Nota_negocio_Boton_Rechazar_todo_Vocento.docx`
-- `7. Consentimientos\Casos de uso - consentimientos vocento.xlsx`
-- `7. Consentimientos\Marco_impacto_Boton_Rechazar_todo_Vocento_v2.xlsx`
-- `7. Consentimientos\Marco_impacto_Boton_Rechazar_todo_Vocento.xlsx` (versión previa de la v2)
-- `7. Consentimientos\Sensibilidad_Rechazar_todo_Vocento.xlsx`
-
-## Pendientes/incertidumbres
-- No se ha resuelto (a fecha de los documentos) si se incluirá el botón "Rechazar todo"; decisión
-  prevista para el 26/06/2026.
-- El detalle exacto por celda de las matrices de consentimiento (códigos concretos, filas 4-83 de
-  la matriz v2) no se ha transcrito íntegro; se referencia la estructura y propósito de cada hoja.

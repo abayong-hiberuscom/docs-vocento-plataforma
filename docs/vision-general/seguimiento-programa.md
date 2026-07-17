@@ -82,10 +82,3 @@
   negocio, ingestas/históricos y cierre del legacy.
 - **Legal/DPO**: avanzado pero no completamente cerrado a julio.
 
-!!! info "Fuentes"
-    - `1. Actas y presentaciones de seguimiento\Presentaciones de Seguimiento\*` (Presentaciones
-      Seguimiento Semanal, dic 2025 - jul 2026)
-    - `1. Actas y presentaciones de seguimiento\Inventarios de seguimiento\Inventario - Gestión de Riesgos.xlsx`
-    - `1. Actas y presentaciones de seguimiento\Inventarios de seguimiento\Inventario documentos.xlsx`
-    - `1. Actas y presentaciones de seguimiento\Listado de PT, Actividades y entregables.xlsx`
-

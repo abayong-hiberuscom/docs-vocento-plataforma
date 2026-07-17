@@ -38,17 +38,3 @@ sobre intereses/usos reales de los suscriptores; apoyar conversión, fidelizaci�
 información agregada y anonimizada; garantizar privacidad por diseño, validación DPO y soberanía
 del dato.
 
-!!! warning "Pendientes/incertidumbres"
-    - La documentación mezcla al menos tres capas (reporting negocio, migración AWS→GCP, caso
-      EEDD) con solapamientos terminológicos.
-    - Varias definiciones funcionales siguen abiertas: tipo/nombre de oferta,
-      `importe_prox_renovacion` (no fiable al 100%), cortes de método de pago, promociones,
-      renovaciones y B2B.
-    - `historico_rfv` está deprecada y será sustituida por `rfv_agrupado`; persisten discrepancias
-      estructurales con el cliente (`tipo_login`, `bizkaia`, `segmento 0`, `valor_referencia`,
-      `ultima-hora`, `tienda-suscripciones`).
-
-!!! info "Fuentes"
-    - `4. Documentación Plataforma Tecnológica\5 - Suscripciones\Otros documentos Suscripciones\Vocento - Documentación técnica - Suscripciones.docx`
-    - `5. Documentación Espacio Datos\2. Casos de uso\CdU Suscripciones\ENTREGABLE E17 Solución y resultados de los Casos de uso ...docx`
-

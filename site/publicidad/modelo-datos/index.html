@@ -25,7 +25,7 @@
     
     
       
-        <title>Modelo de datos - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
+        <title>📊 Modelo de datos - Proyecto Data Vocento — Documentación Técnico-Funcional</title>
       
     
     
@@ -51,12 +51,28 @@
       
     
     
+      <link rel="stylesheet" href="../../css/custom.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
+  <!-- Force shadow DOMs to be 'open' so we can access Mermaid SVGs for full-screen zoom -->
+  <script>
+    (function() {
+      console.log("Hooking Element.prototype.attachShadow...");
+      const originalAttachShadow = Element.prototype.attachShadow;
+      Element.prototype.attachShadow = function(init) {
+        if (init && init.mode === 'closed') {
+          init.mode = 'open';
+        }
+        return originalAttachShadow.call(this, init);
+      };
+    })();
+  </script>
+
   </head>
   
   
@@ -110,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Modelo de datos
+              📊 Modelo de datos
             
           </span>
         </div>
@@ -217,7 +233,7 @@
   
     
   
-  Inicio
+  🏠 Inicio
 
       </a>
     </li>
@@ -238,7 +254,7 @@
   
     
   
-  Visión general del proyecto
+  🎯 Visión General
 
         </a>
       </li>
@@ -260,7 +276,7 @@
   
     
   
-  Espacio de Datos (EEDD)
+  🌐 Espacio de Datos (EEDD)
 
         </a>
       </li>
@@ -282,7 +298,7 @@
   
     
   
-  Gobierno del Dato y Calidad
+  🛡️ Gobierno y Calidad
 
         </a>
       </li>
@@ -306,7 +322,7 @@
   
     
   
-  Publicidad
+  📢 Publicidad
 
         </a>
       </li>
@@ -328,7 +344,7 @@
   
     
   
-  Clasificados
+  🚗 Clasificados
 
         </a>
       </li>
@@ -350,7 +366,7 @@
   
     
   
-  Suscripciones
+  🔄 Suscripciones
 
         </a>
       </li>
@@ -372,7 +388,7 @@
   
     
   
-  Propuestas Comerciales, BI y Plan Data
+  💡 Propuestas y BI
 
         </a>
       </li>
@@ -394,29 +410,7 @@
   
     
   
-  Formación y comunicación
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../anexos/inventario/" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Anexos
+  🎓 Formación
 
         </a>
       </li>
@@ -473,7 +467,7 @@
   <span class="md-ellipsis">
     
   
-    Inicio
+    🏠 Inicio
   
 
     
@@ -524,7 +518,7 @@
   <span class="md-ellipsis">
     
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
     
@@ -540,7 +534,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Visión general del proyecto
+    🎯 Visión General
   
 
           </label>
@@ -560,7 +554,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen ejecutivo
+    📝 Resumen ejecutivo
   
 
     
@@ -588,7 +582,7 @@
   <span class="md-ellipsis">
     
   
-    Seguimiento del programa
+    📅 Seguimiento del programa
   
 
     
@@ -616,7 +610,7 @@
   <span class="md-ellipsis">
     
   
-    Memoria técnica (Entregables E1-E23)
+    📁 Memoria técnica (E1-E23)
   
 
     
@@ -679,7 +673,7 @@
   <span class="md-ellipsis">
     
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
     
@@ -695,7 +689,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Espacio de Datos (EEDD)
+    🌐 Espacio de Datos (EEDD)
   
 
           </label>
@@ -715,7 +709,7 @@
   <span class="md-ellipsis">
     
   
-    Definición y modelo operativo
+    ⚙️ Definición y modelo operativo
   
 
     
@@ -743,7 +737,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura desplegada
+    🏗️ Arquitectura desplegada
   
 
     
@@ -771,7 +765,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno y accesos
+    🔑 Gobierno y accesos
   
 
     
@@ -799,7 +793,7 @@
   <span class="md-ellipsis">
     
   
-    Aspectos legales y DPO
+    ⚖️ Aspectos legales y DPO
   
 
     
@@ -827,7 +821,7 @@
   <span class="md-ellipsis">
     
   
-    Consentimientos
+    📋 Consentimientos
   
 
     
@@ -890,7 +884,7 @@
   <span class="md-ellipsis">
     
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
     
@@ -906,7 +900,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Gobierno del Dato y Calidad
+    🛡️ Gobierno y Calidad
   
 
           </label>
@@ -926,7 +920,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de gobierno
+    🏛️ Modelo de gobierno
   
 
     
@@ -954,7 +948,7 @@
   <span class="md-ellipsis">
     
   
-    Glosario de negocio
+    📖 Glosario de negocio
   
 
     
@@ -982,7 +976,7 @@
   <span class="md-ellipsis">
     
   
-    Reglas de calidad de datos
+    🔎 Reglas de calidad de datos
   
 
     
@@ -1010,7 +1004,7 @@
   <span class="md-ellipsis">
     
   
-    Dataplex y metadatos
+    🗂️ Dataplex y metadatos
   
 
     
@@ -1038,7 +1032,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo entidad-relación técnico
+    📊 Modelo entidad-relación técnico
   
 
     
@@ -1102,7 +1096,7 @@
   <span class="md-ellipsis">
     
   
-    Publicidad
+    📢 Publicidad
   
 
     
@@ -1118,7 +1112,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Publicidad
+    📢 Publicidad
   
 
           </label>
@@ -1138,7 +1132,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1166,7 +1160,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1196,6 +1190,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📊 Modelo de datos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1203,7 +1215,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1212,6 +1224,69 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-entrega-y-ad-server-dm_ad_delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Entrega y Ad Server (dm_ad_delivery)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-gestion-comercial-y-facturacion-dm_gestion_comercial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Gestión Comercial y Facturación (dm_gestion_comercial)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-segmentos-de-audiencia-espacio-de-datos-dm_eedd_publicidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Segmentos de Audiencia - Espacio de Datos (dm_eedd_publicidad)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#origenes-de-datos-y-linaje-pipeline-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orígenes de Datos y Linaje (Pipeline de Negocio)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1263,7 +1338,7 @@
   <span class="md-ellipsis">
     
   
-    Clasificados
+    🚗 Clasificados
   
 
     
@@ -1279,7 +1354,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Clasificados
+    🚗 Clasificados
   
 
           </label>
@@ -1299,7 +1374,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1327,7 +1402,7 @@
   <span class="md-ellipsis">
     
   
-    Arquitectura y fuentes de datos
+    🏗️ Arquitectura y fuentes
   
 
     
@@ -1355,7 +1430,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1414,7 +1489,7 @@
   <span class="md-ellipsis">
     
   
-    Suscripciones
+    🔄 Suscripciones
   
 
     
@@ -1430,7 +1505,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Suscripciones
+    🔄 Suscripciones
   
 
           </label>
@@ -1450,7 +1525,7 @@
   <span class="md-ellipsis">
     
   
-    Resumen funcional
+    📝 Resumen funcional
   
 
     
@@ -1478,7 +1553,7 @@
   <span class="md-ellipsis">
     
   
-    Reporting y objetivos
+    📈 Reporting y objetivos
   
 
     
@@ -1506,7 +1581,7 @@
   <span class="md-ellipsis">
     
   
-    Modelo de datos
+    📊 Modelo de datos
   
 
     
@@ -1567,7 +1642,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
     
@@ -1583,7 +1658,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Propuestas Comerciales, BI y Plan Data
+    💡 Propuestas y BI
   
 
           </label>
@@ -1603,7 +1678,7 @@
   <span class="md-ellipsis">
     
   
-    Propuestas comerciales
+    💼 Propuestas comerciales
   
 
     
@@ -1631,7 +1706,7 @@
   <span class="md-ellipsis">
     
   
-    Plataforma tecnológica y Plan Data
+    💻 Plataforma y Plan Data
   
 
     
@@ -1659,7 +1734,7 @@
   <span class="md-ellipsis">
     
   
-    Inteligencia de negocio
+    📊 Inteligencia de negocio
   
 
     
@@ -1687,7 +1762,7 @@
   <span class="md-ellipsis">
     
   
-    Catálogo de casos de uso
+    🗂️ Catálogo de casos de uso
   
 
     
@@ -1744,7 +1819,7 @@
   <span class="md-ellipsis">
     
   
-    Formación y comunicación
+    🎓 Formación
   
 
     
@@ -1760,7 +1835,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Formación y comunicación
+    🎓 Formación
   
 
           </label>
@@ -1780,7 +1855,7 @@
   <span class="md-ellipsis">
     
   
-    Formación EEDD
+    📚 Formación EEDD
   
 
     
@@ -1808,128 +1883,7 @@
   <span class="md-ellipsis">
     
   
-    Notas de sesiones de gobernanza
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Anexos
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Anexos
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/inventario/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Inventario documental
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../anexos/grabaciones/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Grabaciones (no transcritas)
+    📝 Notas de sesiones
   
 
     
@@ -1968,119 +1922,211 @@
 
 
 <h1 id="modelo-de-datos-publicidad">Modelo de datos — Publicidad<a class="headerlink" href="#modelo-de-datos-publicidad" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>El ER siguiente resume las relaciones más explícitas/localizables en diccionarios, drawios y
-validaciones. En AdPoint existen muchas más tablas <code>dbo_*</code> no desglosadas completamente en la
-documentación revisada.</p>
-</blockquote>
-<pre class="mermaid"><code>erDiagram
-    DIM_COMPANY {
-        string company_id PK
-        string type
-        string name
-    }
-    DIM_USER {
-        string user_id PK
-        string email
-        string role_name
-    }
-    DIM_ORDER {
-        string order_id PK
-        string advertiser_id FK
-        string agency_id FK
-        string trafficker_id FK
-    }
-    DIM_AD_UNIT {
-        string adunit_id PK
-        string adUnitCode
-        string parentId
-    }
-    DIM_DEVICE_CATEGORY {
-        string device_category_id PK
-        string name
-    }
-    DIM_CREATIVE_SIZE {
-        string creative_size_id PK
-        string size
-    }
-    DIM_PRODUCT {
-        string product_id PK
-        string product_name
-    }
-    FACT_DAILY {
-        date impressiondate
-        string adunit_id FK
-        string line_item_id
-        string order_id FK
-        string device_category_id FK
-    }
-    MAESTRO_PUBLICACIONES {
-        string ADSLOTNAME0 PK
-        string Publicacion
-        string CABECERA
-        string Unidad_Gestion
-    }
-    DIM_CUSTOMER {
-        string customer_id PK
-        string customer_name
-    }
-    DIM_ORDERITEM {
-        string orderitem_id PK
-        string order_id FK
-    }
-    DIM_PUBLICATION {
-        string publication_id PK
-        string publication_name
-    }
-    DIM_DATE {
-        date date_id PK
-    }
-    FACT_REVENUE {
-        string revenuerecognition_id PK
-        string customer_id FK
-        string order_id FK
-        string orderitem_id FK
-        string publication_id FK
-        date date_id FK
-    }
-    REF_CU_PUBLICIDAD_SEGMENTOS_IAB {
-        string segment_id PK
-        string iab_category
-        boolean is_active
-    }
-    CU_PUBLICIDAD_DIGITAL {
-        string segmento FK
-        int last_1
-        int last_7
-        int last_15
-        int last_30
-    }
-
-    DIM_COMPANY ||--o{ DIM_ORDER : advertiser_agency
-    DIM_USER ||--o{ DIM_ORDER : gestiona
-    DIM_ORDER ||--o{ FACT_DAILY : planifica
-    DIM_AD_UNIT ||--o{ FACT_DAILY : inventario
-    DIM_DEVICE_CATEGORY ||--o{ FACT_DAILY : dispositivo
-    DIM_CREATIVE_SIZE ||--o{ FACT_DAILY : formato
-    DIM_PRODUCT ||--o{ FACT_DAILY : clasificacion
-    MAESTRO_PUBLICACIONES ||--o{ DIM_AD_UNIT : mapea_adunit
-
-    DIM_CUSTOMER ||--o{ FACT_REVENUE : factura_a
-    DIM_ORDER ||--o{ FACT_REVENUE : origen_comercial
-    DIM_ORDERITEM ||--o{ FACT_REVENUE : detalle
-    DIM_PUBLICATION ||--o{ FACT_REVENUE : publica_en
-    DIM_DATE ||--o{ FACT_REVENUE : fecha
-
-    REF_CU_PUBLICIDAD_SEGMENTOS_IAB ||--o{ CU_PUBLICIDAD_DIGITAL : cataloga</code></pre>
-<div class="admonition info">
-<p class="admonition-title">Fuentes</p>
-<ul>
-<li><code>4. Documentación Plataforma Tecnológica\3 - Publicidad\Publicidad - Medallas &amp; Modelo datos.drawio</code></li>
-<li><code>4. Documentación Plataforma Tecnológica\3 - Publicidad\Diccionario\Descripciones_publicidad.xlsx</code></li>
-<li><code>4. Documentación Plataforma Tecnológica\3 - Publicidad\Informes de validación de datos\*</code></li>
-<li><code>5. Documentación Espacio Datos\2. Casos de uso\CdU Publicidad\Plantilla Metadatos Caso de Uso Publicidad.xlsx</code></li>
-</ul>
+<p>La arquitectura de datos de <strong>Publicidad</strong> en BigQuery se organiza en tres datamarts o esquemas de datos analíticos diferenciados, alojados bajo el proyecto corporativo <code>prj-dataplatform-prod-vocento</code>. Cada datamart cumple un propósito funcional específico: la entrega de impresiones publicitarias, el seguimiento de la facturación comercial, y el análisis de audiencias segmentadas.</p>
+<p>A continuación, se detallan los diagramas entidad-relación (ER) actualizados de los esquemas reales en BigQuery.</p>
+<hr />
+<h2 id="1-entrega-y-ad-server-dm_ad_delivery">1. Entrega y Ad Server (<code>dm_ad_delivery</code>)<a class="headerlink" href="#1-entrega-y-ad-server-dm_ad_delivery" title="Permanent link">&para;</a></h2>
+<p>Este datamart procesa las métricas de impresiones y clics diarios procedentes de <strong>Google Ad Manager (GAM)</strong> para cuantificar y auditar la entrega de campañas en los distintos soportes, inventarios y formatos del grupo.</p>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Modelo interactivo</p>
+<p>Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.</p>
 </div>
+<pre class="mermaid"><code>erDiagram
+    dim_company {
+        int64 id PK
+        string name
+        string type
+        string credit_status
+        string applied_team_ids
+        bool Extranjero
+        datetime last_modified_date_time
+    }
+    dim_user {
+        int64 id PK
+        string name
+        string email
+        string roleName
+        string isActive
+    }
+    dim_order {
+        int64 id PK
+        string name
+        string advertiserId FK
+        string creatorId FK
+        string traffickerId FK
+        string status
+        string totalBudget
+        datetime last_modified_date_time
+    }
+    dim_ad_unit {
+        int64 id PK
+        string adUnitcode
+        string status
+        string Ad_unit_1
+        string Ad_unit_2
+        string Ad_unit_3
+    }
+    dim_device_category {
+        int64 id PK
+        string device_category
+        datetime created
+    }
+    dim_creative_size {
+        int64 id PK
+        string creative_size
+        datetime created
+    }
+    dim_product {
+        int64 id PK
+        string product
+        datetime created
+    }
+    dim_publication {
+        int64 id PK
+        string Publicacion
+        string Cabecera
+        string Medio
+        string device
+    }
+    fact_daily {
+        date impressiondate PK
+        int64 order_id FK
+        int64 adunit_id FK
+        int64 device_category_id FK
+        int64 creative_size_id FK
+        int64 product_id FK
+        int64 publication_id FK
+        int64 line_item_id
+        int64 advertiser_id FK
+    }
+
+    dim_company ||--o{ dim_order : "anunciante_de (id -&gt; advertiserId)"
+    dim_user ||--o{ dim_order : "gestionada_por (id -&gt; traffickerId/creatorId)"
+    dim_order ||--o{ fact_daily : "planifica (id -&gt; order_id)"
+    dim_ad_unit ||--o{ fact_daily : "imputa_a (id -&gt; adunit_id)"
+    dim_device_category ||--o{ fact_daily : "consumida_en (id -&gt; device_category_id)"
+    dim_creative_size ||--o{ fact_daily : "resolucion_de (id -&gt; creative_size_id)"
+    dim_product ||--o{ fact_daily : "clasificada_por (id -&gt; product_id)"
+    dim_publication ||--o{ fact_daily : "publicada_en (id -&gt; publication_id)"</code></pre>
+<hr />
+<h2 id="2-gestion-comercial-y-facturacion-dm_gestion_comercial">2. Gestión Comercial y Facturación (<code>dm_gestion_comercial</code>)<a class="headerlink" href="#2-gestion-comercial-y-facturacion-dm_gestion_comercial" title="Permanent link">&para;</a></h2>
+<p>Es el esquema analítico responsable del seguimiento de contratos, facturas e imputación de ingresos de publicidad procedentes del ERP comercial <strong>AdPoint</strong>. Cruza anunciantes directos y agencias de medios con las líneas de pedido y su devengo financiero.</p>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Modelo interactivo</p>
+<p>Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.</p>
+</div>
+<pre class="mermaid"><code>erDiagram
+    dim_customer {
+        int64 Cust_ID PK
+        string Anunciante
+        string CP_Fiscal
+        string Activa
+    }
+    dim_user {
+        int64 ID_Usuario PK
+        string Nombre_Completo
+        string Email
+        string Rol
+        bool Activo
+    }
+    dim_order {
+        int64 Order_ID PK
+        string Name
+        string ref_num
+        int64 Contract_ID
+        int64 User_ID FK
+        int64 Cust_ID FK
+    }
+    dim_orderitem {
+        int64 OrderItem_ID PK
+        int64 Order_ID FK
+        string Nombre_Anuncio
+        string ItemNumber
+        int64 Ad_Pattern
+        bool Es_Ingreso
+        bool Es_Produccion
+    }
+    dim_publication {
+        int64 ID PK
+        int64 Publ_ID FK
+        string Soporte_Nombre
+        string Medio
+        string ExternalProduct
+        string TipoPublicacion_N1
+        string Cabecera_N2
+        string Publicacion_N3
+        string Agrupador_Publicaciones
+    }
+    dim_product {
+        int64 product_id PK
+        string Producto
+        string Tipo
+        string Tipo_ingr
+        string Codigo_Contable
+        string Active
+    }
+    dim_date {
+        date fecha PK
+        int64 Ano
+        int64 Mes
+        string Mes_Nombre
+        int64 Trimestre
+        string Ano_Mes
+    }
+    fact_revenue {
+        int64 RevenueRecognition_ID PK
+        int64 Order_ID FK
+        int64 OrderItem_ID FK
+        int64 Cust_ID FK
+        int64 repPubl_ID FK
+        int64 basic_id FK
+        date Fecha FK
+        float64 Importe_Neto
+        float64 Porcentaje_Reparto_Mes
+    }
+
+    dim_customer ||--o{ dim_order : "compra (Cust_ID -&gt; Cust_ID)"
+    dim_user ||--o{ dim_order : "creada_por (ID_Usuario -&gt; User_ID)"
+    dim_order ||--o{ dim_orderitem : "contiene (Order_ID -&gt; Order_ID)"
+    dim_order ||--o{ fact_revenue : "imputada_a (Order_ID -&gt; Order_ID)"
+    dim_orderitem ||--o{ fact_revenue : "desglosada_en (OrderItem_ID -&gt; OrderItem_ID)"
+    dim_publication ||--o{ fact_revenue : "soporte_de (Publ_ID -&gt; repPubl_ID)"
+    dim_customer ||--o{ fact_revenue : "facturada_a (Cust_ID -&gt; Cust_ID)"
+    dim_product ||--o{ fact_revenue : "comercializado_como (product_id -&gt; basic_id)"
+    dim_date ||--o{ fact_revenue : "reconocido_en (fecha -&gt; Fecha)"</code></pre>
+<hr />
+<h2 id="3-segmentos-de-audiencia-espacio-de-datos-dm_eedd_publicidad">3. Segmentos de Audiencia - Espacio de Datos (<code>dm_eedd_publicidad</code>)<a class="headerlink" href="#3-segmentos-de-audiencia-espacio-de-datos-dm_eedd_publicidad" title="Permanent link">&para;</a></h2>
+<p>Este esquema expone las categorías y taxonomías IAB en base a los datos de audiencia consolidados del Espacio de Datos (EEDD). Facilita el perfilado de usuarios para la activación de campañas de publicidad digital de alta precisión.</p>
+<div class="admonition tip">
+<p class="admonition-title">🔍 Modelo interactivo</p>
+<p>Haz clic sobre el diagrama para abrirlo en pantalla completa en una nueva pestaña. Podrás hacer zoom con la rueda del ratón y arrastrar para moverte.</p>
+</div>
+<pre class="mermaid"><code>erDiagram
+    ref_cu_eedd_publicidad_segmentos_iab {
+        string segment_id PK
+        string display_name
+        string iab_category
+        bool is_active
+    }
+    cu_eedd_publicidad_digital {
+        string segmento FK
+        int64 last_1
+        int64 last_7
+        int64 last_15
+        int64 last_30
+    }
+
+    ref_cu_eedd_publicidad_segmentos_iab ||--o{ cu_eedd_publicidad_digital : "clasifica_a (segment_id -&gt; segmento)"</code></pre>
+<hr />
+<h2 id="origenes-de-datos-y-linaje-pipeline-de-negocio">Orígenes de Datos y Linaje (Pipeline de Negocio)<a class="headerlink" href="#origenes-de-datos-y-linaje-pipeline-de-negocio" title="Permanent link">&para;</a></h2>
+<p>La consolidación y refinamiento de estos esquemas se orquesta en BigQuery siguiendo tres capas de almacenamiento y transformación:</p>
+<ol>
+<li><strong>Capa Bronce (<code>bronce_publicidad_raw</code>)</strong>: Contiene la ingesta en bruto (raw replicas) de las APIs diarias de Google Ad Manager y las tablas relacionales procedentes del servidor del ERP comercial AdPoint.</li>
+<li><strong>Capa Silver (<code>silver_publicidad_refined</code>)</strong>: </li>
+<li>Aplica tipados rigurosos, conversiones de zona horaria y limpieza de caracteres especiales de origen.</li>
+<li>Incorpora un <strong>maestro de publicaciones unificado</strong> (<code>ficheros_auxiliares_maestro_de_publicaciones_xlsx_hoja1</code>), que mapea las ad_units físicas del Ad Server con las publicaciones lógicas editoriales del grupo.</li>
+<li><strong>Capa Gold (Datamarts <code>dm_*</code>)</strong>: Capa semántica de negocio estructurada en modelos estrella (Dimensionales y Hechos) analizados anteriormente, optimizada para su explotación ágil desde <strong>Looker</strong>.</li>
+</ol>
 
 
 
@@ -2135,6 +2181,8 @@ documentación revisada.</p>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../js/custom.js"></script>
       
     
   </body>
