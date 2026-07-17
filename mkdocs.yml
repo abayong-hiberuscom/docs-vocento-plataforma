@@ -45,16 +45,6 @@ markdown_extensions:
 
 nav:
   - 🏠 Inicio: index.md
-  - 🎯 Visión General:
-      - 📝 Resumen ejecutivo: vision-general/resumen-ejecutivo.md
-      - 📅 Seguimiento del programa: vision-general/seguimiento-programa.md
-      - 📁 Memoria técnica (E1-E23): vision-general/entregables.md
-  - 🌐 Espacio de Datos (EEDD):
-      - ⚙️ Definición y modelo operativo: espacio-datos/modelo-operativo.md
-      - 🏗️ Arquitectura desplegada: espacio-datos/arquitectura.md
-      - 🔑 Gobierno y accesos: espacio-datos/gobierno-accesos.md
-      - ⚖️ Aspectos legales y DPO: espacio-datos/legal-dpo.md
-      - 📋 Consentimientos: espacio-datos/consentimientos.md
   - 🛡️ Gobierno y Calidad:
       - 🏛️ Modelo de gobierno: gobierno-dato/modelo-gobierno.md
       - 📖 Glosario de negocio: gobierno-dato/glosario.md

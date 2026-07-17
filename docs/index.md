@@ -10,9 +10,6 @@ Un sitio de documentación **vivo**, navegable y con búsqueda, en el que los mo
 representan como **diagramas entidad-relación dinámicos (Mermaid)**.
 
 ## Cómo navegar
-- **Visión general del proyecto** — resumen ejecutivo, seguimiento cronológico del programa y la
-  Memoria Técnica oficial (Entregables E1-E23).
-- **Espacio de Datos (EEDD)** — qué es, cómo funciona, cómo se gobierna, accesos y aspectos legales.
 - **Gobierno del Dato y Calidad** — glosario de negocio, reglas de calidad, Dataplex y el modelo
   entidad-relación técnico (BigQuery/Dataform) por capas.
 - **Publicidad / Clasificados / Suscripciones** — resumen funcional, arquitectura de datos y
